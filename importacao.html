@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Importação | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dfe5e1;
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    width: 48px;
+    height: 48px;
+    background: #176b3a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca h1 {
+    font-size: 22px;
+    color: #176b3a;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #68736d;
+}
+
+nav {
+    background: #176b3a;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #0f512b;
+}
+
+.hero {
+    background: #176b3a;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 850px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #176b3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #68736d;
+}
+
+.destaque {
+    background: #eef5f0;
+    border-left: 5px solid #176b3a;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.destaque strong {
+    color: #176b3a;
+    font-size: 18px;
+}
+
+.alerta {
+    background: #fff8e8;
+    border-left: 5px solid #d39b16;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.alerta strong {
+    color: #8a6400;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.card h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #68736d;
+    font-size: 15px;
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.passo {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.numero {
+    width: 34px;
+    height: 34px;
+    background: #176b3a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.passo h3 {
+    color: #176b3a;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.lista {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.lista li {
+    margin-bottom: 8px;
+}
+
+.botao {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #0f512b;
+}
+
+.fonte {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+footer {
+    background: #26332d;
+    color: white;
+    margin-top: 20px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 30px;
+}
+
+.rodape p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .cards,
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="topo">
+
+    <div class="marca">
+
+        <div class="simbolo">S</div>
+
+        <div>
+
+            <h1>SIPOV-SP</h1>
+
+            <p>
+                Serviço de Inspeção de Produtos de Origem Vegetal
+            </p>
+
+        </div>
+
+    </div>
+
+    <strong>MAPA</strong>
+
+</div>
+
+
+<nav>
+
+<div class="menu">
+
+    <a href="index.html">Início</a>
+
+    <a href="registro.html">Registro</a>
+
+    <a href="bebidas.html">Bebidas</a>
+
+    <a href="classificacao.html">Classificação</a>
+
+    <a href="importacao.html">Importação</a>
+
+    <a href="#">Fiscalização</a>
+
+    <a href="#">Legislação</a>
+
+    <a href="#">Documentos</a>
+
+    <a href="#">Contato</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-conteudo">
+
+    <h2>Importação</h2>
+
+    <p>
+        Orientações sobre importação de produtos de origem vegetal,
+        fiscalização agropecuária, DUIMP, LPCO, classificação,
+        documentação e procedimentos de controle.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+<div class="voltar">
+
+    <a href="index.html">
+        ← Voltar para a página inicial
+    </a>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>Antes de importar</strong>
+
+    <p>
+        Verifique previamente os requisitos aplicáveis ao produto,
+        sua classificação, documentação, padrões brasileiros de
+        identidade e qualidade e os procedimentos de fiscalização.
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>✈️ O que você procura?</h2>
+
+    <p>
+        Encontre orientações de acordo com a sua necessidade.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>📦 Requisitos de importação</h3>
+
+    <p>
+        Consulte os requisitos aplicáveis aos produtos vegetais
+        destinados à importação e os procedimentos de controle
+        realizados pelo MAPA.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🖥️ DUIMP</h3>
+
+    <p>
+        Informações sobre a Declaração Única de Importação e o
+        gerenciamento de risco aplicado às operações de produtos
+        de origem vegetal.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📋 LPCO</h3>
+
+    <p>
+        Orientações sobre o uso do LPCO e os fluxos aplicáveis
+        às operações de importação, especialmente durante a
+        implantação da DUIMP.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🌾 Classificação</h3>
+
+    <p>
+        Verifique os produtos sujeitos à classificação e os
+        padrões oficiais aplicáveis às mercadorias importadas.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔬 Análise laboratorial</h3>
+
+    <p>
+        Informações sobre coleta oficial de amostras, análise
+        laboratorial e procedimentos relacionados à certificação,
+        quando aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📑 Documentação</h3>
+
+    <p>
+        Organize previamente os documentos necessários à operação
+        e verifique os requisitos específicos do produto.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🧭 Fluxo simplificado da importação</h2>
+
+    <p>
+        O procedimento pode variar conforme o produto, modalidade
+        logística, enquadramento e resultado do gerenciamento de risco.
+    </p>
+
+</div>
+
+
+<div class="passos">
+
+
+<div class="passo">
+
+    <div class="numero">1</div>
+
+    <h3>Prepare a operação</h3>
+
+    <p>
+        Identifique o produto, origem, finalidade, enquadramento
+        e requisitos aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">2</div>
+
+    <h3>Registre a operação</h3>
+
+    <p>
+        Insira as informações e documentos pertinentes no
+        sistema oficial aplicável à operação.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">3</div>
+
+    <h3>Gerenciamento de risco</h3>
+
+    <p>
+        A operação é submetida aos critérios eletrônicos de
+        gerenciamento de risco da fiscalização agropecuária.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">4</div>
+
+    <h3>Definição do canal</h3>
+
+    <p>
+        A operação poderá ser direcionada aos diferentes canais
+        de fiscalização previstos no sistema.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">5</div>
+
+    <h3>Fiscalização</h3>
+
+    <p>
+        Quando aplicável, podem ocorrer análise documental,
+        conferência física, coleta oficial de amostras e
+        demais procedimentos fiscais.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">6</div>
+
+    <h3>Conclusão</h3>
+
+    <p>
+        Após o atendimento dos procedimentos e requisitos
+        aplicáveis, a fiscalização agropecuária é concluída.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🟢 Canal verde x 🔴 Canal vermelho</h2>
+
+    <p>
+        A parametrização eletrônica define o nível de controle
+        aplicável à operação.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>🟢 Canal verde</h3>
+
+    <p>
+        Operação direcionada para liberação automática conforme
+        os critérios de baixo risco definidos pelo gerenciamento
+        de risco.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔴 Canal vermelho</h3>
+
+    <p>
+        Operação sujeita aos procedimentos de fiscalização
+        aplicáveis, que podem incluir análise documental,
+        conferência física, coleta oficial de amostras e
+        análise laboratorial.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="alerta">
+
+    <strong>⚠️ Atenção ao gerenciamento de risco</strong>
+
+    <p>
+        A definição do canal de fiscalização não depende
+        exclusivamente da existência de Certificado de Inspeção
+        de Importação. O gerenciamento de risco considera
+        diferentes informações relacionadas à operação,
+        ao produto e ao histórico de conformidade.
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>🔎 O que pode ser considerado na análise de risco?</h2>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>👤 Histórico do importador</h3>
+
+    <p>
+        Histórico de conformidade e ocorrências fiscais
+        relacionadas às operações anteriores.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📑 Regularidade documental</h3>
+
+    <p>
+        Informações e documentos apresentados nos sistemas
+        oficiais e sua compatibilidade com a operação.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🌎 Origem</h3>
+
+    <p>
+        País de origem e demais informações relacionadas
+        à operação de importação.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔬 Histórico analítico</h3>
+
+    <p>
+        Informações relacionadas ao histórico de conformidade
+        analítica do produto.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📦 Perfil do produto</h3>
+
+    <p>
+        Características e informações do produto submetido
+        à fiscalização.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔗 Rastreabilidade</h3>
+
+    <p>
+        Informações relacionadas à identificação e rastreabilidade
+        da operação e do produto.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🔬 Quando houver coleta de amostra</h2>
+
+    <p>
+        A coleta oficial poderá ocorrer nos procedimentos
+        determinados pela fiscalização.
+    </p>
+
+</div>
+
+
+<div class="fonte">
+
+    <ul class="lista">
+
+        <li>
+            A amostra é coletada oficialmente conforme os
+            procedimentos de fiscalização aplicáveis.
+        </li>
+
+        <li>
+            Quando houver necessidade de análise laboratorial,
+            a amostra é encaminhada conforme o fluxo oficial.
+        </li>
+
+        <li>
+            O importador deve observar as orientações referentes
+            ao laboratório e aos procedimentos aplicáveis.
+        </li>
+
+        <li>
+            Os resultados laboratoriais podem integrar a decisão
+            da fiscalização da operação.
+        </li>
+
+    </ul>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📑 Responsabilidade do importador</h2>
+
+    <p>
+        A fiscalização baseada em risco reforça a responsabilidade
+        do operador pelas informações apresentadas.
+    </p>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>
+        As informações declaradas devem ser verdadeiras,
+        completas e compatíveis com a documentação e o produto.
+    </strong>
+
+    <p>
+        O importador deve manter procedimentos de autocontrole,
+        verificação documental, rastreabilidade e conformidade
+        regulatória compatíveis com suas operações.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📚 Fontes e orientações oficiais</h2>
+
+    <p>
+        Consulte sempre as informações oficiais antes de realizar
+        uma operação de importação.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Importação de produtos vegetais</h3>
+
+    <p>
+        Requisitos de classificação, qualidade e controle
+        aplicáveis aos produtos vegetais importados.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/importacao/importacao-de-produtos-vegetais"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar MAPA
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>DUIMP e gerenciamento de risco</h3>
+
+    <p>
+        Orientações oficiais do DIPOV sobre DUIMP, gerenciamento
+        de risco, canais de fiscalização e procedimentos.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/importacao"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar MAPA
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Manual de LPCO</h3>
+
+    <p>
+        Manual oficial para requerimento de LPCO nas operações
+        de importação de produtos de interesse agropecuário.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/informativos/manual-de-lpco-importacao"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar MAPA
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="rodape">
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Superintendência Federal de Agricultura no Estado de São Paulo
+    </p>
+
+    <br>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
