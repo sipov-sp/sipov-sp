@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fiscalização | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dfe5e1;
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    width: 48px;
+    height: 48px;
+    background: #176b3a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca h1 {
+    font-size: 22px;
+    color: #176b3a;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #68736d;
+}
+
+nav {
+    background: #176b3a;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #0f512b;
+}
+
+.hero {
+    background: #176b3a;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 850px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #176b3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #68736d;
+}
+
+.destaque {
+    background: #eef5f0;
+    border-left: 5px solid #176b3a;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.destaque strong {
+    color: #176b3a;
+    font-size: 18px;
+}
+
+.alerta {
+    background: #fff8e8;
+    border-left: 5px solid #d39b16;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.alerta strong {
+    color: #8a6400;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.card h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #68736d;
+    font-size: 15px;
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.passo {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.numero {
+    width: 34px;
+    height: 34px;
+    background: #176b3a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.passo h3 {
+    color: #176b3a;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.lista {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.lista li {
+    margin-bottom: 9px;
+}
+
+.botao {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #0f512b;
+}
+
+.fonte {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+footer {
+    background: #26332d;
+    color: white;
+    margin-top: 20px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 30px;
+}
+
+.rodape p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .cards,
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="topo">
+
+    <div class="marca">
+
+        <div class="simbolo">S</div>
+
+        <div>
+
+            <h1>SIPOV-SP</h1>
+
+            <p>
+                Serviço de Inspeção de Produtos de Origem Vegetal
+            </p>
+
+        </div>
+
+    </div>
+
+    <strong>MAPA</strong>
+
+</div>
+
+
+<nav>
+
+<div class="menu">
+
+    <a href="index.html">Início</a>
+
+    <a href="registro.html">Registro</a>
+
+    <a href="bebidas.html">Bebidas</a>
+
+    <a href="classificacao.html">Classificação</a>
+
+    <a href="importacao.html">Importação</a>
+
+    <a href="fiscalizacao.html">Fiscalização</a>
+
+    <a href="#">Legislação</a>
+
+    <a href="#">Documentos</a>
+
+    <a href="#">Contato</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-conteudo">
+
+    <h2>Fiscalização</h2>
+
+    <p>
+        Informações sobre fiscalização de produtos de origem vegetal,
+        autocontrole, inspeções, coleta de amostras, documentos fiscais
+        e medidas administrativas.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+<div class="voltar">
+
+    <a href="index.html">
+        ← Voltar para a página inicial
+    </a>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>
+        A fiscalização é permanente
+    </strong>
+
+    <p>
+        O registro no MAPA não encerra as obrigações do estabelecimento.
+        A manutenção da conformidade depende do cumprimento permanente
+        da legislação e dos sistemas de autocontrole aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>🛡️ O que você procura?</h2>
+
+    <p>
+        Encontre orientações de acordo com a sua situação.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>📋 Fui fiscalizado. E agora?</h3>
+
+    <p>
+        Entenda, de forma geral, os principais documentos e etapas
+        que podem fazer parte de uma ação de fiscalização.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📝 Termo de Fiscalização</h3>
+
+    <p>
+        Documento utilizado para formalizar informações e registros
+        relacionados à ação fiscal, conforme o procedimento aplicável.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📢 Intimação</h3>
+
+    <p>
+        Informações sobre situações em que o agente fiscalizado é
+        cientificado de providências ou medidas a serem adotadas.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔬 Coleta de amostras</h3>
+
+    <p>
+        Informações gerais sobre coleta oficial de amostras e
+        encaminhamento para análise, quando aplicável.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📊 Resultado de análise</h3>
+
+    <p>
+        Orientações gerais sobre resultados laboratoriais e sua
+        relação com os procedimentos de fiscalização.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>⚖️ Medidas administrativas</h3>
+
+    <p>
+        Informações gerais sobre medidas cautelares, sanções e
+        demais providências previstas na legislação.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🧭 Como funciona uma ação de fiscalização?</h2>
+
+    <p>
+        O procedimento pode variar conforme o produto, atividade,
+        histórico e nível de risco identificado.
+    </p>
+
+</div>
+
+
+<div class="passos">
+
+
+<div class="passo">
+
+    <div class="numero">1</div>
+
+    <h3>Planejamento</h3>
+
+    <p>
+        As ações oficiais podem ser planejadas considerando
+        programas de fiscalização, vigilância, monitoramento
+        e critérios de risco.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">2</div>
+
+    <h3>Inspeção</h3>
+
+    <p>
+        Podem ser verificadas instalações, processos, produtos,
+        documentos, registros e condições de funcionamento.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">3</div>
+
+    <h3>Verificação documental</h3>
+
+    <p>
+        Os agentes fiscalizados podem ser solicitados a apresentar
+        documentos e registros relacionados à atividade.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">4</div>
+
+    <h3>Coleta e análise</h3>
+
+    <p>
+        Quando necessário, podem ser realizadas coletas oficiais
+        de amostras e análises laboratoriais.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">5</div>
+
+    <h3>Registro da ação</h3>
+
+    <p>
+        As constatações e providências adotadas são formalizadas
+        nos documentos e sistemas oficiais correspondentes.
+    </p>
+
+</div>
+
+
+<div class="passo">
+
+    <div class="numero">6</div>
+
+    <h3>Providências</h3>
+
+    <p>
+        Conforme o caso, podem ser determinadas correções,
+        medidas cautelares ou outras providências previstas
+        na legislação.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📑 O que o estabelecimento deve manter organizado?</h2>
+
+    <p>
+        A organização dos registros facilita a demonstração
+        da conformidade durante a fiscalização.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>📚 Autocontrole</h3>
+
+    <p>
+        Programas e registros de autocontrole aplicáveis
+        às atividades desenvolvidas pelo estabelecimento.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🧹 Higiene e BPF</h3>
+
+    <p>
+        Procedimentos e registros relacionados às condições
+        higiênico-sanitárias e às Boas Práticas de Fabricação,
+        quando aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔎 Rastreabilidade</h3>
+
+    <p>
+        Registros capazes de demonstrar a origem das matérias-primas,
+        identificação dos lotes, produção e destino dos produtos.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🧪 Análises</h3>
+
+    <p>
+        Registros de análises e controles realizados pelo
+        estabelecimento, conforme os requisitos aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📦 Controle de produtos</h3>
+
+    <p>
+        Informações relacionadas aos produtos produzidos,
+        recebidos, armazenados e expedidos.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>👥 Treinamentos</h3>
+
+    <p>
+        Registros de capacitação e treinamento relacionados
+        às atividades e aos procedimentos internos.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🔬 Coleta de amostras</h2>
+
+    <p>
+        A coleta oficial pode fazer parte da fiscalização quando
+        houver necessidade de verificar a conformidade do produto.
+    </p>
+
+</div>
+
+
+<div class="fonte">
+
+    <ul class="lista">
+
+        <li>
+            A coleta oficial deve seguir os procedimentos
+            estabelecidos pela fiscalização.
+        </li>
+
+        <li>
+            A amostra é identificada e vinculada ao procedimento
+            fiscal correspondente.
+        </li>
+
+        <li>
+            Quando houver análise laboratorial, a amostra é
+            encaminhada conforme o fluxo oficial.
+        </li>
+
+        <li>
+            O resultado da análise pode subsidiar a avaliação
+            de conformidade do produto.
+        </li>
+
+    </ul>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="alerta">
+
+    <strong>
+        ⚠️ Recebeu uma intimação ou documento fiscal?
+    </strong>
+
+    <p>
+        Leia atentamente o documento recebido e observe as
+        providências, documentos e prazos nele indicados.
+        Quando houver dúvida sobre o procedimento, utilize
+        os canais institucionais oficiais do MAPA.
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>⚖️ Quando há uma não conformidade</h2>
+
+    <p>
+        A providência administrativa depende da natureza da
+        ocorrência, do risco, dos antecedentes e das demais
+        circunstâncias previstas na legislação.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>🟢 Correção da irregularidade</h3>
+
+    <p>
+        Algumas situações podem permitir o saneamento da
+        irregularidade, conforme os requisitos e prazos
+        estabelecidos pela legislação e pela fiscalização.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🟡 Medida cautelar</h3>
+
+    <p>
+        Quando prevista e necessária, a fiscalização pode
+        adotar medida cautelar para prevenir riscos ou
+        interromper determinada situação irregular.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🔴 Processo administrativo</h3>
+
+    <p>
+        Determinadas infrações podem resultar na instauração
+        de procedimento administrativo e aplicação das
+        consequências previstas na legislação.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>⚖️ Defesa e manifestação</h3>
+
+    <p>
+        Nos procedimentos administrativos, devem ser observados
+        os direitos e as etapas processuais previstos na legislação
+        aplicável ao caso concreto.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📚 Base legal</h2>
+
+    <p>
+        Consulte sempre a legislação vigente e a norma específica
+        aplicável ao produto e à situação fiscal.
+    </p>
+
+</div>
+
+
+<div class="fonte">
+
+    <ul class="lista">
+
+        <li>
+            Lei nº 14.515, de 29 de dezembro de 2022 —
+            programas de autocontrole e procedimentos da defesa agropecuária.
+        </li>
+
+        <li>
+            Decreto nº 12.709, de 31 de outubro de 2025 —
+            Regulamento da Fiscalização de Produtos de Origem Vegetal.
+        </li>
+
+        <li>
+            Lei nº 9.972, de 25 de maio de 2000 —
+            classificação de produtos vegetais.
+        </li>
+
+        <li>
+            Legislação específica de bebidas, vinhos e demais
+            produtos de origem vegetal, conforme o produto.
+        </li>
+
+    </ul>
+
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar legislação de produtos vegetais
+    </a>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🔗 Consultas oficiais</h2>
+
+    <p>
+        Utilize as fontes oficiais para consultar a legislação
+        e as informações atualizadas.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>🛡️ Regulamento da fiscalização</h3>
+
+    <p>
+        Informações oficiais sobre o novo marco regulatório
+        da fiscalização de produtos de origem vegetal.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/dipov"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar MAPA
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📚 Legislação de produtos vegetais</h3>
+
+    <p>
+        Consulte leis, decretos, portarias, instruções normativas
+        e padrões oficiais de classificação.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📢 Editais de notificação</h3>
+
+    <p>
+        Consulte as notificações públicas disponibilizadas
+        pelo MAPA nos termos da legislação aplicável.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/edital-de-notificacao-ao-agente-fiscalizado"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="rodape">
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Superintendência Federal de Agricultura no Estado de São Paulo
+    </p>
+
+    <br>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
