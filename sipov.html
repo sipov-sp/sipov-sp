@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>O SIPOV-SP | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dfe5e1;
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    width: 48px;
+    height: 48px;
+    background: #176b3a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca h1 {
+    font-size: 22px;
+    color: #176b3a;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #68736d;
+}
+
+nav {
+    background: #176b3a;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #0f512b;
+}
+
+.hero {
+    background: #176b3a;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 850px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #176b3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #68736d;
+}
+
+.destaque {
+    background: #eef5f0;
+    border-left: 5px solid #176b3a;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.destaque strong {
+    color: #176b3a;
+    font-size: 19px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.card h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #68736d;
+    font-size: 15px;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+.contato {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 28px;
+}
+
+.contato p {
+    margin-bottom: 10px;
+}
+
+.contato strong {
+    color: #176b3a;
+}
+
+.botao {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #0f512b;
+}
+
+.aviso {
+    background: #fff8e8;
+    border-left: 5px solid #d39b16;
+    padding: 22px;
+    border-radius: 5px;
+}
+
+.aviso strong {
+    color: #8a6400;
+}
+
+footer {
+    background: #26332d;
+    color: white;
+    margin-top: 20px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 30px;
+}
+
+.rodape p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="topo">
+
+    <div class="marca">
+
+        <div class="simbolo">S</div>
+
+        <div>
+
+            <h1>SIPOV-SP</h1>
+
+            <p>
+                Serviço de Inspeção de Produtos de Origem Vegetal
+            </p>
+
+        </div>
+
+    </div>
+
+    <strong>MAPA</strong>
+
+</div>
+
+
+<nav>
+
+<div class="menu">
+
+    <a href="index.html">Início</a>
+
+    <a href="sipov.html">O SIPOV-SP</a>
+
+    <a href="registro.html">Registro</a>
+
+    <a href="bebidas.html">Bebidas</a>
+
+    <a href="classificacao.html">Classificação</a>
+
+    <a href="importacao.html">Importação</a>
+
+    <a href="fiscalizacao.html">Fiscalização</a>
+
+    <a href="legislacao.html">Legislação</a>
+
+    <a href="documentos.html">Documentos</a>
+
+    <a href="#">Contato</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-conteudo">
+
+    <h2>O SIPOV-SP</h2>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+        da Superintendência de Agricultura e Pecuária
+        do Estado de São Paulo.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+<div class="voltar">
+
+    <a href="index.html">
+        ← Voltar para a página inicial
+    </a>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>Quem somos</strong>
+
+    <p>
+        O SIPOV-SP integra a estrutura da Superintendência de
+        Agricultura e Pecuária do Estado de São Paulo (SFA-SP),
+        unidade do Ministério da Agricultura e Pecuária (MAPA).
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>🌱 O que fazemos?</h2>
+
+    <p>
+        Nossa atuação está relacionada à inspeção e fiscalização
+        de produtos de origem vegetal, conforme as competências
+        estabelecidas na legislação federal.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>📋 Registro</h3>
+
+    <p>
+        Atuação relacionada ao registro de estabelecimentos
+        e produtos sujeitos ao controle do MAPA.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🥤 Bebidas</h3>
+
+    <p>
+        Fiscalização e acompanhamento das atividades relacionadas
+        às bebidas, vinhos e derivados da uva e do vinho,
+        conforme a legislação aplicável.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🌾 Qualidade Vegetal</h3>
+
+    <p>
+        Atuação relacionada à classificação e à qualidade
+        dos produtos de origem vegetal, conforme as normas
+        aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>✈️ Importação</h3>
+
+    <p>
+        Participação nos procedimentos de fiscalização de
+        produtos de origem vegetal importados, conforme
+        as competências do MAPA.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🛡️ Fiscalização</h3>
+
+    <p>
+        Ações de fiscalização, inspeção, monitoramento e
+        verificação de conformidade dos produtos e
+        estabelecimentos sujeitos ao controle federal.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📚 Orientação</h3>
+
+    <p>
+        Disponibilização de informações públicas para auxiliar
+        estabelecimentos e usuários na compreensão dos
+        requisitos aplicáveis.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🏛️ Onde estamos na estrutura do MAPA?</h2>
+
+</div>
+
+
+<div class="destaque">
+
+    <p>
+        <strong>Ministério da Agricultura e Pecuária – MAPA</strong>
+    </p>
+
+    <p>
+        ↓
+    </p>
+
+    <p>
+        <strong>
+            Superintendência de Agricultura e Pecuária
+            do Estado de São Paulo – SFA-SP
+        </strong>
+    </p>
+
+    <p>
+        ↓
+    </p>
+
+    <p>
+        <strong>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+            – SIPOV-SP
+        </strong>
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>⚖️ Base de atuação</h2>
+
+    <p>
+        A atuação do SIPOV-SP está vinculada à legislação federal
+        aplicável aos produtos de origem vegetal.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Lei nº 14.515/2022</h3>
+
+    <p>
+        Estabelece princípios e regras relacionados aos
+        programas de autocontrole e à defesa agropecuária.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Decreto nº 12.709/2025</h3>
+
+    <p>
+        Institui o Regulamento da Fiscalização de Produtos
+        de Origem Vegetal e disciplina aspectos da fiscalização,
+        classificação, responsabilidades e sanções.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Legislação específica</h3>
+
+    <p>
+        A atuação também observa as normas específicas de cada
+        produto, atividade e procedimento.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Normas do MAPA</h3>
+
+    <p>
+        Portarias, instruções normativas e demais atos
+        administrativos complementam a regulamentação
+        aplicável.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📍 Atendimento institucional</h2>
+
+    <p>
+        Informações oficiais de contato do SIPOV-SP.
+    </p>
+
+</div>
+
+
+<div class="contato">
+
+    <p>
+        <strong>Serviço:</strong>
+        Serviço de Inspeção de Produtos de Origem Vegetal – SIPOV-SP
+    </p>
+
+    <p>
+        <strong>Unidade:</strong>
+        Superintendência de Agricultura e Pecuária do Estado de São Paulo – SFA-SP
+    </p>
+
+    <p>
+        <strong>Endereço:</strong>
+        Rua 13 de Maio, nº 1558, 2º andar, Bela Vista,
+        São Paulo/SP – CEP 01327-002
+    </p>
+
+    <p>
+        <strong>E-mail:</strong>
+        sipov-sp@agro.gov.br
+    </p>
+
+    <p>
+        <strong>Telefone:</strong>
+        (11) 3787-5420
+    </p>
+
+    <a
+        class="botao"
+        href="mailto:sipov-sp@agro.gov.br"
+    >
+        Enviar e-mail
+    </a>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="aviso">
+
+    <strong>⚠️ Importante</strong>
+
+    <p>
+        Para informações sobre processos, registros, fiscalização
+        ou outros procedimentos administrativos, utilize os canais
+        institucionais apropriados e informe, quando necessário,
+        o número do processo ou documento relacionado.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🔗 Informações oficiais</h2>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Ministério da Agricultura e Pecuária</h3>
+
+    <p>
+        Portal institucional do MAPA.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar MAPA
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Produtos de Origem Vegetal</h3>
+
+    <p>
+        Página oficial com informações, legislação,
+        registros, importação e demais conteúdos da
+        Inspeção Vegetal.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="rodape">
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Superintendência de Agricultura e Pecuária
+        do Estado de São Paulo
+    </p>
+
+    <br>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
