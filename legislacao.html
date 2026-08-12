@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legislação | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dfe5e1;
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    width: 48px;
+    height: 48px;
+    background: #176b3a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca h1 {
+    font-size: 22px;
+    color: #176b3a;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #68736d;
+}
+
+nav {
+    background: #176b3a;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #0f512b;
+}
+
+.hero {
+    background: #176b3a;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 850px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #176b3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #68736d;
+}
+
+.destaque {
+    background: #eef5f0;
+    border-left: 5px solid #176b3a;
+    padding: 22px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+}
+
+.destaque strong {
+    color: #176b3a;
+    font-size: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.card h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #68736d;
+    font-size: 15px;
+}
+
+.normas {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.normas h3 {
+    color: #176b3a;
+    margin-bottom: 12px;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+.botao {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #0f512b;
+}
+
+.aviso {
+    background: #fff8e8;
+    border-left: 5px solid #d39b16;
+    padding: 22px;
+    border-radius: 5px;
+}
+
+.aviso strong {
+    color: #8a6400;
+}
+
+footer {
+    background: #26332d;
+    color: white;
+    margin-top: 20px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 30px;
+}
+
+.rodape p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="topo">
+
+    <div class="marca">
+
+        <div class="simbolo">S</div>
+
+        <div>
+
+            <h1>SIPOV-SP</h1>
+
+            <p>
+                Serviço de Inspeção de Produtos de Origem Vegetal
+            </p>
+
+        </div>
+
+    </div>
+
+    <strong>MAPA</strong>
+
+</div>
+
+
+<nav>
+
+<div class="menu">
+
+    <a href="index.html">Início</a>
+
+    <a href="registro.html">Registro</a>
+
+    <a href="bebidas.html">Bebidas</a>
+
+    <a href="classificacao.html">Classificação</a>
+
+    <a href="importacao.html">Importação</a>
+
+    <a href="fiscalizacao.html">Fiscalização</a>
+
+    <a href="legislacao.html">Legislação</a>
+
+    <a href="#">Documentos</a>
+
+    <a href="#">Contato</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-conteudo">
+
+    <h2>Legislação</h2>
+
+    <p>
+        Leis, decretos, portarias, instruções normativas,
+        padrões oficiais e demais referências aplicáveis
+        aos produtos de origem vegetal.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+<div class="voltar">
+
+    <a href="index.html">
+        ← Voltar para a página inicial
+    </a>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>Consulte sempre a fonte oficial</strong>
+
+    <p>
+        A legislação pode ser alterada, revogada ou substituída.
+        O SIPOV-SP organiza os principais assuntos para facilitar
+        a consulta, mas a versão oficial da norma deve ser sempre
+        verificada na fonte oficial correspondente.
+    </p>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>📚 Encontre a legislação</h2>
+
+    <p>
+        Selecione o assunto de seu interesse.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>🌾 Produtos Vegetais</h3>
+
+    <p>
+        Qualidade, segurança, padrões oficiais de classificação,
+        requisitos e demais normas aplicáveis aos produtos
+        de origem vegetal.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar legislação
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🥤 Vinhos e Bebidas</h3>
+
+    <p>
+        Legislação específica para bebidas, vinhos e derivados
+        da uva e do vinho.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/bebidas"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar legislação
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🌾 Classificação Vegetal</h3>
+
+    <p>
+        Padrões Oficiais de Classificação, legislação de qualidade
+        vegetal e referências aplicáveis à classificação.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar POC
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📦 Importação</h3>
+
+    <p>
+        Normas e orientações relacionadas à importação,
+        fiscalização agropecuária e requisitos para produtos
+        de origem vegetal.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/importacao"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Consultar
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>⚖️ Principais normas estruturantes</h2>
+
+    <p>
+        Algumas das normas fundamentais para a atuação
+        na área de produtos de origem vegetal.
+    </p>
+
+</div>
+
+
+<div class="normas">
+
+<ul class="lista">
+
+    <li>
+        <strong>Lei nº 7.678/1988</strong> —
+        produção, circulação e comercialização de vinho
+        e derivados da uva e do vinho.
+    </li>
+
+    <li>
+        <strong>Lei nº 8.918/1994</strong> —
+        padronização, classificação, registro, inspeção
+        e fiscalização da produção de bebidas.
+    </li>
+
+    <li>
+        <strong>Lei nº 9.972/2000</strong> —
+        classificação de produtos vegetais.
+    </li>
+
+    <li>
+        <strong>Lei nº 14.515/2022</strong> —
+        programas de autocontrole e defesa agropecuária.
+    </li>
+
+    <li>
+        <strong>Decreto nº 12.709/2025</strong> —
+        Regulamento da Fiscalização de Produtos de Origem Vegetal.
+    </li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📜 Tipos de atos normativos</h2>
+
+    <p>
+        Entenda rapidamente o tipo de documento que você está consultando.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Lei</h3>
+
+    <p>
+        Norma aprovada pelo Poder Legislativo e sancionada
+        conforme o processo legislativo.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Decreto</h3>
+
+    <p>
+        Ato normativo utilizado, entre outras finalidades,
+        para regulamentar leis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Portaria</h3>
+
+    <p>
+        Ato administrativo normativo utilizado pelos órgãos
+        competentes para disciplinar matérias de sua atribuição.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Instrução Normativa</h3>
+
+    <p>
+        Ato utilizado para estabelecer orientações, procedimentos
+        e requisitos dentro da competência administrativa do órgão.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🔎 Qual legislação devo consultar?</h2>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Tenho uma fábrica de bebidas</h3>
+
+    <p>
+        Comece pela legislação específica de bebidas e,
+        conforme o produto, consulte também as normas gerais
+        de produtos de origem vegetal.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Trabalho com classificação</h3>
+
+    <p>
+        Consulte a legislação de classificação vegetal,
+        os Padrões Oficiais de Classificação e as regras
+        do CGC/MAPA.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Vou importar</h3>
+
+    <p>
+        Consulte os requisitos específicos do produto,
+        as regras de importação e os procedimentos
+        de fiscalização aplicáveis.
+    </p>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Fui fiscalizado</h3>
+
+    <p>
+        Consulte a legislação específica do produto,
+        o RISPOV e as normas relacionadas ao autocontrole
+        e à fiscalização.
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>📋 Padrões Oficiais de Classificação</h2>
+
+    <p>
+        Consulte os padrões oficiais e o Compêndio de Produtos Vegetais.
+    </p>
+
+</div>
+
+
+<div class="destaque">
+
+    <strong>
+        Padrões Oficiais de Classificação Vegetal
+    </strong>
+
+    <p>
+        A página oficial do MAPA reúne a listagem dos Padrões
+        Oficiais de Classificação e outras referências de qualidade
+        e segurança dos produtos vegetais.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar página oficial
+    </a>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="aviso">
+
+    <strong>⚠️ Atenção</strong>
+
+    <p>
+        Esta página tem finalidade informativa e de organização
+        das fontes públicas. Em caso de divergência, prevalece
+        o texto oficial da legislação vigente publicado pelos
+        canais oficiais competentes.
+    </p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="rodape">
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Superintendência Federal de Agricultura no Estado de São Paulo
+    </p>
+
+    <br>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
