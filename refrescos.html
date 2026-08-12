@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refrescos, Refrigerantes e Preparados | SIPOV-SP</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #08783f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #176b3a;
+            color: white;
+        }
+
+        .topo {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 20px;
+        }
+
+        .topo h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .topo p {
+            font-size: 16px;
+            max-width: 800px;
+        }
+
+        nav {
+            background: #075d31;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 12px 20px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 20px 50px;
+        }
+
+        .voltar {
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+
+        .destaque {
+            background: #edf6f0;
+            border-left: 5px solid #16743f;
+            padding: 22px;
+            margin-bottom: 32px;
+            border-radius: 4px;
+        }
+
+        .destaque strong {
+            display: block;
+            color: #08783f;
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #08783f;
+            font-size: 27px;
+            margin: 30px 0 8px;
+        }
+
+        .intro {
+            color: #5b6963;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 9px;
+            padding: 22px;
+        }
+
+        .card h3 {
+            color: #08783f;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #52615a;
+            font-size: 15px;
+        }
+
+        .passos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .passo {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .numero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #08783f;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .passo h3 {
+            color: #08783f;
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+
+        .atencao {
+            background: #edf6f0;
+            border-left: 5px solid #16743f;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .atencao strong {
+            color: #08783f;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .fontes {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 9px;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #16743f;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .botao:hover {
+            background: #0d5c30;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #1f2f27;
+            color: white;
+            padding: 28px 20px;
+        }
+
+        .rodape {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #dbe4df;
+        }
+
+        @media (max-width: 800px) {
+            .cards,
+            .passos {
+                grid-template-columns: 1fr;
+            }
+
+            .topo h1 {
+                font-size: 28px;
+            }
+
+            .nav-inner {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html">Início</a>
+            <a href="sipov.html">O SIPOV-SP</a>
+            <a href="registro.html">Registro</a>
+            <a href="bebidas.html">Bebidas</a>
+            <a href="classificacao.html">Classificação</a>
+            <a href="importacao.html">Importação</a>
+            <a href="fiscalizacao.html">Fiscalização</a>
+            <a href="legislacao.html">Legislação</a>
+            <a href="documentos.html">Documentos</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </nav>
+
+    <div class="topo">
+        <h1>🥤 Refrescos, Refrigerantes e Preparados</h1>
+        <p>
+            Orientações para enquadramento, composição, denominação,
+            registro e consulta dos requisitos aplicáveis.
+        </p>
+    </div>
+
+</header>
+
+<main>
+
+    <div class="voltar">
+        ← <a href="bebidas.html">Voltar para Bebidas</a>
+    </div>
+
+    <div class="destaque">
+        <strong>Antes de registrar seu produto</strong>
+        Verifique o enquadramento pretendido, a composição, a matéria-prima,
+        a denominação e os requisitos específicos previstos na legislação aplicável.
+    </div>
+
+    <h2>🥤 Qual produto você pretende registrar?</h2>
+
+    <p class="intro">
+        Identifique a categoria do produto antes de verificar os requisitos
+        específicos de composição, denominação e rotulagem.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🥤 Refrigerante</h3>
+            <p>
+                Consulte os requisitos específicos da categoria e o respectivo
+                padrão aplicável ao produto.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🍹 Refresco</h3>
+            <p>
+                Verifique o enquadramento, a composição e os requisitos
+                específicos aplicáveis ao produto.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🧃 Preparado para refresco</h3>
+            <p>
+                Consulte os requisitos específicos da categoria, incluindo
+                composição, denominação e características previstas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Outros preparados</h3>
+            <p>
+                Quando o produto não se enquadrar claramente nas categorias
+                apresentadas, consulte a legislação e o padrão correspondente.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h2>🔎 Como analisar seu produto?</h2>
+
+    <p class="intro">
+        O correto enquadramento deve preceder a análise da composição,
+        denominação e demais requisitos aplicáveis.
+    </p>
+
+    <div class="passos">
+
+        <div class="passo">
+            <span class="numero">1</span>
+            <h3>Identifique o produto</h3>
+            <p>
+                Defina o produto que pretende fabricar, importar ou comercializar.
+            </p>
+        </div>
+
+        <div class="passo">
+            <span class="numero">2</span>
+            <h3>Verifique o enquadramento</h3>
+            <p>
+                Identifique a categoria correspondente às características
+                e à composição do produto.
+            </p>
+        </div>
+
+        <div class="passo">
+            <span class="numero">3</span>
+            <h3>Confira a composição</h3>
+            <p>
+                Verifique matérias-primas, ingredientes, aditivos e demais
+                requisitos previstos para a categoria.
+            </p>
+        </div>
+
+        <div class="passo">
+            <span class="numero">4</span>
+            <h3>Confira a denominação</h3>
+            <p>
+                A denominação de venda deve ser compatível com o enquadramento
+                e os requisitos aplicáveis.
+            </p>
+        </div>
+
+        <div class="passo">
+            <span class="numero">5</span>
+            <h3>Verifique a rotulagem</h3>
+            <p>
+                Confira as informações obrigatórias e os requisitos específicos
+                aplicáveis ao produto.
+            </p>
+        </div>
+
+        <div class="passo">
+            <span class="numero">6</span>
+            <h3>Registre no SIPEAGRO</h3>
+            <p>
+                Após verificar os requisitos aplicáveis, realize o procedimento
+                correspondente no sistema.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="atencao">
+        <strong>⚠️ Atenção</strong>
+        O enquadramento de um produto depende de suas características,
+        composição e requisitos específicos. A denominação pretendida deve
+        ser compatível com o enquadramento e com a legislação vigente.
+    </div>
+
+
+    <h2>📚 Principais referências</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📖 Cartilhão de Bebidas</h3>
+            <p>
+                Material de apoio para consulta das normas e requisitos
+                relacionados às bebidas.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/compendios/Anexo_Instrucao_Normativa_140_2024_6Edicao.pdf/view"
+                target="_blank"
+                rel="noopener noreferrer">
+                Consultar Cartilhão
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>📋 Padrões aplicáveis às bebidas</h3>
+            <p>
+                Consulte a relação oficial do MAPA com os produtos e respectivos
+                padrões ou atos normativos aplicáveis.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos/padroes-aplicaveis-as-bebidas"
+                target="_blank"
+                rel="noopener noreferrer">
+                Consultar padrões oficiais
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="fontes">
+
+        <h3>🔗 Referências oficiais</h3>
+
+        <p>
+            As orientações desta página têm caráter informativo.
+            A versão oficial e vigente das normas deve ser sempre consultada
+            na fonte oficial correspondente.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos"
+            target="_blank"
+            rel="noopener noreferrer">
+            Consultar orientações oficiais do MAPA
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="rodape">
+
+        <h3>SIPOV-SP</h3>
+
+        <p>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+        </p>
+
+        <p>
+            Superintendência de Agricultura e Pecuária no Estado de São Paulo – SFA-SP
+        </p>
+
+        <p>
+            Ministério da Agricultura e Pecuária – MAPA
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
