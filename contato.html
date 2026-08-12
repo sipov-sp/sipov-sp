@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contato | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dfe5e1;
+}
+
+.topo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    width: 48px;
+    height: 48px;
+    background: #176b3a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.marca h1 {
+    font-size: 22px;
+    color: #176b3a;
+}
+
+.marca p {
+    font-size: 13px;
+    color: #68736d;
+}
+
+nav {
+    background: #176b3a;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 17px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #0f512b;
+}
+
+.hero {
+    background: #176b3a;
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 850px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #176b3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    color: #68736d;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 28px;
+}
+
+.card h3 {
+    color: #176b3a;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #68736d;
+    font-size: 15px;
+}
+
+.contato {
+    background: white;
+    border: 1px solid #dfe5e1;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contato p {
+    margin-bottom: 12px;
+}
+
+.contato strong {
+    color: #176b3a;
+}
+
+.email {
+    font-size: 19px;
+    font-weight: bold;
+    color: #176b3a;
+    word-break: break-word;
+}
+
+.botao {
+    display: inline-block;
+    background: #176b3a;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #0f512b;
+}
+
+.aviso {
+    background: #fff8e8;
+    border-left: 5px solid #d39b16;
+    padding: 22px;
+    border-radius: 5px;
+}
+
+.aviso strong {
+    color: #8a6400;
+}
+
+.urgente {
+    background: #eef5f0;
+    border-left: 5px solid #176b3a;
+    padding: 22px;
+    border-radius: 5px;
+}
+
+.lista {
+    padding-left: 20px;
+}
+
+.lista li {
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #26332d;
+    color: white;
+    margin-top: 20px;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 30px;
+}
+
+.rodape p {
+    color: #c8d0cb;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="topo">
+
+    <div class="marca">
+
+        <div class="simbolo">S</div>
+
+        <div>
+
+            <h1>SIPOV-SP</h1>
+
+            <p>
+                Serviço de Inspeção de Produtos de Origem Vegetal
+            </p>
+
+        </div>
+
+    </div>
+
+    <strong>MAPA</strong>
+
+</div>
+
+
+<nav>
+
+<div class="menu">
+
+    <a href="index.html">Início</a>
+
+    <a href="sipov.html">O SIPOV-SP</a>
+
+    <a href="registro.html">Registro</a>
+
+    <a href="bebidas.html">Bebidas</a>
+
+    <a href="classificacao.html">Classificação</a>
+
+    <a href="importacao.html">Importação</a>
+
+    <a href="fiscalizacao.html">Fiscalização</a>
+
+    <a href="legislacao.html">Legislação</a>
+
+    <a href="documentos.html">Documentos</a>
+
+    <a href="contato.html">Contato</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-conteudo">
+
+    <h2>Contato</h2>
+
+    <p>
+        Canais institucionais para informações relacionadas
+        à atuação do SIPOV-SP.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+<div class="voltar">
+
+    <a href="index.html">
+        ← Voltar para a página inicial
+    </a>
+
+</div>
+
+
+<div class="titulo">
+
+    <h2>📞 Fale com o SIPOV-SP</h2>
+
+    <p>
+        Utilize os canais institucionais para encaminhar dúvidas,
+        solicitações e informações relacionadas às atividades
+        do Serviço.
+    </p>
+
+</div>
+
+
+<div class="contato">
+
+    <p>
+        <strong>Serviço:</strong><br>
+        Serviço de Inspeção de Produtos de Origem Vegetal – SIPOV-SP
+    </p>
+
+    <p>
+        <strong>Unidade:</strong><br>
+        Superintendência de Agricultura e Pecuária do Estado de São Paulo – SFA-SP
+    </p>
+
+    <p>
+        <strong>Endereço:</strong><br>
+        Rua 13 de Maio, nº 1558, 2º andar, Bela Vista,
+        São Paulo/SP – CEP 01327-002
+    </p>
+
+    <p>
+        <strong>E-mail institucional:</strong><br>
+
+        <span class="email">
+            sipov-sp@agro.gov.br
+        </span>
+    </p>
+
+    <p>
+        <strong>Telefone:</strong><br>
+        (11) 3787-5420
+    </p>
+
+    <a
+        class="botao"
+        href="mailto:sipov-sp@agro.gov.br"
+    >
+        ✉️ Enviar e-mail
+    </a>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🧭 Qual assunto você procura?</h2>
+
+    <p>
+        Antes de entrar em contato, verifique se a informação
+        que você procura já está disponível no portal.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>📋 Registro</h3>
+
+    <p>
+        Para informações sobre registro de estabelecimento,
+        registro de produtos, alteração cadastral ou renovação.
+    </p>
+
+    <a class="botao" href="registro.html">
+        Ver Registro
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🥤 Bebidas</h3>
+
+    <p>
+        Para orientações relacionadas à composição, denominação,
+        rotulagem e registro de bebidas.
+    </p>
+
+    <a class="botao" href="bebidas.html">
+        Ver Bebidas
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🌾 Classificação</h3>
+
+    <p>
+        Para informações relacionadas à classificação e aos
+        Padrões Oficiais de Classificação.
+    </p>
+
+    <a class="botao" href="classificacao.html">
+        Ver Classificação
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>✈️ Importação</h3>
+
+    <p>
+        Para orientações relacionadas aos procedimentos de
+        importação de produtos de origem vegetal.
+    </p>
+
+    <a class="botao" href="importacao.html">
+        Ver Importação
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>🛡️ Fiscalização</h3>
+
+    <p>
+        Para informações relacionadas à fiscalização,
+        autocontrole e procedimentos administrativos.
+    </p>
+
+    <a class="botao" href="fiscalizacao.html">
+        Ver Fiscalização
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>📚 Legislação</h3>
+
+    <p>
+        Consulte primeiro a legislação e as referências
+        normativas organizadas no portal.
+    </p>
+
+    <a class="botao" href="legislacao.html">
+        Ver Legislação
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="urgente">
+
+    <strong>📌 Antes de enviar uma solicitação</strong>
+
+    <p>
+        Para facilitar o atendimento, informe de forma objetiva
+        o assunto da solicitação e, quando aplicável, o número
+        do processo, estabelecimento, produto, documento ou
+        procedimento relacionado.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="titulo">
+
+    <h2>🌐 Outros canais oficiais</h2>
+
+    <p>
+        Alguns serviços e informações não são realizados diretamente
+        pelo SIPOV-SP.
+    </p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+    <h3>Portal do MAPA</h3>
+
+    <p>
+        Informações institucionais, serviços, legislação e
+        conteúdos oficiais do Ministério da Agricultura e Pecuária.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/agricultura/pt-br"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar MAPA
+    </a>
+
+</div>
+
+
+<div class="card">
+
+    <h3>Gov.br</h3>
+
+    <p>
+        Portal oficial de serviços e informações do Governo Federal.
+    </p>
+
+    <a
+        class="botao"
+        href="https://www.gov.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar Gov.br
+    </a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+<div class="aviso">
+
+    <strong>⚠️ Atenção</strong>
+
+    <p>
+        O envio de e-mail não substitui os procedimentos formais
+        previstos para processos administrativos. Quando houver
+        procedimento específico no SEI, SIPEAGRO ou outro sistema
+        oficial, deverá ser utilizado o canal correspondente.
+    </p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="rodape">
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Superintendência de Agricultura e Pecuária
+        do Estado de São Paulo
+    </p>
+
+    <br>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
