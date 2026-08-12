@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kombucha | SIPOV-SP</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #146c3a;
+            color: white;
+            padding: 32px 7%;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 14px;
+            max-width: 850px;
+        }
+
+        nav {
+            background: #075f32;
+            padding: 10px 7%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 20px 60px;
+        }
+
+        .voltar {
+            margin-bottom: 25px;
+        }
+
+        .voltar a {
+            color: #08763d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .voltar a:hover {
+            text-decoration: underline;
+        }
+
+        .destaque {
+            background: #edf6f0;
+            border-left: 4px solid #08763d;
+            padding: 18px 20px;
+            margin-bottom: 32px;
+            border-radius: 3px;
+        }
+
+        .destaque strong {
+            display: block;
+            color: #08763d;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #08763d;
+            font-size: 25px;
+            margin: 35px 0 10px;
+        }
+
+        h3 {
+            color: #08763d;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+
+        .card ul {
+            margin: 10px 0 0 20px;
+        }
+
+        .card li {
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+
+        .passos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 18px;
+        }
+
+        .passo {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .numero {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            background: #08763d;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .atencao {
+            background: #fff8e8;
+            border-left: 4px solid #e4a400;
+            padding: 18px 20px;
+            margin: 25px 0;
+        }
+
+        .atencao strong {
+            color: #8a6200;
+        }
+
+        .referencia {
+            background: white;
+            border: 1px solid #d8dfdb;
+            border-radius: 8px;
+            padding: 22px;
+            margin-top: 18px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #08763d;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .botao:hover {
+            background: #075f32;
+        }
+
+        footer {
+            background: #20332b;
+            color: white;
+            padding: 28px 7%;
+            font-size: 12px;
+        }
+
+        footer h3 {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .cards,
+            .passos {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="registro.html">Registro</a>
+        <a href="bebidas.html">Bebidas</a>
+        <a href="classificacao.html">Classificação</a>
+        <a href="importacao.html">Importação</a>
+        <a href="fiscalizacao.html">Fiscalização</a>
+        <a href="legislacao.html">Legislação</a>
+        <a href="documentos.html">Documentos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <header>
+        <h1>🫧 Kombucha</h1>
+        <p>
+            Orientações para enquadramento, composição, denominação,
+            registro e consulta dos requisitos aplicáveis à kombucha.
+        </p>
+    </header>
+
+    <main>
+
+        <div class="voltar">
+            <a href="bebidas.html">← Voltar para Bebidas</a>
+        </div>
+
+        <div class="destaque">
+            <strong>Antes de registrar sua kombucha</strong>
+            Verifique o enquadramento do produto, sua composição,
+            os ingredientes utilizados, a denominação pretendida,
+            a rotulagem e os requisitos aplicáveis conforme a legislação vigente.
+        </div>
+
+        <h2>🔎 O que você precisa verificar?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🧪 Composição</h3>
+                <p>
+                    Verifique a composição declarada para o produto,
+                    incluindo os ingredientes, matérias-primas e demais
+                    componentes utilizados na elaboração.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🏷️ Denominação</h3>
+                <p>
+                    A denominação pretendida deve ser compatível com as
+                    características, composição e enquadramento do produto.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📋 Rotulagem</h3>
+                <p>
+                    Confira as informações obrigatórias e os requisitos
+                    específicos de rotulagem aplicáveis ao produto.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📚 Padrões e requisitos</h3>
+                <p>
+                    Consulte os padrões de identidade e qualidade e demais
+                    requisitos previstos para a categoria.
+                </p>
+            </div>
+
+        </div>
+
+        <h2>🧭 Como analisar sua kombucha?</h2>
+
+        <div class="passos">
+
+            <div class="passo">
+                <span class="numero">1</span>
+                <h3>Identifique o produto</h3>
+                <p>
+                    Defina o produto que pretende fabricar, importar
+                    ou comercializar.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span class="numero">2</span>
+                <h3>Verifique o enquadramento</h3>
+                <p>
+                    Confirme se as características e a composição do produto
+                    correspondem à categoria de kombucha.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span class="numero">3</span>
+                <h3>Confira a composição</h3>
+                <p>
+                    Verifique ingredientes, matérias-primas, aditivos e
+                    demais componentes previstos para o produto.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span class="numero">4</span>
+                <h3>Confira a denominação</h3>
+                <p>
+                    Avalie se a denominação pretendida é compatível com
+                    o enquadramento e as características do produto.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span class="numero">5</span>
+                <h3>Verifique a rotulagem</h3>
+                <p>
+                    Confira as informações obrigatórias e os requisitos
+                    específicos aplicáveis à rotulagem.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span class="numero">6</span>
+                <h3>Registre no SIPEAGRO</h3>
+                <p>
+                    Após verificar os requisitos aplicáveis, realize
+                    o procedimento correspondente no SIPEAGRO.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="atencao">
+            <strong>⚠️ Atenção</strong>
+            <p>
+                O enquadramento de uma kombucha depende das características
+                e da composição efetivamente apresentadas pelo produto.
+                A denominação pretendida deve ser compatível com seu
+                enquadramento e com os requisitos legais aplicáveis.
+            </p>
+        </div>
+
+        <h2>📖 Referências para consulta</h2>
+
+        <div class="cards">
+
+            <div class="referencia">
+                <h3>📘 Cartilhão de Bebidas</h3>
+                <p>
+                    Consulte o Cartilhão de Bebidas utilizado como material
+                    de apoio para consulta das normas e referências
+                    relacionadas às bebidas.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Consultar referências oficiais
+                </a>
+            </div>
+
+            <div class="referencia">
+                <h3>🏛️ Orientação oficial do MAPA</h3>
+                <p>
+                    As orientações apresentadas nesta página têm caráter
+                    informativo. Consulte sempre a legislação e as
+                    orientações oficiais vigentes.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Consultar MAPA
+                </a>
+            </div>
+
+        </div>
+
+        <div class="destaque" style="margin-top: 30px;">
+            <strong>📌 Importante</strong>
+            As informações desta página têm finalidade orientativa.
+            A versão oficial das normas deve ser sempre consultada na
+            fonte correspondente e considerada para a análise do produto.
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>SIPOV-SP</h3>
+
+        <p>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+        </p>
+
+        <p>
+            Superintendência Federal de Agricultura no Estado de São Paulo
+        </p>
+
+        <p>
+            Ministério da Agricultura e Pecuária – MAPA
+        </p>
+    </footer>
+
+</body>
+
+</html>
