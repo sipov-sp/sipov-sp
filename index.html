@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIPOV-SP | MAPA</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #dfe5e1;
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .simbolo {
+            width: 48px;
+            height: 48px;
+            background: #176b3a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .marca h1 {
+            font-size: 22px;
+            color: #176b3a;
+            letter-spacing: 0.5px;
+        }
+
+        .marca p {
+            font-size: 13px;
+            color: #68736d;
+        }
+
+        nav {
+            background: #176b3a;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 17px;
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            background: #0f512b;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #176b3a, #23864c);
+            color: white;
+        }
+
+        .hero-conteudo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 30px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            max-width: 700px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 720px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 30px;
+        }
+
+        .titulo {
+            margin-bottom: 25px;
+        }
+
+        .titulo h2 {
+            font-size: 28px;
+            color: #176b3a;
+            margin-bottom: 5px;
+        }
+
+        .titulo p {
+            color: #68736d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-color: #176b3a;
+        }
+
+        .icone {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #176b3a;
+            margin-bottom: 8px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #68736d;
+            font-size: 14px;
+        }
+
+        .acessos {
+            background: white;
+            border-top: 1px solid #dfe5e1;
+            border-bottom: 1px solid #dfe5e1;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .link-box {
+            background: #f5f7f6;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #26332d;
+            border: 1px solid #e2e7e4;
+        }
+
+        .link-box strong {
+            display: block;
+            color: #176b3a;
+            margin-bottom: 5px;
+        }
+
+        .avisos {
+            background: #eef5f0;
+            border-left: 5px solid #176b3a;
+            padding: 22px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #26332d;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .rodape {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 30px;
+        }
+
+        .rodape h3 {
+            margin-bottom: 8px;
+        }
+
+        .rodape p {
+            color: #c8d0cb;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+
+            .topo {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .links {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .menu {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .links {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-conteudo,
+            .container,
+            .topo {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="topo">
+
+        <div class="marca">
+
+            <div class="simbolo">S</div>
+
+            <div>
+                <h1>SIPOV-SP</h1>
+                <p>Serviço de Inspeção de Produtos de Origem Vegetal</p>
+            </div>
+
+        </div>
+
+        <div>
+            <strong>MAPA</strong>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <div class="menu">
+
+            <a href="index.html">Início</a>
+            <a href="#">O SIPOV-SP</a>
+            <a href="#">Registro</a>
+            <a href="#">Bebidas</a>
+            <a href="#">Classificação</a>
+            <a href="#">Importação</a>
+            <a href="#">Fiscalização</a>
+            <a href="#">Legislação</a>
+            <a href="#">Documentos</a>
+            <a href="#">Contato</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <h2>Serviço de Inspeção de Produtos de Origem Vegetal</h2>
+
+        <p>
+            Informações, orientações, legislação e serviços relacionados
+            à inspeção de produtos de origem vegetal no Estado de São Paulo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>O que você procura?</h2>
+
+        <p>
+            Acesse rapidamente as principais áreas de atuação do SIPOV-SP.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <a class="card" href="#">
+
+            <div class="icone">📋</div>
+
+            <h3>Registro</h3>
+
+            <p>
+                Orientações para registro e alteração cadastral
+                de estabelecimentos e produtos.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="#">
+
+            <div class="icone">🥤</div>
+
+            <h3>Bebidas</h3>
+
+            <p>
+                Informações sobre registro, composição,
+                rotulagem e legislação de bebidas.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="#">
+
+            <div class="icone">🌾</div>
+
+            <h3>Classificação Vegetal</h3>
+
+            <p>
+                Informações sobre classificação oficial
+                e produtos de origem vegetal.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="#">
+
+            <div class="icone">📦</div>
+
+            <h3>Importação</h3>
+
+            <p>
+                Orientações e procedimentos para importação
+                de produtos de origem vegetal.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="#">
+
+            <div class="icone">🔎</div>
+
+            <h3>Fiscalização</h3>
+
+            <p>
+                Informações sobre fiscalização,
+                coleta de amostras e autocontrole.
+            </p>
+
+        </a>
+
+
+        <a class="card" href="#">
+
+            <div class="icone">📚</div>
+
+            <h3>Legislação</h3>
+
+            <p>
+                Consulte leis, decretos, portarias,
+                instruções normativas e orientações.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="acessos">
+
+    <div class="container">
+
+        <div class="titulo">
+
+            <h2>Acessos rápidos</h2>
+
+            <p>
+                Sistemas e serviços relacionados à atuação do MAPA.
+            </p>
+
+        </div>
+
+
+        <div class="links">
+
+            <a class="link-box" href="#">
+                <strong>SIPEAGRO</strong>
+                Sistema de registro e acompanhamento.
+            </a>
+
+            <a class="link-box" href="#">
+                <strong>SISCOLE</strong>
+                Sistema relacionado à coleta de amostras.
+            </a>
+
+            <a class="link-box" href="#">
+                <strong>Gov.br / MAPA</strong>
+                Serviços e informações oficiais.
+            </a>
+
+            <a class="link-box" href="#">
+                <strong>DIPOV</strong>
+                Departamento de Inspeção de Produtos de Origem Vegetal.
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>🔔 Avisos</h2>
+
+        <p>
+            Comunicados e atualizações importantes.
+        </p>
+
+    </div>
+
+    <div class="avisos">
+
+        <strong>Portal SIPOV-SP em construção</strong>
+
+        <p>
+            Este portal está sendo estruturado para facilitar o acesso
+            a orientações, documentos, legislação e serviços relacionados
+            à inspeção de produtos de origem vegetal.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="rodape">
+
+        <h3>SIPOV-SP</h3>
+
+        <p>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+        </p>
+
+        <p>
+            Superintendência Federal de Agricultura no Estado de São Paulo
+        </p>
+
+        <br>
+
+        <p>
+            Ministério da Agricultura e Pecuária – MAPA
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
