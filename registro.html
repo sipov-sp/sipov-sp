@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | SIPOV-SP</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #dfe5e1;
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .simbolo {
+            width: 48px;
+            height: 48px;
+            background: #176b3a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .marca h1 {
+            font-size: 22px;
+            color: #176b3a;
+        }
+
+        .marca p {
+            font-size: 13px;
+            color: #68736d;
+        }
+
+        nav {
+            background: #176b3a;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 17px;
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            background: #0f512b;
+        }
+
+        .hero {
+            background: #176b3a;
+            color: white;
+        }
+
+        .hero-conteudo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 30px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 30px;
+        }
+
+        .titulo {
+            margin-bottom: 25px;
+        }
+
+        .titulo h2 {
+            color: #176b3a;
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .titulo p {
+            color: #68736d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: #176b3a;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #68736d;
+            font-size: 15px;
+        }
+
+        .lista {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .lista li {
+            margin-bottom: 8px;
+        }
+
+        .destaque {
+            background: #eef5f0;
+            border-left: 5px solid #176b3a;
+            padding: 22px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .destaque strong {
+            color: #176b3a;
+        }
+
+        .passos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .passo {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .numero {
+            width: 34px;
+            height: 34px;
+            background: #176b3a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .passo h3 {
+            color: #176b3a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #176b3a;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background: #0f512b;
+        }
+
+        .voltar {
+            margin-bottom: 25px;
+        }
+
+        .voltar a {
+            color: #176b3a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #26332d;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .rodape {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 30px;
+        }
+
+        .rodape p {
+            color: #c8d0cb;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+
+            .cards,
+            .passos {
+                grid-template-columns: 1fr;
+            }
+
+            .topo {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="topo">
+
+        <div class="marca">
+
+            <div class="simbolo">S</div>
+
+            <div>
+
+                <h1>SIPOV-SP</h1>
+
+                <p>
+                    Serviço de Inspeção de Produtos de Origem Vegetal
+                </p>
+
+            </div>
+
+        </div>
+
+        <strong>MAPA</strong>
+
+    </div>
+
+
+    <nav>
+
+        <div class="menu">
+
+            <a href="index.html">Início</a>
+
+            <a href="registro.html">Registro</a>
+
+            <a href="#">Bebidas</a>
+
+            <a href="#">Classificação</a>
+
+            <a href="#">Importação</a>
+
+            <a href="#">Fiscalização</a>
+
+            <a href="#">Legislação</a>
+
+            <a href="#">Documentos</a>
+
+            <a href="#">Contato</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <h2>Registro</h2>
+
+        <p>
+            Orientações sobre registro de estabelecimentos e produtos
+            de origem vegetal no Ministério da Agricultura e Pecuária.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+    <div class="voltar">
+
+        <a href="index.html">← Voltar para a página inicial</a>
+
+    </div>
+
+
+    <div class="destaque">
+
+        <strong>Antes de solicitar o registro</strong>
+
+        <p>
+            Verifique o enquadramento da atividade, os requisitos
+            aplicáveis e a documentação necessária antes de iniciar
+            a solicitação no sistema eletrônico do MAPA.
+        </p>
+
+    </div>
+
+
+    <div class="titulo">
+
+        <h2>O que você precisa?</h2>
+
+        <p>
+            Selecione a situação que corresponde ao seu estabelecimento.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>🏭 Registro de estabelecimento</h3>
+
+            <p>
+                Orientações para solicitação de registro de
+                estabelecimentos sujeitos à fiscalização de
+                produtos de origem vegetal.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🥤 Registro de produtos</h3>
+
+            <p>
+                Informações sobre registro de produtos sujeitos
+                ao controle do MAPA, conforme a legislação
+                específica aplicável.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🔄 Alteração cadastral</h3>
+
+            <p>
+                Orientações para atualização das informações
+                cadastrais e das condições relacionadas ao registro.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📋 Renovação / manutenção</h3>
+
+            <p>
+                Informações relacionadas à manutenção da regularidade
+                do registro e cumprimento permanente da legislação.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>📑 Documentação</h2>
+
+        <p>
+            A documentação exigida depende do tipo de estabelecimento,
+            atividade e nível de registro aplicável.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>Manual de Boas Práticas de Fabricação</h3>
+
+            <p>
+                Documento que descreve as práticas adotadas pelo
+                estabelecimento para garantir as condições
+                higiênico-sanitárias e a conformidade do processo.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Memorial Descritivo</h3>
+
+            <p>
+                Documento contendo informações sobre o estabelecimento,
+                instalações, equipamentos, processos e atividades.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Planta e fluxograma</h3>
+
+            <p>
+                Representação das instalações e dos fluxos relacionados
+                às atividades desenvolvidas no estabelecimento.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Documentação complementar</h3>
+
+            <p>
+                Outros documentos podem ser exigidos de acordo com
+                a atividade, produto e legislação específica.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>🧭 Passo a passo</h2>
+
+        <p>
+            De forma geral, a solicitação ocorre por meio do sistema
+            eletrônico disponibilizado pelo MAPA.
+        </p>
+
+    </div>
+
+
+    <div class="passos">
+
+
+        <div class="passo">
+
+            <div class="numero">1</div>
+
+            <h3>Verifique o enquadramento</h3>
+
+            <p>
+                Identifique a atividade, os produtos envolvidos
+                e o tipo de registro aplicável.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">2</div>
+
+            <h3>Prepare a documentação</h3>
+
+            <p>
+                Organize os documentos e informações exigidos
+                para a solicitação.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">3</div>
+
+            <h3>Acesse o SIPEAGRO</h3>
+
+            <p>
+                Realize a solicitação utilizando o sistema
+                eletrônico do MAPA.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">4</div>
+
+            <h3>Envie as informações</h3>
+
+            <p>
+                Preencha os dados solicitados e apresente
+                a documentação correspondente.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">5</div>
+
+            <h3>Acompanhe a análise</h3>
+
+            <p>
+                Acompanhe a solicitação e, quando houver,
+                atenda às pendências apresentadas.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">6</div>
+
+            <h3>Mantenha o registro atualizado</h3>
+
+            <p>
+                Após o registro, mantenha as condições aprovadas
+                e as informações cadastrais atualizadas.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <a
+        class="botao"
+        href="https://sistemasweb.agricultura.gov.br/pages/SIPEAGRO.html"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Acessar o SIPEAGRO
+    </a>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>📚 Informações oficiais</h2>
+
+        <p>
+            Consulte a página oficial do MAPA para orientações
+            detalhadas e atualizadas.
+        </p>
+
+    </div>
+
+
+    <div class="destaque">
+
+        <strong>Registro de Estabelecimentos e Produtos de Origem Vegetal</strong>
+
+        <p>
+            O MAPA disponibiliza orientações específicas sobre
+            registro de estabelecimentos, produtos, documentação,
+            enquadramento e procedimentos.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Consultar orientação oficial do MAPA
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="rodape">
+
+        <h3>SIPOV-SP</h3>
+
+        <p>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+        </p>
+
+        <p>
+            Superintendência Federal de Agricultura no Estado de São Paulo
+        </p>
+
+        <br>
+
+        <p>
+            Ministério da Agricultura e Pecuária – MAPA
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
