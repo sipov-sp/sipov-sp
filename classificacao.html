@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Classificação Vegetal | SIPOV-SP</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #dfe5e1;
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .simbolo {
+            width: 48px;
+            height: 48px;
+            background: #176b3a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .marca h1 {
+            font-size: 22px;
+            color: #176b3a;
+        }
+
+        .marca p {
+            font-size: 13px;
+            color: #68736d;
+        }
+
+        nav {
+            background: #176b3a;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 17px;
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            background: #0f512b;
+        }
+
+        .hero {
+            background: #176b3a;
+            color: white;
+        }
+
+        .hero-conteudo {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 30px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 850px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 30px;
+        }
+
+        .voltar {
+            margin-bottom: 25px;
+        }
+
+        .voltar a {
+            color: #176b3a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .titulo {
+            margin-bottom: 25px;
+        }
+
+        .titulo h2 {
+            color: #176b3a;
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .titulo p {
+            color: #68736d;
+        }
+
+        .destaque {
+            background: #eef5f0;
+            border-left: 5px solid #176b3a;
+            padding: 22px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .destaque strong {
+            color: #176b3a;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: #176b3a;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #68736d;
+            font-size: 15px;
+        }
+
+        .passos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .passo {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .numero {
+            width: 34px;
+            height: 34px;
+            background: #176b3a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .passo h3 {
+            color: #176b3a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .lista {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .lista li {
+            margin-bottom: 8px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #176b3a;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background: #0f512b;
+        }
+
+        .fonte {
+            background: white;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        footer {
+            background: #26332d;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .rodape {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 30px;
+        }
+
+        .rodape p {
+            color: #c8d0cb;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+
+            .cards,
+            .passos {
+                grid-template-columns: 1fr;
+            }
+
+            .topo {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="topo">
+
+        <div class="marca">
+
+            <div class="simbolo">S</div>
+
+            <div>
+
+                <h1>SIPOV-SP</h1>
+
+                <p>
+                    Serviço de Inspeção de Produtos de Origem Vegetal
+                </p>
+
+            </div>
+
+        </div>
+
+        <strong>MAPA</strong>
+
+    </div>
+
+
+    <nav>
+
+        <div class="menu">
+
+            <a href="index.html">Início</a>
+
+            <a href="registro.html">Registro</a>
+
+            <a href="bebidas.html">Bebidas</a>
+
+            <a href="classificacao.html">Classificação</a>
+
+            <a href="#">Importação</a>
+
+            <a href="#">Fiscalização</a>
+
+            <a href="#">Legislação</a>
+
+            <a href="#">Documentos</a>
+
+            <a href="#">Contato</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-conteudo">
+
+        <h2>Classificação Vegetal</h2>
+
+        <p>
+            Informações sobre classificação de produtos de origem vegetal,
+            padrões oficiais, documentos, classificadores e procedimentos.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main>
+
+
+<section class="container">
+
+    <div class="voltar">
+
+        <a href="index.html">← Voltar para a página inicial</a>
+
+    </div>
+
+
+    <div class="destaque">
+
+        <strong>Antes de solicitar a classificação</strong>
+
+        <p>
+            Verifique se o produto possui Padrão Oficial de Classificação
+            estabelecido pelo MAPA e identifique os requisitos aplicáveis.
+        </p>
+
+    </div>
+
+
+    <div class="titulo">
+
+        <h2>🌾 O que você procura?</h2>
+
+        <p>
+            Encontre orientações de acordo com a sua necessidade.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>🔎 Meu produto precisa de classificação?</h3>
+
+            <p>
+                Verifique se o produto possui Padrão Oficial de
+                Classificação e se está sujeito à classificação
+                obrigatória.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📋 Padrões Oficiais de Classificação</h3>
+
+            <p>
+                Consulte os padrões estabelecidos pelo MAPA
+                para os produtos vegetais.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏢 Empresas e serviços de classificação</h3>
+
+            <p>
+                Consulte informações sobre empresas credenciadas
+                para prestação de serviços de classificação vegetal.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>👨‍🔬 Classificadores</h3>
+
+            <p>
+                Informações sobre habilitação, registro no CGC/MAPA
+                e renovação da habilitação de classificadores.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📄 Documento de classificação</h3>
+
+            <p>
+                Informações sobre os requisitos e informações
+                que devem constar no documento de classificação.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📚 Legislação</h3>
+
+            <p>
+                Consulte as principais normas relacionadas à
+                classificação de produtos vegetais.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>❓ Quando a classificação é obrigatória?</h2>
+
+        <p>
+            A obrigatoriedade depende do produto e da situação
+            prevista na legislação.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>🍽️ Alimentação humana</h3>
+
+            <p>
+                Produtos vegetais que possuam Padrão Oficial de
+                Classificação e sejam destinados diretamente à
+                alimentação humana, em condições de serem oferecidos
+                ao consumidor final.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏛️ Operações com o Poder Público</h3>
+
+            <p>
+                Nas operações de compra, venda ou doação realizadas
+                pelo Poder Público, observadas as disposições
+                legais e exceções aplicáveis.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>✈️ Importação</h3>
+
+            <p>
+                A classificação de produtos vegetais importados
+                ocorre nos portos, aeroportos e postos de fronteira,
+                conforme as regras aplicáveis à importação.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>🧭 Como funciona?</h2>
+
+        <p>
+            O procedimento deve observar o Padrão Oficial de
+            Classificação aplicável ao produto.
+        </p>
+
+    </div>
+
+
+    <div class="passos">
+
+
+        <div class="passo">
+
+            <div class="numero">1</div>
+
+            <h3>Identifique o produto</h3>
+
+            <p>
+                Verifique a denominação do produto e se existe
+                Padrão Oficial de Classificação.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">2</div>
+
+            <h3>Consulte o padrão</h3>
+
+            <p>
+                Consulte os requisitos de identidade e qualidade
+                estabelecidos para o produto.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">3</div>
+
+            <h3>Escolha a forma de classificação</h3>
+
+            <p>
+                Verifique se a classificação será realizada
+                pelo próprio estabelecimento ou por empresa
+                credenciada, conforme a legislação aplicável.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">4</div>
+
+            <h3>Realize a classificação</h3>
+
+            <p>
+                A classificação deve seguir o Padrão Oficial
+                de Classificação correspondente ao produto.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">5</div>
+
+            <h3>Emita o documento</h3>
+
+            <p>
+                O resultado deve ser formalizado conforme os
+                requisitos aplicáveis ao documento de classificação.
+            </p>
+
+        </div>
+
+
+        <div class="passo">
+
+            <div class="numero">6</div>
+
+            <h3>Mantenha os registros</h3>
+
+            <p>
+                Mantenha os documentos e registros relacionados
+                à classificação conforme a legislação aplicável.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>📑 Principais documentos e referências</h2>
+
+        <p>
+            Algumas das principais normas relacionadas à classificação
+            vegetal incluem:
+        </p>
+
+    </div>
+
+
+    <div class="fonte">
+
+        <ul class="lista">
+
+            <li>
+                Lei nº 9.972/2000 — classificação de produtos vegetais.
+            </li>
+
+            <li>
+                Decreto nº 6.268/2007 — regulamentação da classificação.
+            </li>
+
+            <li>
+                Lei nº 14.515/2022 — autocontrole na defesa agropecuária.
+            </li>
+
+            <li>
+                Instrução Normativa nº 08/2014 — documento de classificação.
+            </li>
+
+            <li>
+                Instrução Normativa nº 09/2019 e alterações — CGC/MAPA.
+            </li>
+
+            <li>
+                Portaria nº 521/2022 — formação e qualificação de classificadores.
+            </li>
+
+        </ul>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Consultar legislação oficial
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <div class="titulo">
+
+        <h2>🔗 Consultas oficiais</h2>
+
+        <p>
+            Acesse diretamente as informações disponibilizadas
+            pelo MAPA.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>📋 Padrões Oficiais de Classificação</h3>
+
+            <p>
+                Listagem dos padrões oficiais e informações
+                relacionadas à classificação vegetal.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/legislacaoPOV"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>👨‍🔬 Habilitação de classificadores</h3>
+
+            <p>
+                Orientações oficiais sobre habilitação e renovação
+                da habilitação de classificadores.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-classificadores-de-produtos-vegetais"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏢 Serviços de classificação</h3>
+
+            <p>
+                Consulte informações oficiais sobre classificação
+                para o mercado interno e operações com o Poder Público.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/acesso-a-informacao/acoes-e-programas/cartas-de-servico/defesa-agropecuaria-produtos-de-origem-vegetal/classificacao-de-produtos-vegetais-para-o-mercado-interno-e-para-compra-e-venda-do-poder-publico-federal-estadual-municipal"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="rodape">
+
+        <h3>SIPOV-SP</h3>
+
+        <p>
+            Serviço de Inspeção de Produtos de Origem Vegetal
+        </p>
+
+        <p>
+            Superintendência Federal de Agricultura no Estado de São Paulo
+        </p>
+
+        <br>
+
+        <p>
+            Ministério da Agricultura e Pecuária – MAPA
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
