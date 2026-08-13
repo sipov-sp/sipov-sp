@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cervejas | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #26332d;
+    line-height: 1.6;
+}
+
+header {
+    background: #176b3a;
+    color: white;
+    padding: 35px 7%;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    max-width: 800px;
+}
+
+nav {
+    background: #075c2e;
+    padding: 10px 7%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 25px;
+}
+
+.voltar {
+    margin-bottom: 25px;
+}
+
+.voltar a {
+    color: #08783f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.destaque {
+    background: #edf6f0;
+    border-left: 4px solid #08783f;
+    padding: 18px;
+    margin-bottom: 35px;
+}
+
+.destaque strong {
+    color: #075c2e;
+}
+
+h2 {
+    color: #08783f;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.introducao {
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #d7dfda;
+    border-radius: 8px;
+    padding: 22px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    color: #08783f;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.card h3 a {
+    color: #08783f;
+    text-decoration: none;
+}
+
+.card p {
+    font-size: 14px;
+    color: #4c5953;
+}
+
+.observacao {
+    background: #fffdf0;
+    border-left: 4px solid #c6a500;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+.referencias {
+    margin-top: 40px;
+}
+
+.referencias h2 {
+    margin-bottom: 18px;
+}
+
+.referencias-box {
+    background: white;
+    border: 1px solid #d7dfda;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.referencias-box p {
+    margin-bottom: 12px;
+}
+
+.botao {
+    display: inline-block;
+    background: #08783f;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+footer {
+    background: #176b3a;
+    color: white;
+    margin-top: 50px;
+    padding: 30px 7%;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Início</a>
+<a href="registro.html">Registro</a>
+<a href="bebidas.html">Bebidas</a>
+<a href="classificacao.html">Classificação</a>
+<a href="importacao.html">Importação</a>
+<a href="fiscalizacao.html">Fiscalização</a>
+<a href="legislacao.html">Legislação</a>
+<a href="documentos.html">Documentos</a>
+<a href="contato.html">Contato</a>
+
+</nav>
+
+
+<header>
+
+<h1>🍺 Cervejas</h1>
+
+<p>
+Orientações sobre enquadramento, composição, denominação,
+padrões de identidade e qualidade, registro, rotulagem e
+legislação aplicável às cervejas.
+</p>
+
+</header>
+
+
+<main>
+
+<div class="voltar">
+
+<a href="outras.html">← Voltar para Outras Bebidas</a>
+
+</div>
+
+
+<div class="destaque">
+
+<strong>Antes de registrar sua cerveja</strong>
+
+<p>
+Verifique o enquadramento do produto, a composição,
+os ingredientes, os aditivos, a denominação pretendida,
+os parâmetros de identidade e qualidade e os requisitos
+de rotulagem aplicáveis.
+</p>
+
+</div>
+
+
+<h2>🍺 O que você precisa verificar?</h2>
+
+<p class="introducao">
+A análise de uma cerveja deve começar pelo enquadramento
+correto do produto e pela conferência de sua composição
+com os requisitos previstos na legislação aplicável.
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🔎 Enquadramento</h3>
+
+<p>
+Identifique corretamente o produto e verifique se suas
+características e composição permitem o enquadramento
+como cerveja.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧪 Composição</h3>
+
+<p>
+Confira matérias-primas, ingredientes, adjuntos,
+aditivos e demais componentes utilizados na elaboração
+do produto.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📋 Denominação</h3>
+
+<p>
+A denominação pretendida deve ser compatível com as
+características, composição e enquadramento legal
+da cerveja.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📊 Padrões de identidade e qualidade</h3>
+
+<p>
+Verifique os parâmetros e requisitos específicos
+estabelecidos para o produto e seus diferentes
+enquadramentos.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏷️ Rotulagem</h3>
+
+<p>
+Confira a denominação de venda, lista de ingredientes,
+informações obrigatórias e demais requisitos aplicáveis
+à rotulagem.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💻 Registro no SIPEAGRO</h3>
+
+<p>
+Após verificar o enquadramento e os requisitos aplicáveis,
+realize o procedimento correspondente no SIPEAGRO.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="observacao">
+
+<strong>⚠️ Atenção</strong>
+
+<p>
+A denominação e a composição declaradas no registro devem
+ser compatíveis com o enquadramento do produto e com os
+requisitos estabelecidos na legislação vigente.
+</p>
+
+</div>
+
+
+<section class="referencias">
+
+<h2>📚 Principais referências</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>📘 Padrão de Identidade e Qualidade</h3>
+
+<p>
+Consulte os requisitos específicos aplicáveis aos
+produtos de cervejaria, incluindo composição,
+denominação e parâmetros de identidade e qualidade.
+</p>
+
+<a
+class="botao"
+href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-de-produtos-origem-vegetal/biblioteca-de-normas-vinhos-e-bebidas"
+target="_blank"
+rel="noopener noreferrer">
+
+Consultar legislação oficial
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>📗 Cartilhão de Bebidas</h3>
+
+<p>
+Material de apoio para consulta dos padrões de
+identidade e qualidade, denominações, parâmetros
+analíticos e requisitos de rotulagem.
+</p>
+
+<a
+class="botao"
+href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-de-produtos-origem-vegetal/biblioteca-de-normas-vinhos-e-bebidas"
+target="_blank"
+rel="noopener noreferrer">
+
+Consultar referências oficiais
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏛️ Orientação oficial do MAPA</h3>
+
+<p>
+As informações desta página possuem caráter orientativo.
+Consulte sempre a legislação e as orientações oficiais
+vigentes antes do registro ou comercialização do produto.
+</p>
+
+<a
+class="botao"
+href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/bebidas"
+target="_blank"
+rel="noopener noreferrer">
+
+Consultar MAPA
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="observacao">
+
+<strong>📌 Importante</strong>
+
+<p>
+O SIPOV-SP organiza as informações para facilitar a consulta.
+A versão oficial das normas deve ser sempre verificada na
+fonte correspondente.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<h3>SIPOV-SP</h3>
+
+<p>
+Serviço de Inspeção de Produtos de Origem Vegetal
+</p>
+
+<p>
+Ministério da Agricultura e Pecuária – MAPA
+</p>
+
+</footer>
+
+</body>
+
+</html>
