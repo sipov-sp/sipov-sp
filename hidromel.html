@@ -33,7 +33,7 @@
 
         header p {
             margin: 0;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
         }
 
@@ -45,130 +45,144 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-right: 25px;
-            font-size: 13px;
+            margin-right: 24px;
+            font-size: 12px;
             font-weight: bold;
         }
 
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 35px 20px 50px;
+            padding: 32px 20px 50px;
         }
 
         .voltar {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .voltar a {
             color: #08783f;
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .aviso {
             background: #edf7f1;
             border-left: 4px solid #08783f;
-            padding: 16px 18px;
-            margin-bottom: 30px;
+            padding: 14px 16px;
+            margin-bottom: 28px;
         }
 
         .aviso strong {
             display: block;
             color: #08783f;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         h2 {
             color: #08783f;
-            margin-top: 30px;
+            margin-top: 28px;
+            margin-bottom: 6px;
+            font-size: 21px;
         }
 
         h3 {
             color: #08783f;
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .intro {
             margin-top: 0;
+            margin-bottom: 18px;
         }
 
         .cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin: 20px 0 30px;
+            gap: 14px;
+            margin: 18px 0 26px;
         }
 
         .card {
             background: white;
             border: 1px solid #d7ded9;
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 7px;
+            padding: 16px;
         }
 
         .card p {
-            margin-bottom: 0;
-            font-size: 14px;
-        }
-
-        .card ul {
-            margin-bottom: 0;
-        }
-
-        .etapa {
-            background: white;
-            border: 1px solid #d7ded9;
-            border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 12px;
-        }
-
-        .etapa strong {
-            color: #08783f;
+            margin: 0;
+            font-size: 12px;
         }
 
         .atencao {
             background: #fffbea;
             border-left: 4px solid #d6a400;
-            padding: 18px;
-            margin: 25px 0;
+            padding: 14px 16px;
+            margin: 22px 0 28px;
+        }
+
+        .atencao strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .atencao p {
+            margin: 0;
         }
 
         .referencias {
             background: white;
             border: 1px solid #d7ded9;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 15px;
+            border-radius: 7px;
+            padding: 16px;
+        }
+
+        .referencias p {
+            margin-top: 0;
+            margin-bottom: 8px;
         }
 
         .botao {
             display: inline-block;
             background: #08783f;
             color: white;
-            padding: 10px 16px;
-            border-radius: 5px;
+            padding: 9px 13px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 13px;
-            margin-top: 10px;
+            font-size: 11px;
+        }
+
+        .botao:hover {
+            background: #075f32;
         }
 
         footer {
             background: #075f32;
             color: white;
-            padding: 30px 6%;
-            margin-top: 30px;
+            padding: 28px 6%;
+            margin-top: 20px;
         }
 
         footer h3 {
             color: white;
+            margin-bottom: 6px;
         }
 
         footer p {
-            margin: 5px 0;
-            font-size: 13px;
+            margin: 3px 0;
+            font-size: 12px;
         }
 
         @media (max-width: 700px) {
+
             .cards {
                 grid-template-columns: 1fr;
             }
@@ -184,14 +198,19 @@
 <body>
 
 <header>
+
     <h1>🍯 Hidromel</h1>
+
     <p>
         Orientações sobre enquadramento, composição, denominação,
         registro, rotulagem e requisitos aplicáveis ao hidromel.
     </p>
+
 </header>
 
+
 <nav>
+
     <a href="index.html">Início</a>
     <a href="registro.html">Registro</a>
     <a href="bebidas.html">Bebidas</a>
@@ -201,7 +220,9 @@
     <a href="legislacao.html">Legislação</a>
     <a href="documentos.html">Documentos</a>
     <a href="contato.html">Contato</a>
+
 </nav>
+
 
 <main>
 
@@ -209,162 +230,137 @@
         <a href="outras.html">← Voltar para Outras bebidas</a>
     </div>
 
+
     <div class="aviso">
+
         <strong>Antes de registrar seu produto</strong>
+
         Verifique o enquadramento do produto, sua composição,
         a matéria-prima utilizada, a denominação pretendida,
         os ingredientes e os requisitos específicos previstos
         na legislação aplicável.
+
     </div>
 
-    <h2>🍯 Hidromel</h2>
 
-    <p>
-        Consulte as orientações abaixo para verificar o enquadramento
-        do produto, os principais aspectos de composição, denominação,
-        rotulagem e registro.
+    <h2>🍯 O que você precisa verificar?</h2>
+
+    <p class="intro">
+        A análise de um hidromel deve começar pelo enquadramento correto
+        do produto e pela conferência de sua composição com os requisitos
+        previstos na legislação aplicável.
     </p>
 
 
-    <h2>🔎 Como analisar seu hidromel?</h2>
-
     <div class="cards">
 
-        <div class="card">
-            <h3>1️⃣ Identifique o produto</h3>
-            <p>
-                Defina as características do produto que pretende
-                fabricar, importar ou comercializar.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>2️⃣ Verifique o enquadramento</h3>
+
+            <h3>🔎 Enquadramento</h3>
+
             <p>
-                Confira se as características e a composição do produto
-                são compatíveis com o enquadramento pretendido.
+                Identifique corretamente o produto e verifique se suas
+                características e composição permitem o enquadramento
+                como hidromel.
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>3️⃣ Confira a composição</h3>
-            <p>
-                Verifique matérias-primas, ingredientes, aditivos
-                e demais componentes utilizados na elaboração.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>4️⃣ Confira a denominação</h3>
+
+            <h3>🧪 Composição</h3>
+
             <p>
-                A denominação de venda deve ser compatível com o
-                enquadramento e os requisitos aplicáveis ao produto.
+                Confira matérias-primas, ingredientes, adjuvantes,
+                aditivos e demais componentes utilizados na elaboração
+                do produto.
             </p>
+
         </div>
 
-        <div class="card">
-            <h3>5️⃣ Verifique a rotulagem</h3>
-            <p>
-                Confira as informações obrigatórias e os requisitos
-                específicos aplicáveis à rotulagem.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>6️⃣ Registre no SIPEAGRO</h3>
+
+            <h3>📋 Denominação</h3>
+
             <p>
-                Após verificar os requisitos aplicáveis, realize
-                o procedimento correspondente no sistema.
+                A denominação pretendida deve ser compatível com as
+                características, composição e enquadramento legal
+                do hidromel.
             </p>
+
         </div>
+
+
+        <div class="card">
+
+            <h3>📊 Padrões de identidade e qualidade</h3>
+
+            <p>
+                Verifique os parâmetros e requisitos específicos
+                estabelecidos para o produto e seu enquadramento.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏷️ Rotulagem</h3>
+
+            <p>
+                Confira a denominação de venda, lista de ingredientes,
+                informações obrigatórias e demais requisitos aplicáveis
+                à rotulagem.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>💻 Registro no SIPEAGRO</h3>
+
+            <p>
+                Após verificar o enquadramento e os requisitos aplicáveis,
+                realize o procedimento correspondente no SIPEAGRO.
+            </p>
+
+        </div>
+
 
     </div>
 
 
     <div class="atencao">
+
         <strong>⚠️ Atenção</strong>
+
         <p>
-            O enquadramento de uma bebida depende das características,
-            composição e requisitos específicos aplicáveis ao produto.
-            A denominação pretendida deve ser compatível com o
-            enquadramento e com a legislação vigente.
+            A denominação e a composição declaradas no registro devem
+            ser compatíveis com o enquadramento do produto e com os
+            requisitos estabelecidos na legislação vigente.
         </p>
-    </div>
 
-
-    <h2>📋 Pontos de verificação</h2>
-
-    <div class="etapa">
-        <strong>🍯 Matéria-prima</strong>
-        <p>
-            Verifique a matéria-prima utilizada na elaboração e sua
-            compatibilidade com o produto pretendido.
-        </p>
-    </div>
-
-    <div class="etapa">
-        <strong>🧪 Composição</strong>
-        <p>
-            Confira a composição declarada, os ingredientes, eventuais
-            aditivos e demais componentes empregados no produto.
-        </p>
-    </div>
-
-    <div class="etapa">
-        <strong>🏷️ Denominação</strong>
-        <p>
-            A denominação de venda deve corresponder às características
-            e ao enquadramento efetivamente aplicável ao produto.
-        </p>
-    </div>
-
-    <div class="etapa">
-        <strong>📦 Rotulagem</strong>
-        <p>
-            Verifique as informações obrigatórias, a apresentação da
-            denominação e demais requisitos aplicáveis à rotulagem.
-        </p>
-    </div>
-
-    <div class="etapa">
-        <strong>💻 Registro</strong>
-        <p>
-            Após a confirmação do enquadramento e dos requisitos
-            aplicáveis, proceda ao registro no SIPEAGRO, quando exigido.
-        </p>
     </div>
 
 
     <h2>📚 Principais referências</h2>
 
+
     <div class="cards">
 
-        <div class="referencias">
-            <h3>📘 Cartilhão de Bebidas</h3>
-
-            <p>
-                Consulte o Cartilhão de Bebidas como material de apoio
-                para consulta das normas e referências relacionadas às
-                bebidas.
-            </p>
-
-            <a
-                class="botao"
-                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal"
-                target="_blank"
-                rel="noopener noreferrer">
-                Consultar referências oficiais
-            </a>
-        </div>
-
 
         <div class="referencias">
-            <h3>🏛️ Orientação oficial do MAPA</h3>
+
+            <h3>📘 Requisitos específicos do produto</h3>
 
             <p>
-                As informações desta página possuem caráter orientativo.
-                Consulte sempre a legislação e as orientações oficiais
-                vigentes.
+                Consulte a legislação vigente e os requisitos aplicáveis
+                ao enquadramento, composição, denominação e padrões
+                de identidade e qualidade do produto.
             </p>
 
             <a
@@ -372,22 +368,74 @@
                 href="https://www.gov.br/agricultura/pt-br"
                 target="_blank"
                 rel="noopener noreferrer">
-                Consultar MAPA
+
+                Consultar legislação oficial
+
             </a>
+
         </div>
+
+
+        <div class="referencias">
+
+            <h3>📗 Cartilhão de Bebidas</h3>
+
+            <p>
+                Material de apoio para consulta das normas e referências
+                relacionadas às bebidas.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Consultar referências oficiais
+
+            </a>
+
+        </div>
+
+
+        <div class="referencias">
+
+            <h3>🏛️ Orientação oficial do MAPA</h3>
+
+            <p>
+                As informações desta página possuem caráter orientativo.
+                Consulte sempre a legislação e as orientações oficiais
+                vigentes antes do registro ou comercialização do produto.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Consultar MAPA
+
+            </a>
+
+        </div>
+
 
     </div>
 
 
     <div class="atencao">
+
         <strong>📌 Importante</strong>
 
         <p>
-            A versão oficial das normas deve ser sempre consultada
-            na fonte correspondente. Esta página possui finalidade
-            orientativa e não substitui a legislação vigente.
+            O SIPOV-SP organiza as informações para facilitar a consulta.
+            A versão oficial das normas deve ser sempre verificada
+            na fonte correspondente.
         </p>
+
     </div>
+
 
 </main>
 
@@ -405,6 +453,7 @@
     </p>
 
 </footer>
+
 
 </body>
 </html>
