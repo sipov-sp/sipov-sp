@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registro de Importador e Exportador de Bebidas | SIPOV-SP</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f5;
+    color: #173b2a;
+    line-height: 1.5;
+}
+
+header {
+    background: #08783f;
+    height: 22px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px;
+}
+
+a {
+    color: #08783f;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #08783f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+h1 {
+    color: #08783f;
+    font-size: 30px;
+    margin: 5px 0 8px;
+}
+
+h2 {
+    color: #08783f;
+    font-size: 22px;
+    margin-top: 34px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #08783f;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+p {
+    color: #333;
+    font-size: 14px;
+}
+
+.intro {
+    background: #eaf5ee;
+    border-left: 4px solid #08783f;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+}
+
+.intro strong {
+    display: block;
+    color: #08783f;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.destaque {
+    background: #eaf5ee;
+    border-left: 5px solid #08783f;
+    padding: 17px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.destaque h3 {
+    margin-bottom: 6px;
+}
+
+.atencao {
+    background: #fff9df;
+    border-left: 5px solid #e2b400;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.atencao strong {
+    color: #5b4900;
+}
+
+.atencao p {
+    margin-bottom: 8px;
+}
+
+.documento {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.documento h3 {
+    margin-bottom: 12px;
+}
+
+.documento ul {
+    margin-top: 10px;
+}
+
+.documento li {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.documento a {
+    font-weight: bold;
+}
+
+.checklist {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li {
+    padding: 9px 0;
+    border-bottom: 1px solid #edf1ee;
+    color: #333;
+    font-size: 14px;
+}
+
+.checklist li:last-child {
+    border-bottom: none;
+}
+
+.check {
+    color: #08783f;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.sipeagro {
+    background: #eaf5ee;
+    border: 1px solid #b9d8c5;
+    border-left: 5px solid #08783f;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.sipeagro h3 {
+    margin-bottom: 5px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 9px 14px;
+    background: #08783f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background: #065f31;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    padding: 18px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.legal {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.legal ul {
+    margin-top: 8px;
+}
+
+.legal li {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.legal a {
+    color: #08783f;
+    font-weight: bold;
+}
+
+footer {
+    background: #08783f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 35px;
+}
+
+footer p {
+    color: white;
+    margin: 3px 0;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header></header>
+
+<div class="container">
+
+
+<!-- VOLTAR -->
+
+<a href="registro-estabelecimento.html" class="voltar">
+    ← Voltar para Registro de Estabelecimento
+</a>
+
+
+<!-- TÍTULO -->
+
+<h1>
+    📦 Registro de Importador e Exportador de Bebidas
+</h1>
+
+
+<!-- INTRODUÇÃO -->
+
+<div class="intro">
+
+    <strong>
+        Exclusivamente importadores ou exportadores inscritos no CNPJ
+    </strong>
+
+    <p>
+        Esta página reúne as principais orientações para estabelecimentos
+        que exercem exclusivamente atividades de importação ou exportação
+        de bebidas, fermentados acéticos, vinhos e derivados da uva e do vinho.
+    </p>
+
+    <p>
+        O procedimento de registro é realizado por meio do SIPEAGRO,
+        mediante apresentação da documentação aplicável ao estabelecimento.
+    </p>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- ATENÇÃO -->
+<!-- ====================================================== -->
+
+<div class="atencao">
+
+    <strong>
+        ⚠️ Atenção: esta orientação é para estabelecimentos exclusivamente importadores ou exportadores
+    </strong>
+
+    <p>
+        Esta modalidade é destinada ao estabelecimento que exerce
+        exclusivamente atividade de importação ou exportação.
+    </p>
+
+    <p>
+        Caso o estabelecimento também realize produção, fabricação,
+        elaboração, padronização ou envase de bebidas, deverão ser
+        observados os requisitos correspondentes à atividade efetivamente
+        desenvolvida.
+    </p>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- ENDEREÇO -->
+<!-- ====================================================== -->
+
+<h2>
+    🏢 O endereço do estabelecimento
+</h2>
+
+<div class="atencao">
+
+    <strong>
+        ⚠️ O endereço informado não pode ser residencial
+    </strong>
+
+    <p>
+        O estabelecimento deve possuir endereço físico próprio,
+        identificável e compatível com a atividade declarada.
+    </p>
+
+    <p>
+        O endereço informado na solicitação de registro deve
+        corresponder ao local efetivamente utilizado para o
+        desenvolvimento das atividades objeto do registro e
+        permitir sua identificação e fiscalização pelo MAPA.
+    </p>
+
+    <p>
+        <strong>
+            Antes de protocolar a solicitação, confira se o endereço
+            cadastrado no SIPEAGRO é o mesmo constante nos documentos
+            apresentados.
+        </strong>
+    </p>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- DOCUMENTOS -->
+<!-- ====================================================== -->
+
+<h2>
+    📑 Documentos obrigatórios
+</h2>
+
+<p>
+    Para estabelecimentos exclusivamente importadores ou exportadores
+    inscritos no CNPJ, deverão ser apresentados os documentos
+    correspondentes à atividade exercida.
+</p>
+
+
+<div class="documento">
+
+    <h3>
+        6.2 — Exclusivamente importadores ou exportadores inscritos no CNPJ
+    </h3>
+
+    <ul>
+
+        <li>
+
+            <strong>
+                Cópia do CPF dos sócios da empresa ou representante legal
+                do estabelecimento.
+            </strong>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Comprovante de Inscrição no Cadastro Nacional de Pessoa
+                Jurídica – CNPJ.
+            </strong>
+
+            <br>
+
+            <a
+                href="https://solucoes.receita.fazenda.gov.br/Servicos/cnpjreva/"
+                target="_blank"
+            >
+                Consultar / emitir comprovante de CNPJ
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Comprovante de Inscrição Estadual, quando aplicável.
+            </strong>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Contrato Social consolidado com suas alterações,
+                constando a atividade do estabelecimento prevista nos
+                Regulamentos das Leis nº 7.678, de 1988, e nº 8.918,
+                de 1994.
+            </strong>
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- CHECKLIST -->
+<!-- ====================================================== -->
+
+<h2>
+    ✅ Confira antes de enviar
+</h2>
+
+<div class="checklist">
+
+    <ul>
+
+        <li>
+            <span class="check">☐</span>
+            CNPJ ativo e compatível com a empresa solicitante;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            CPF dos sócios ou representante legal disponível;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Comprovante de CNPJ atualizado;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Inscrição Estadual apresentada, quando aplicável;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Contrato Social consolidado e suas alterações atualizado;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Atividade de importação e/ou exportação compatível
+            com o objeto social;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Endereço do estabelecimento informado corretamente;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Endereço não residencial;
+        </li>
+
+        <li>
+            <span class="check">☐</span>
+            Informações declaradas no SIPEAGRO compatíveis com
+            os documentos apresentados.
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- O QUE NÃO É NECESSÁRIO -->
+<!-- ====================================================== -->
+
+<h2>
+    📌 Atenção à documentação
+</h2>
+
+<div class="destaque">
+
+    <h3>
+        Não confunda as modalidades de registro
+    </h3>
+
+    <p>
+        Para o estabelecimento que exerce <strong>exclusivamente</strong>
+        atividades de importação ou exportação, a documentação é
+        específica e diferente daquela exigida para estabelecimentos
+        que produzem, fabricam, elaboram, padronizam ou envasilham bebidas.
+    </p>
+
+    <p>
+        Portanto, não devem ser exigidos para esta modalidade,
+        exclusivamente em razão do registro como importador/exportador,
+        os documentos próprios da estrutura produtiva, como Memorial
+        Descritivo de instalações e equipamentos e Manual de Boas Práticas
+        aplicável à fabricação.
+    </p>
+
+    <p>
+        <strong>
+            A atividade efetivamente exercida pelo estabelecimento
+            é que determina os requisitos aplicáveis.
+        </strong>
+    </p>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- SIPEAGRO -->
+<!-- ====================================================== -->
+
+<h2>
+    💻 Solicitação no SIPEAGRO
+</h2>
+
+<div class="sipeagro">
+
+    <h3>
+        Onde realizar a solicitação?
+    </h3>
+
+    <p>
+        O pedido de registro deve ser realizado por meio do
+        Sistema SIPEAGRO, com o preenchimento das informações
+        e inclusão dos documentos nas respectivas abas do sistema.
+    </p>
+
+    <p>
+        Antes de concluir o envio, confira se todas as informações
+        declaradas estão compatíveis entre si e com os documentos
+        anexados.
+    </p>
+
+    <a
+        href="http://sistemasweb.agricultura.gov.br/pages/SIPEAGRO.html"
+        target="_blank"
+        class="botao"
+    >
+        Acessar o SIPEAGRO
+    </a>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- IMPORTAÇÃO / EXPORTAÇÃO -->
+<!-- ====================================================== -->
+
+<h2>
+    🚢 Importação e exportação
+</h2>
+
+<div class="grid">
+
+    <div class="card">
+
+        <h3>
+            📥 Importação
+        </h3>
+
+        <p>
+            O estabelecimento registrado como importador deve observar
+            os requisitos aplicáveis aos produtos importados e aos
+            procedimentos de fiscalização correspondentes.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            📤 Exportação
+        </h3>
+
+        <p>
+            O estabelecimento registrado como exportador deve observar
+            os requisitos aplicáveis ao produto e ao país de destino,
+            inclusive eventuais exigências específicas estabelecidas
+            para a exportação.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- BASE LEGAL -->
+<!-- ====================================================== -->
+
+<h2>
+    📚 Base legal
+</h2>
+
+<div class="legal">
+
+    <p>
+        Entre os principais atos normativos relacionados às bebidas
+        e às atividades de importação e exportação estão:
+    </p>
+
+
+    <ul>
+
+        <li>
+
+            <a
+                href="https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7678.htm"
+                target="_blank"
+            >
+                Lei nº 7.678, de 8 de novembro de 1988
+            </a>
+
+            – dispõe sobre a produção, circulação e comercialização
+            do vinho e derivados da uva e do vinho.
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="https://www.planalto.gov.br/ccivil_03/leis/l8918.htm"
+                target="_blank"
+            >
+                Lei nº 8.918, de 14 de julho de 1994
+            </a>
+
+            – dispõe sobre a padronização, classificação, registro,
+            inspeção e fiscalização da produção de bebidas.
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14515.htm"
+                target="_blank"
+            >
+                Lei nº 14.515, de 29 de dezembro de 2022
+            </a>
+
+            – dispõe sobre programas de autocontrole e incentivo
+            à conformidade na defesa agropecuária.
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12709.htm"
+                target="_blank"
+            >
+                Decreto nº 12.709, de 31 de outubro de 2025
+            </a>
+
+            – regulamenta a fiscalização dos produtos abrangidos
+            pela legislação de defesa agropecuária.
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=detalharAtosArvore&tipo=INM&numeroAto=00000072&seqAto=000&valorAno=2018&orgao=GM/MAPA&codTipo=&desItem=&desItemFim="
+                target="_blank"
+            >
+                Instrução Normativa SDA/MAPA nº 72, de 16 de novembro de 2018
+            </a>
+
+            – estabelece requisitos e procedimentos para registro
+            de estabelecimentos e produtos classificados como bebidas
+            e fermentados acéticos.
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/bebidas"
+                target="_blank"
+            >
+                Instrução Normativa nº 140, de 28 de fevereiro de 2024
+            </a>
+
+            – consolida as normas de bebidas, fermentados acéticos,
+            vinhos e derivados da uva e do vinho.
+
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- ORIENTAÇÃO FINAL -->
+<!-- ====================================================== -->
+
+<div class="atencao">
+
+    <strong>
+        📌 Importante
+    </strong>
+
+    <p>
+        O registro como exclusivamente importador ou exportador
+        não substitui outras autorizações, habilitações ou
+        procedimentos eventualmente exigidos para a importação
+        ou exportação de determinados produtos ou destinos.
+    </p>
+
+    <p>
+        Sempre verifique os requisitos específicos aplicáveis
+        ao produto, à operação e ao país de destino.
+    </p>
+
+    <p>
+        As informações desta página possuem finalidade orientativa.
+        A legislação vigente e as orientações oficiais do MAPA
+        devem ser consultadas antes da formalização da solicitação.
+    </p>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal – SIPOV-SP
+    </p>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
