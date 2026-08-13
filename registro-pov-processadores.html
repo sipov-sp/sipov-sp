@@ -3,562 +3,1302 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Processadores, Industrializadores, Beneficiadores e Embaladores | SIPOV-SP</title>
+<title>Processadores, Industrializadores, Beneficiadores e Embaladores | SIPOV-SP</title>
 
-    <style>
+<style>
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f7f5;
-            color: #17351f;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f7f5;
+    color: #173b2b;
+}
 
-        .topo {
-            height: 22px;
-            background: #087a3d;
-        }
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+}
 
-        .container {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 30px 20px 50px;
-        }
+a {
+    color: #007a43;
+}
 
-        .voltar {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #087a3d;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.voltar {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-        h1,
-        h2,
-        h3 {
-            color: #087a3d;
-        }
+h1 {
+    color: #007a43;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+h2 {
+    color: #007a43;
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 8px;
+}
 
-        h2 {
-            margin-top: 35px;
-            font-size: 22px;
-        }
+h3 {
+    color: #007a43;
+    margin-top: 0;
+}
 
-        h3 {
-            margin-top: 0;
-            font-size: 18px;
-        }
+p {
+    line-height: 1.55;
+}
 
-        .intro {
-            background: #eaf5ee;
-            border-left: 4px solid #087a3d;
-            padding: 18px;
-            margin: 20px 0 30px;
-        }
+.card {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 15px;
+}
 
-        .card {
-            background: white;
-            border: 1px solid #d5ddd8;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-        }
+.botao {
+    display: inline-block;
+    background: #087f43;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
 
-        .card p:last-child {
-            margin-bottom: 0;
-        }
+.destaque {
+    background: #edf8f1;
+    border-left: 4px solid #087f43;
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 4px;
+}
 
-        .destaque {
-            background: #eaf5ee;
-            border-left: 4px solid #087a3d;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
+.alerta {
+    background: #fff9df;
+    border-left: 4px solid #e0ad00;
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 4px;
+}
 
-        .atencao {
-            background: #fff8dc;
-            border-left: 4px solid #d5a800;
-            padding: 20px;
-            margin: 25px 0;
-        }
+.info {
+    background: #eef7f2;
+    border-left: 4px solid #16804b;
+    padding: 18px;
+    margin-top: 18px;
+    border-radius: 4px;
+}
 
-        .importante {
-            background: #fff4d6;
-            border-left: 4px solid #e0a000;
-            padding: 20px;
-            margin: 25px 0;
-        }
+.niveis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 15px;
+}
 
-        ul {
-            padding-left: 22px;
-        }
+.nivel {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 8px;
+    padding: 18px;
+}
 
-        li {
-            margin-bottom: 8px;
-        }
+.nivel h3 {
+    margin-bottom: 8px;
+}
 
-        .botao {
-            display: inline-block;
-            background: #087a3d;
-            color: white;
-            padding: 9px 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 8px;
-        }
+.basico {
+    border-top: 5px solid #26934f;
+}
 
-        .botao:hover {
-            background: #065f30;
-        }
+.intermediario {
+    border-top: 5px solid #d6a500;
+}
 
-        .numero {
-            display: inline-block;
-            background: #087a3d;
-            color: white;
-            border-radius: 50%;
-            width: 28px;
-            height: 28px;
-            text-align: center;
-            line-height: 28px;
-            margin-right: 8px;
-            font-weight: bold;
-        }
+.completo {
+    border-top: 5px solid #c74634;
+}
 
-        .checklist {
-            background: white;
-            border: 1px solid #d5ddd8;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 15px;
-        }
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
 
-        footer {
-            margin-top: 45px;
-            padding-top: 20px;
-            border-top: 1px solid #d5ddd8;
-            font-size: 13px;
-            color: #555;
-        }
+.tabela th,
+.tabela td {
+    border: 1px solid #d5ddd8;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
 
-        @media (max-width: 700px) {
+.tabela th {
+    background: #eaf4ee;
+    color: #006b3c;
+}
 
-            .grid {
-                grid-template-columns: 1fr;
-            }
+details {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    margin: 12px 0;
+    padding: 0;
+}
 
-            h1 {
-                font-size: 24px;
-            }
+summary {
+    cursor: pointer;
+    padding: 17px;
+    font-weight: bold;
+    color: #007a43;
+    font-size: 16px;
+}
 
-        }
+.conteudo {
+    padding: 0 18px 18px 18px;
+    border-top: 1px solid #e2e8e4;
+}
 
-    </style>
+.conteudo ul {
+    line-height: 1.7;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.step {
+    background: white;
+    border: 1px solid #d5ddd8;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.numero {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #087f43;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.pequeno {
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #eaf2ed;
+    border-top: 1px solid #d5ddd8;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+
+    .grid,
+    .niveis,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
 
 </head>
 
 
 <body>
 
-<div class="topo"></div>
+<main>
 
 
-<div class="container">
+<a href="registro-estabelecimento.html" class="voltar">
+    ← Voltar para Registro de Estabelecimento
+</a>
 
 
-    <!-- VOLTAR -->
+<h1>
+    🏭 Processadores, Industrializadores, Beneficiadores e Embaladores
+</h1>
 
-    <a href="registro-estabelecimento.html" class="voltar">
-        ← Voltar para Registro de Estabelecimento
-    </a>
+<p>
+    Orientações para registro de estabelecimentos que realizam atividades
+    de processamento, industrialização, beneficiamento ou embalagem de
+    produtos de origem vegetal.
+</p>
 
 
-    <!-- TÍTULO -->
+<!-- ========================================================= -->
+<!-- ATENÇÃO INICIAL -->
+<!-- ========================================================= -->
 
-    <h1>
-        🏭 Processadores, Industrializadores, Beneficiadores e Embaladores
-    </h1>
+<div class="info">
+
+    <strong>Antes de solicitar o registro</strong>
 
     <p>
-        Orientações para registro de estabelecimentos que realizam
-        atividades de processamento, industrialização, beneficiamento
-        ou embalagem de produtos de origem vegetal.
+        Verifique o enquadramento do estabelecimento, a atividade que será
+        exercida, os produtos envolvidos e os requisitos específicos
+        aplicáveis ao caso.
     </p>
 
+    <p>
+        A documentação, as habilitações, o nível de registro e a necessidade
+        de vistoria podem variar conforme a atividade, o produto e a
+        finalidade pretendida.
+    </p>
 
-    <!-- INTRODUÇÃO -->
+</div>
 
-    <div class="intro">
 
-        <strong>Antes de solicitar o registro</strong>
+<!-- ========================================================= -->
+<!-- QUAL ATIVIDADE -->
+<!-- ========================================================= -->
+
+<h2>
+    🔎 Qual atividade o estabelecimento realiza?
+</h2>
+
+<div class="grid">
+
+
+    <div class="card">
+
+        <h3>
+            🏭 Processadores e Industrializadores
+        </h3>
 
         <p>
-            Verifique o enquadramento do estabelecimento, a atividade
-            que será exercida, os produtos envolvidos e os requisitos
-            específicos aplicáveis ao seu caso.
+            Estabelecimentos que transformam o produto vegetal, de forma
+            artesanal ou industrial, em subprodutos ou resíduos de valor
+            econômico.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            🌾 Beneficiadores
+        </h3>
+
+        <p>
+            Estabelecimentos que atuam na preparação, seleção ou alteração
+            superficial do produto vegetal destinado ao consumo ou à
+            industrialização.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            📦 Embaladores
+        </h3>
+
+        <p>
+            Estabelecimentos que realizam o acondicionamento de produtos
+            vegetais, seja por conta própria ou como intermediários.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            📋 Enquadramento
+        </h3>
+
+        <p>
+            O estabelecimento deve verificar previamente sua atividade,
+            o produto pretendido, o nível de registro aplicável e quais
+            requisitos são exigidos para a habilitação.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- NÍVEL DE REGISTRO -->
+<!-- ========================================================= -->
+
+<h2>
+    🧭 Qual é o nível de registro?
+</h2>
+
+<p>
+    O nível de registro aplicável depende da atividade e da habilitação
+    pretendida. Antes de preparar a documentação, consulte a listagem
+    oficial de produtos passíveis de registro.
+</p>
+
+
+<div class="niveis">
+
+
+    <div class="nivel basico">
+
+        <h3>
+            🟢 Registro Básico
+        </h3>
+
+        <p>
+            Modalidade de registro simplificada, conforme o enquadramento
+            da habilitação.
         </p>
 
         <p>
-            A documentação, as habilitações e os requisitos podem variar
-            conforme a atividade desenvolvida, o produto e a finalidade
+            <strong>Vistoria:</strong> dispensada.
+        </p>
+
+    </div>
+
+
+    <div class="nivel intermediario">
+
+        <h3>
+            🟡 Registro Intermediário
+        </h3>
+
+        <p>
+            Exige documentação complementar de acordo com a habilitação
             pretendida.
         </p>
 
-    </div>
-
-
-    <!-- COMO IDENTIFICAR -->
-
-    <h2>
-        🔎 Qual atividade o estabelecimento realiza?
-    </h2>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>
-                🏭 Processadores e Industrializadores
-            </h3>
-
-            <p>
-                Estabelecimentos que transformam o produto vegetal,
-                de forma artesanal ou industrial, em subprodutos
-                ou resíduos de valor econômico.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🌾 Beneficiadores
-            </h3>
-
-            <p>
-                Estabelecimentos que atuam na preparação, seleção
-                ou alteração superficial do produto vegetal destinado
-                ao consumo ou à industrialização.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                📦 Embaladores
-            </h3>
-
-            <p>
-                Estabelecimentos que realizam o acondicionamento
-                de produtos vegetais, seja por conta própria ou
-                como intermediários.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                📋 Enquadramento
-            </h3>
-
-            <p>
-                O estabelecimento deve verificar previamente se a
-                atividade desenvolvida e o produto pretendido estão
-                sujeitos a registro e quais requisitos são aplicáveis.
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- PONTOS DE VERIFICAÇÃO -->
-
-    <h2>
-        📋 O que verificar antes de solicitar o registro?
-    </h2>
-
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>
-                <span class="numero">1</span>
-                Atividade
-            </h3>
-
-            <p>
-                Identifique exatamente a atividade que será realizada
-                pelo estabelecimento.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                <span class="numero">2</span>
-                Produto
-            </h3>
-
-            <p>
-                Identifique os produtos de origem vegetal envolvidos
-                na atividade.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                <span class="numero">3</span>
-                Enquadramento
-            </h3>
-
-            <p>
-                Verifique se o produto e a atividade estão sujeitos
-                a registro e quais habilitações são aplicáveis.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                <span class="numero">4</span>
-                Instalações
-            </h3>
-
-            <p>
-                Confira se as instalações, equipamentos, fluxo
-                operacional e demais estruturas são compatíveis
-                com a atividade pretendida.
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- PRODUTOS -->
-
-    <h2>
-        📦 Produtos passíveis de registro
-    </h2>
-
-    <div class="destaque">
-
         <p>
-            A relação atualizada de produtos passíveis de registro
-            no CGC/MAPA, respectivas habilitações e demais
-            informações específicas está disponível na página
-            oficial do MAPA.
-        </p>
-
-        <a
-            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos/registro-estabelecimento-produtos-vegetais-no-cgc-mapa-1/listagem-de-produtos-passiveis-de-registro-no-cgc-mapa"
-            target="_blank"
-            class="botao"
-        >
-            Consultar produtos passíveis de registro
-        </a>
-
-    </div>
-
-
-    <!-- DOCUMENTAÇÃO -->
-
-    <h2>
-        📄 Documentação e informações
-    </h2>
-
-    <div class="card">
-
-        <p>
-            A documentação exigida para o registro deve ser apresentada
-            nas abas específicas do sistema utilizado para a solicitação,
-            conforme os requisitos aplicáveis ao estabelecimento e à
-            atividade pretendida.
-        </p>
-
-        <p>
-            Antes de protocolar a solicitação, confira se todos os
-            documentos e informações necessários foram preenchidos
-            corretamente.
+            <strong>Vistoria:</strong> poderá ser realizada a critério
+            da fiscalização.
         </p>
 
     </div>
 
 
-    <!-- FLUXO -->
+    <div class="nivel completo">
 
-    <h2>
-        🔄 Como funciona o processo?
-    </h2>
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3>
-                1️⃣ Identifique
-            </h3>
-
-            <p>
-                Defina a atividade e os produtos relacionados
-                ao estabelecimento.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                2️⃣ Verifique
-            </h3>
-
-            <p>
-                Confira o enquadramento e os requisitos aplicáveis.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                3️⃣ Prepare
-            </h3>
-
-            <p>
-                Organize as instalações, documentos e informações
-                necessários.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                4️⃣ Solicite
-            </h3>
-
-            <p>
-                Realize a solicitação de registro pelo sistema
-                correspondente.
-            </p>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- ATENÇÃO -->
-
-    <div class="atencao">
-
-        <strong>⚠️ Atenção</strong>
+        <h3>
+            🔴 Registro Completo
+        </h3>
 
         <p>
-            O enquadramento correto do estabelecimento é fundamental
-            para determinar os requisitos aplicáveis ao registro.
+            Exige documentação complementar e atendimento dos requisitos
+            específicos da habilitação.
         </p>
 
         <p>
-            Em caso de dúvida, verifique a legislação específica
-            aplicável ao produto e à atividade pretendida antes
-            de realizar a solicitação.
+            <strong>Vistoria:</strong> obrigatória.
         </p>
 
     </div>
-
-
-    <!-- BASE LEGAL -->
-
-    <h2>
-        ⚖️ Base legal e referências
-    </h2>
-
-    <div class="card">
-
-        <p>
-            As orientações desta página devem ser consultadas em
-            conjunto com a legislação e as orientações oficiais
-            vigentes aplicáveis aos produtos de origem vegetal.
-        </p>
-
-        <p>
-            A versão oficial das normas deve ser sempre verificada
-            na fonte correspondente.
-        </p>
-
-    </div>
-
-
-    <!-- IMPORTANTE -->
-
-    <div class="importante">
-
-        <strong>📌 Importante</strong>
-
-        <p>
-            O SIPOV-SP organiza estas informações para facilitar
-            a consulta e orientar o interessado quanto ao
-            enquadramento e aos principais requisitos do registro.
-        </p>
-
-        <p>
-            A análise do processo observará a legislação vigente
-            e os requisitos específicos aplicáveis à atividade
-            e aos produtos apresentados.
-        </p>
-
-    </div>
-
-
-    <footer>
-
-        SIPOV-SP — Orientações para registro de estabelecimentos
-        de produtos de origem vegetal.
-
-    </footer>
-
 
 </div>
+
+
+<div class="alerta">
+
+    <strong>⚠️ Atenção</strong>
+
+    <p>
+        O nível de registro não deve ser escolhido livremente pelo
+        interessado. O enquadramento depende da atividade, do produto
+        e da habilitação pretendida.
+    </p>
+
+    <p>
+        Consulte a listagem oficial para verificar o nível aplicável,
+        os documentos exigidos, a necessidade de vistoria e a declaração
+        final correspondente.
+    </p>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- LISTAGEM OFICIAL -->
+<!-- ========================================================= -->
+
+<h2>
+    📋 Consulte o produto antes de preparar o processo
+</h2>
+
+<div class="destaque">
+
+    <h3>
+        🌱 Produtos passíveis de registro
+    </h3>
+
+    <p>
+        A relação atualizada de produtos passíveis de registro no
+        CGC/MAPA, respectivas habilitações e demais informações específicas
+        encontra-se disponível na página oficial do MAPA.
+    </p>
+
+    <p>
+        Consulte a listagem para verificar, conforme o produto e a
+        habilitação pretendida, o nível de registro, os documentos
+        necessários, a necessidade de vistoria e a declaração final
+        da solicitação.
+    </p>
+
+    <a
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos/registro-estabelecimento-produtos-vegetais-no-cgc-mapa-1/listagem-de-produtos-passiveis-de-registro-no-cgc-mapa"
+        target="_blank"
+        class="botao"
+    >
+        🔎 Consultar produtos passíveis de registro
+    </a>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- DOCUMENTAÇÃO -->
+<!-- ========================================================= -->
+
+<h2>
+    📄 Documentação e informações
+</h2>
+
+<p>
+    A documentação necessária varia conforme o nível de registro,
+    a atividade e a habilitação pretendida. Confira sempre a listagem
+    oficial antes de protocolar a solicitação.
+</p>
+
+
+<details>
+
+    <summary>
+        🟢 Documentação — Registro Básico
+    </summary>
+
+    <div class="conteudo">
+
+        <p>
+            O registro básico possui procedimento simplificado,
+            conforme a habilitação correspondente.
+        </p>
+
+        <p>
+            Antes de iniciar a solicitação, confira na listagem oficial
+            quais informações e declarações são exigidas para o produto
+            e a habilitação pretendida.
+        </p>
+
+    </div>
+
+</details>
+
+
+<details>
+
+    <summary>
+        🟡 Documentação — Registro Intermediário
+    </summary>
+
+    <div class="conteudo">
+
+        <p>
+            Para o registro intermediário, devem ser apresentados os
+            documentos exigidos para a habilitação pretendida.
+        </p>
+
+        <ul>
+
+            <li>
+                Requerimento e informações da solicitação;
+            </li>
+
+            <li>
+                Memorial descritivo, quando exigido;
+            </li>
+
+            <li>
+                Manual ou documentação de autocontrole, quando exigido;
+            </li>
+
+            <li>
+                Documentação do estabelecimento e da atividade;
+            </li>
+
+            <li>
+                Demais documentos específicos indicados para a habilitação.
+            </li>
+
+        </ul>
+
+        <p>
+            A relação definitiva deve ser conferida na listagem oficial
+            correspondente ao produto e à habilitação.
+        </p>
+
+    </div>
+
+</details>
+
+
+<details>
+
+    <summary>
+        🔴 Documentação — Registro Completo
+    </summary>
+
+    <div class="conteudo">
+
+        <p>
+            O registro completo exige o atendimento dos requisitos
+            documentais previstos para a habilitação.
+        </p>
+
+        <ul>
+
+            <li>
+                Documentação exigida para o registro;
+            </li>
+
+            <li>
+                Memorial descritivo, quando aplicável;
+            </li>
+
+            <li>
+                Documentação relativa ao Responsável Técnico,
+                quando exigida;
+            </li>
+
+            <li>
+                Comprovantes e documentos complementares previstos
+                para a habilitação;
+            </li>
+
+            <li>
+                Comprovante de pagamento do emolumento, quando aplicável;
+            </li>
+
+            <li>
+                Demais documentos específicos indicados na listagem oficial.
+            </li>
+
+        </ul>
+
+    </div>
+
+</details>
+
+
+<!-- ========================================================= -->
+<!-- MEMORIAL DESCRITIVO -->
+<!-- ========================================================= -->
+
+<details>
+
+    <summary>
+        📐 Modelo para elaboração do Memorial Descritivo
+    </summary>
+
+    <div class="conteudo">
+
+        <p>
+            Quando o Memorial Descritivo for exigido para a habilitação,
+            utilize o modelo e confira se todas as informações necessárias
+            foram contempladas.
+        </p>
+
+        <h3>
+            1. Identificação do estabelecimento
+        </h3>
+
+        <ul>
+
+            <li>
+                Nome empresarial;
+            </li>
+
+            <li>
+                CNPJ ou documento equivalente;
+            </li>
+
+            <li>
+                Endereço completo;
+            </li>
+
+            <li>
+                Identificação do responsável pelo estabelecimento.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            2. Finalidade
+        </h3>
+
+        <p>
+            Descrever os produtos envolvidos, as atividades que serão
+            realizadas e a capacidade operacional do estabelecimento.
+        </p>
+
+
+        <h3>
+            3. Aspectos gerais do estabelecimento
+        </h3>
+
+        <ul>
+
+            <li>
+                Características da área externa;
+            </li>
+
+            <li>
+                Controle de acesso de animais, pragas e contaminantes;
+            </li>
+
+            <li>
+                Armazenamento e destinação de resíduos;
+            </li>
+
+            <li>
+                Sistema de eliminação de efluentes e águas residuais;
+            </li>
+
+            <li>
+                Sistemas de controle aplicáveis.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            4. Água
+        </h3>
+
+        <ul>
+
+            <li>
+                Origem da água utilizada;
+            </li>
+
+            <li>
+                Sistema de controle da potabilidade;
+            </li>
+
+            <li>
+                Pontos de utilização e demais informações pertinentes.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            5. Instalações sanitárias e demais dependências
+        </h3>
+
+        <ul>
+
+            <li>
+                Vestiários;
+            </li>
+
+            <li>
+                Banheiros;
+            </li>
+
+            <li>
+                Pontos de água;
+            </li>
+
+            <li>
+                Lavatórios e pontos para higienização das mãos;
+            </li>
+
+            <li>
+                Demais dependências relacionadas à atividade.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            6. Seções que compõem o estabelecimento
+        </h3>
+
+        <p>
+            Para cada setor ou compartimento, descrever sua finalidade,
+            características construtivas, revestimentos, piso, paredes,
+            teto, portas, janelas, drenagem, pontos de água, iluminação
+            e ventilação.
+        </p>
+
+
+        <h3>
+            7. Equipamentos e utensílios
+        </h3>
+
+        <p>
+            Relacionar os equipamentos e utensílios utilizados,
+            informando o material de constituição, especialmente das
+            partes que entram em contato com o produto, e suas capacidades,
+            quando aplicável.
+        </p>
+
+
+        <h3>
+            8. Fluxo das operações
+        </h3>
+
+        <p>
+            Descrever o fluxo das operações desde o recebimento da
+            matéria-prima até a expedição do produto final.
+        </p>
+
+
+        <div class="alerta">
+
+            <strong>
+                💡 Dica
+            </strong>
+
+            <p>
+                O memorial deve permitir compreender claramente a
+                estrutura física, os equipamentos, o fluxo operacional
+                e a finalidade de cada área do estabelecimento.
+            </p>
+
+        </div>
+
+    </div>
+
+</details>
+
+
+<!-- ========================================================= -->
+<!-- VISTORIA -->
+<!-- ========================================================= -->
+
+<h2>
+    🏭 Vistoria do estabelecimento
+</h2>
+
+<p>
+    A necessidade de vistoria depende do nível de registro e da
+    habilitação pretendida.
+</p>
+
+
+<table class="tabela">
+
+    <thead>
+
+        <tr>
+
+            <th>
+                Nível
+            </th>
+
+            <th>
+                Vistoria
+            </th>
+
+            <th>
+                Observação
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <td>
+                🟢 Básico
+            </td>
+
+            <td>
+                Dispensada
+            </td>
+
+            <td>
+                O procedimento é simplificado conforme a habilitação.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                🟡 Intermediário
+            </td>
+
+            <td>
+                Facultativa
+            </td>
+
+            <td>
+                Poderá ser realizada a critério da fiscalização.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                🔴 Completo
+            </td>
+
+            <td>
+                Obrigatória
+            </td>
+
+            <td>
+                A vistoria integra o procedimento de registro.
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+<div class="alerta">
+
+    <strong>
+        ⚠️ Importante
+    </strong>
+
+    <p>
+        A necessidade de vistoria deve ser conferida na listagem oficial
+        correspondente ao produto e à habilitação pretendida.
+    </p>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- DECLARAÇÃO FINAL -->
+<!-- ========================================================= -->
+
+<h2>
+    📝 Declaração final da solicitação
+</h2>
+
+<div class="card">
+
+    <p>
+        Antes de concluir a solicitação no SIPEAGRO, confira a declaração
+        final aplicável à habilitação pretendida.
+    </p>
+
+    <p>
+        A declaração correspondente pode variar conforme o produto e
+        a habilitação. Por isso, utilize a listagem oficial para
+        identificar a declaração exigida no seu caso.
+    </p>
+
+    <a
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos/registro-estabelecimento-produtos-vegetais-no-cgc-mapa-1/listagem-de-produtos-passiveis-de-registro-no-cgc-mapa"
+        target="_blank"
+        class="botao"
+    >
+        🔎 Consultar declaração aplicável
+    </a>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- O QUE VERIFICAR -->
+<!-- ========================================================= -->
+
+<h2>
+    ✅ O que verificar antes de solicitar o registro?
+</h2>
+
+
+<div class="grid">
+
+
+    <div class="card">
+
+        <h3>
+            1️⃣ Atividade
+        </h3>
+
+        <p>
+            Identifique exatamente qual atividade será realizada pelo
+            estabelecimento.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            2️⃣ Produto
+        </h3>
+
+        <p>
+            Identifique os produtos de origem vegetal envolvidos na
+            atividade.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            3️⃣ Habilitação
+        </h3>
+
+        <p>
+            Consulte a habilitação correspondente na listagem oficial
+            de produtos passíveis de registro.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            4️⃣ Nível de registro
+        </h3>
+
+        <p>
+            Verifique se o enquadramento corresponde ao nível básico,
+            intermediário ou completo.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            5️⃣ Documentação
+        </h3>
+
+        <p>
+            Confira todos os documentos exigidos para a habilitação.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            6️⃣ Vistoria
+        </h3>
+
+        <p>
+            Verifique se a vistoria é dispensada, facultativa ou
+            obrigatória.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            7️⃣ Declaração final
+        </h3>
+
+        <p>
+            Confira a declaração correspondente antes de concluir
+            a solicitação.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>
+            8️⃣ SIPEAGRO
+        </h3>
+
+        <p>
+            Somente após conferir os requisitos, realize a solicitação
+            no sistema correspondente.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- COMO FUNCIONA -->
+<!-- ========================================================= -->
+
+<h2>
+    🔄 Como funciona o processo?
+</h2>
+
+<p>
+    De forma geral, o processo segue as etapas abaixo. As etapas
+    efetivamente aplicáveis podem variar conforme a habilitação,
+    o produto e o nível de registro.
+</p>
+
+
+<div class="steps">
+
+
+    <div class="step">
+
+        <div class="numero">1</div>
+
+        <strong>
+            Identifique
+        </strong>
+
+        <p class="pequeno">
+            Defina a atividade e os produtos relacionados ao estabelecimento.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">2</div>
+
+        <strong>
+            Consulte
+        </strong>
+
+        <p class="pequeno">
+            Consulte a habilitação na listagem oficial.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">3</div>
+
+        <strong>
+            Enquadre
+        </strong>
+
+        <p class="pequeno">
+            Verifique o nível de registro aplicável.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">4</div>
+
+        <strong>
+            Prepare
+        </strong>
+
+        <p class="pequeno">
+            Organize documentos, declarações e informações.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">5</div>
+
+        <strong>
+            Solicite
+        </strong>
+
+        <p class="pequeno">
+            Realize a solicitação pelo SIPEAGRO.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">6</div>
+
+        <strong>
+            Acompanhe
+        </strong>
+
+        <p class="pequeno">
+            Acompanhe a análise da solicitação.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">7</div>
+
+        <strong>
+            Atenda exigências
+        </strong>
+
+        <p class="pequeno">
+            Apresente as informações ou documentos solicitados.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">8</div>
+
+        <strong>
+            Vistoria
+        </strong>
+
+        <p class="pequeno">
+            Quando aplicável, acompanhe a realização da vistoria.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">9</div>
+
+        <strong>
+            Finalize
+        </strong>
+
+        <p class="pequeno">
+            Aguarde a conclusão da análise.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="numero">10</div>
+
+        <strong>
+            Registro
+        </strong>
+
+        <p class="pequeno">
+            Após o atendimento dos requisitos, acompanhe a conclusão
+            do registro.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- ATENÇÃO FINAL -->
+<!-- ========================================================= -->
+
+<div class="alerta">
+
+    <strong>
+        ⚠️ Evite problemas na análise
+    </strong>
+
+    <p>
+        Não inicie a solicitação sem antes conferir o produto,
+        a habilitação, o nível de registro, os documentos exigidos,
+        a necessidade de vistoria e a declaração final aplicável.
+    </p>
+
+    <p>
+        A ausência de informações ou documentos exigidos pode
+        comprometer a análise da solicitação.
+    </p>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- FONTE OFICIAL -->
+<!-- ========================================================= -->
+
+<footer>
+
+    <strong>
+        📚 Fonte e consulta oficial
+    </strong>
+
+    <p>
+        As informações desta página têm finalidade orientativa.
+        Para verificar os requisitos vigentes e específicos de cada
+        habilitação, consulte sempre a legislação aplicável e a
+        documentação disponibilizada oficialmente pelo MAPA.
+    </p>
+
+    <a
+        href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos/registro-estabelecimento-produtos-vegetais-no-cgc-mapa-1/listagem-de-produtos-passiveis-de-registro-no-cgc-mapa"
+        target="_blank"
+        class="botao"
+    >
+        Consultar página oficial do MAPA
+    </a>
+
+</footer>
+
+
+</main>
 
 </body>
 
