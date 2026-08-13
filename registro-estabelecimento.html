@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registro de Estabelecimentos | SIPOV-SP</title>
+    <title>Registro de Estabelecimento | SIPOV-SP</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -27,7 +30,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 22px;
         }
 
         a {
@@ -39,7 +42,7 @@
             display: inline-block;
             margin-bottom: 18px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         h1 {
@@ -50,7 +53,7 @@
 
         h2 {
             color: #08783f;
-            font-size: 23px;
+            font-size: 22px;
             margin-top: 32px;
             margin-bottom: 8px;
         }
@@ -67,10 +70,12 @@
             margin: 6px 0;
         }
 
+        /* INTRODUÇÃO */
+
         .intro {
             background: #eaf5ee;
             border-left: 4px solid #08783f;
-            padding: 16px 18px;
+            padding: 15px 18px;
             margin-bottom: 25px;
         }
 
@@ -81,17 +86,21 @@
             margin-bottom: 5px;
         }
 
+        /* GRIDS */
+
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 14px;
         }
 
+        /* CARDS */
+
         .card {
             background: white;
             border: 1px solid #d5ddd8;
             border-radius: 7px;
-            padding: 18px;
+            padding: 17px;
             box-shadow: 0 1px 2px rgba(0,0,0,0.04);
         }
 
@@ -99,12 +108,12 @@
             border-color: #08783f;
         }
 
-        .card .icone {
-            font-size: 21px;
-            margin-right: 5px;
+        .card h3 {
+            line-height: 1.35;
         }
 
         .card h3 a {
+            color: #08783f;
             font-weight: bold;
             font-size: 17px;
         }
@@ -112,6 +121,8 @@
         .card p {
             margin-top: 8px;
         }
+
+        /* BOTÕES */
 
         .botao {
             display: inline-block;
@@ -126,14 +137,17 @@
 
         .botao:hover {
             background: #065f31;
+            color: white;
         }
+
+        /* DESTAQUE */
 
         .destaque {
             background: #eaf5ee;
             border: 1px solid #b9d8c5;
             border-left: 5px solid #08783f;
             border-radius: 6px;
-            padding: 18px;
+            padding: 17px;
             margin-top: 18px;
         }
 
@@ -141,9 +155,7 @@
             margin-bottom: 7px;
         }
 
-        .destaque p {
-            margin-bottom: 8px;
-        }
+        /* ETAPAS */
 
         .steps {
             display: grid;
@@ -158,7 +170,7 @@
             border-radius: 6px;
             padding: 13px 10px;
             text-align: center;
-            min-height: 100px;
+            min-height: 105px;
         }
 
         .numero {
@@ -184,6 +196,8 @@
         .step p {
             font-size: 11px;
         }
+
+        /* DOCUMENTOS */
 
         .documentos {
             background: white;
@@ -211,6 +225,8 @@
             margin-right: 7px;
         }
 
+        /* ATENÇÃO */
+
         .atencao {
             background: #fff9df;
             border-left: 4px solid #e2b400;
@@ -222,6 +238,8 @@
             color: #594700;
         }
 
+        /* AVISO FINAL */
+
         .rodape-aviso {
             background: #fff9df;
             border-left: 4px solid #e2b400;
@@ -229,6 +247,8 @@
             margin-top: 25px;
             margin-bottom: 30px;
         }
+
+        /* RODAPÉ */
 
         footer {
             background: #08783f;
@@ -242,8 +262,14 @@
             color: white;
         }
 
+        /* RESPONSIVO */
+
         @media (max-width: 800px) {
-            .grid,
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
             .documentos-grid {
                 grid-template-columns: 1fr;
             }
@@ -251,9 +277,11 @@
             .steps {
                 grid-template-columns: repeat(2, 1fr);
             }
+
         }
 
         @media (max-width: 500px) {
+
             .steps {
                 grid-template-columns: 1fr;
             }
@@ -261,28 +289,48 @@
             h1 {
                 font-size: 25px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
 <header></header>
 
+
 <div class="container">
 
-    <a href="registro.html" class="voltar">← Voltar para Registro</a>
 
-    <h1>🏭 Registro de estabelecimentos</h1>
+    <!-- VOLTAR -->
+
+    <a href="registro.html" class="voltar">
+        ← Voltar para Registro
+    </a>
+
+
+    <!-- TÍTULO -->
+
+    <h1>
+        🏭 Registro de estabelecimentos
+    </h1>
+
+
+    <!-- INTRODUÇÃO -->
 
     <div class="intro">
 
-        <strong>Antes de solicitar o registro</strong>
+        <strong>
+            Antes de solicitar o registro
+        </strong>
 
         <p>
-            Verifique o enquadramento do estabelecimento, a atividade que será
-            exercida, os produtos envolvidos e os requisitos específicos
-            aplicáveis ao seu caso.
+            Verifique o enquadramento do estabelecimento, a atividade
+            que será exercida, os produtos envolvidos e os requisitos
+            específicos aplicáveis ao seu caso.
         </p>
 
         <p>
@@ -294,16 +342,25 @@
     </div>
 
 
-    <!-- PRODUTOS DE ORIGEM VEGETAL -->
 
-    <h2>🌱 Registro de estabelecimentos de produtos de origem vegetal</h2>
+    <!-- ========================================================= -->
+    <!-- PRODUTOS DE ORIGEM VEGETAL -->
+    <!-- ========================================================= -->
+
+    <h2>
+        🌱 Produtos de origem vegetal e classificação vegetal
+    </h2>
 
     <p>
-        Consulte abaixo as principais situações de registro relacionadas
-        aos produtos de origem vegetal.
+        Selecione a atividade correspondente para consultar as orientações,
+        requisitos e procedimentos aplicáveis ao registro.
     </p>
 
+
     <div class="grid">
+
+
+        <!-- POV -->
 
         <div class="card">
 
@@ -315,21 +372,9 @@
             </h3>
 
             <p>
-                <strong>Processadores e Industrializadores:</strong>
-                quem transforma o produto vegetal, de forma artesanal ou
-                industrial, em subprodutos ou resíduos de valor econômico.
-            </p>
-
-            <p>
-                <strong>Beneficiadores:</strong>
-                quem atua na preparação, seleção ou alteração superficial
-                do produto para consumo ou industrialização.
-            </p>
-
-            <p>
-                <strong>Embaladores:</strong>
-                quem acondiciona o produto vegetal, seja por conta própria
-                ou como intermediário.
+                Orientações para registro de estabelecimentos que realizam
+                atividades de processamento, industrialização, beneficiamento
+                ou embalagem de produtos de origem vegetal.
             </p>
 
             <a href="#" class="botao">
@@ -338,6 +383,8 @@
 
         </div>
 
+
+        <!-- EXPORTAÇÃO -->
 
         <div class="card">
 
@@ -349,33 +396,8 @@
             </h3>
 
             <p>
-                Atividades específicas de exportação, conforme o destino
-                e o produto, para as quais o registro se tornou obrigatório
-                nos termos da IN MAPA nº 97/2021.
-            </p>
-
-            <p>
-                <strong>China:</strong> grãos de soja, café grão cru,
-                grãos de milho, amendoim e produtos de origem vegetal em geral.
-            </p>
-
-            <p>
-                <strong>União Europeia:</strong> maçã, mamão, manga, melão,
-                uva, amendoim, castanha-do-Brasil e pimenta-do-reino.
-            </p>
-
-            <p>
-                <strong>Rússia:</strong> grãos de soja.
-            </p>
-
-            <p>
-                <strong>Colômbia:</strong> açúcar.
-            </p>
-
-            <p>
-                <strong>Países Árabes do Golfo:</strong> castanha-do-Brasil,
-                abrangendo Arábia Saudita, Omã, Bahrein, Catar,
-                Emirados Árabes Unidos e Kuwait.
+                Orientações específicas para estabelecimentos que realizam
+                atividades de exportação de produtos de origem vegetal.
             </p>
 
             <a href="#" class="botao">
@@ -384,6 +406,8 @@
 
         </div>
 
+
+        <!-- AZEITE -->
 
         <div class="card">
 
@@ -395,9 +419,8 @@
             </h3>
 
             <p>
-                Registro aplicável às atividades de importação e distribuição
-                de azeite de oliva e óleo de bagaço de oliva, conforme
-                a IN MAPA nº 97/2021.
+                Orientações específicas para registro de estabelecimentos
+                que realizam importação e distribuição desses produtos.
             </p>
 
             <a href="#" class="botao">
@@ -406,6 +429,8 @@
 
         </div>
 
+
+        <!-- TERMINAIS -->
 
         <div class="card">
 
@@ -417,8 +442,8 @@
             </h3>
 
             <p>
-                Registro de terminais alfandegados de exportação de produtos
-                de origem vegetal.
+                Orientações para registro de terminais alfandegados
+                relacionados à exportação de produtos de origem vegetal.
             </p>
 
             <a href="#" class="botao">
@@ -427,19 +452,71 @@
 
         </div>
 
+
+        <!-- PRESTADORAS CLASSIFICAÇÃO -->
+
+        <div class="card">
+
+            <h3>
+                🧪
+                <a href="#">
+                    Prestadoras de Serviço da Classificação Vegetal
+                </a>
+            </h3>
+
+            <p>
+                Orientações para registro de empresas prestadoras de
+                serviços relacionados à classificação vegetal.
+            </p>
+
+            <a href="#" class="botao">
+                Ver orientações
+            </a>
+
+        </div>
+
+
+        <!-- PESSOA FÍSICA -->
+
+        <div class="card">
+
+            <h3>
+                👤
+                <a href="#">
+                    Registro de Pessoas Físicas – Classificação Vegetal
+                </a>
+            </h3>
+
+            <p>
+                Orientações para registro de pessoas físicas relacionadas
+                à atividade de classificação vegetal.
+            </p>
+
+            <a href="#" class="botao">
+                Ver orientações
+            </a>
+
+        </div>
+
+
     </div>
 
 
+
+    <!-- ========================================================= -->
     <!-- PRODUTOS PASSÍVEIS DE REGISTRO -->
+    <!-- ========================================================= -->
 
     <div class="destaque">
 
-        <h3>📋 Produtos passíveis de registro</h3>
+        <h3>
+            📋 Produtos passíveis de registro
+        </h3>
 
         <p>
             A relação atualizada de produtos passíveis de registro no
             CGC/MAPA, respectivas habilitações e demais informações
-            específicas encontra-se disponível na página oficial do MAPA.
+            específicas está disponível na página oficial do MAPA.
         </p>
 
         <a
@@ -453,17 +530,26 @@
     </div>
 
 
-    <!-- BEBIDAS -->
 
-    <h2>🍷 Registro de estabelecimentos de bebidas</h2>
+    <!-- ========================================================= -->
+    <!-- BEBIDAS -->
+    <!-- ========================================================= -->
+
+    <h2>
+        🍷 Registro de estabelecimentos de bebidas
+    </h2>
 
     <p>
-        Para estabelecimentos que desenvolvem atividades relacionadas
-        à produção, elaboração, padronização, envase, importação ou
-        exportação de bebidas.
+        Selecione a atividade correspondente para consultar as orientações,
+        requisitos e procedimentos aplicáveis ao registro de
+        estabelecimentos de bebidas.
     </p>
 
+
     <div class="grid">
+
+
+        <!-- PRODUTOR / FABRICANTE -->
 
         <div class="card">
 
@@ -475,8 +561,8 @@
             </h3>
 
             <p>
-                Orientações para estabelecimentos que produzem, fabricam,
-                elaboram, padronizam ou envasilham bebidas.
+                Orientações para registro de estabelecimentos que produzem,
+                fabricam, elaboram, padronizam ou envasilham bebidas.
             </p>
 
             <a href="#" class="botao">
@@ -485,6 +571,8 @@
 
         </div>
 
+
+        <!-- IMPORTADOR / EXPORTADOR -->
 
         <div class="card">
 
@@ -496,8 +584,8 @@
             </h3>
 
             <p>
-                Orientações para estabelecimentos que realizam atividades
-                de importação ou exportação de bebidas.
+                Orientações para registro de estabelecimentos que realizam
+                atividades de importação ou exportação de bebidas.
             </p>
 
             <a href="#" class="botao">
@@ -506,154 +594,220 @@
 
         </div>
 
-
-        <div class="card">
-
-            <h3>
-                🧪
-                <a href="#">
-                    Prestadoras de serviço da classificação vegetal
-                </a>
-            </h3>
-
-            <p>
-                Orientações relacionadas ao registro de empresas que
-                prestam serviços de classificação vegetal.
-            </p>
-
-            <a href="#" class="botao">
-                Ver orientações
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                👤
-                <a href="#">
-                    Registro de pessoas físicas – classificação vegetal
-                </a>
-            </h3>
-
-            <p>
-                Informações e orientações para o registro de pessoas físicas
-                relacionadas à atividade de classificação vegetal.
-            </p>
-
-            <a href="#" class="botao">
-                Ver orientações
-            </a>
-
-        </div>
 
     </div>
 
 
-    <!-- COMO FUNCIONA -->
 
-    <h2>🔄 Como funciona o processo?</h2>
+    <!-- ========================================================= -->
+    <!-- COMO FUNCIONA -->
+    <!-- ========================================================= -->
+
+    <h2>
+        🔄 Como funciona o processo?
+    </h2>
 
     <p>
-        De forma geral, o processo envolve as etapas abaixo. As etapas
-        efetivamente aplicáveis podem variar conforme a atividade,
-        o produto e o enquadramento do estabelecimento.
+        De forma geral, o processo envolve as etapas abaixo.
+        As etapas efetivamente aplicáveis podem variar conforme
+        a atividade, o produto e o enquadramento do estabelecimento.
     </p>
+
+
+    <!-- PRIMEIRA LINHA -->
 
     <div class="steps">
 
+
         <div class="step">
-            <div class="numero">1</div>
-            <strong>Identifique</strong>
+
+            <div class="numero">
+                1
+            </div>
+
+            <strong>
+                Identifique
+            </strong>
+
             <p>
                 Defina a atividade e o produto relacionado ao estabelecimento.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">2</div>
-            <strong>Verifique</strong>
+
+            <div class="numero">
+                2
+            </div>
+
+            <strong>
+                Verifique
+            </strong>
+
             <p>
                 Confira o enquadramento e os requisitos aplicáveis.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">3</div>
-            <strong>Prepare</strong>
+
+            <div class="numero">
+                3
+            </div>
+
+            <strong>
+                Prepare
+            </strong>
+
             <p>
                 Organize documentos e informações necessárias.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">4</div>
-            <strong>Solicite</strong>
+
+            <div class="numero">
+                4
+            </div>
+
+            <strong>
+                Solicite
+            </strong>
+
             <p>
                 Realize a solicitação no sistema correspondente.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">5</div>
-            <strong>Acompanhe</strong>
+
+            <div class="numero">
+                5
+            </div>
+
+            <strong>
+                Acompanhe
+            </strong>
+
             <p>
                 Acompanhe a análise do processo.
             </p>
+
         </div>
+
 
     </div>
 
+
+    <!-- SEGUNDA LINHA -->
 
     <div class="steps">
 
+
         <div class="step">
-            <div class="numero">6</div>
-            <strong>Atenda</strong>
+
+            <div class="numero">
+                6
+            </div>
+
+            <strong>
+                Atenda
+            </strong>
+
             <p>
                 Responda às exigências, quando houver.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">7</div>
-            <strong>Vistoria</strong>
+
+            <div class="numero">
+                7
+            </div>
+
+            <strong>
+                Vistoria
+            </strong>
+
             <p>
                 Quando aplicável, acompanhe a vistoria.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">8</div>
-            <strong>Análise</strong>
+
+            <div class="numero">
+                8
+            </div>
+
+            <strong>
+                Análise
+            </strong>
+
             <p>
                 Aguarde a conclusão da análise.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">9</div>
-            <strong>Registro</strong>
+
+            <div class="numero">
+                9
+            </div>
+
+            <strong>
+                Registro
+            </strong>
+
             <p>
                 Após aprovação, siga as orientações para conclusão.
             </p>
+
         </div>
 
+
         <div class="step">
-            <div class="numero">10</div>
-            <strong>Manutenção</strong>
+
+            <div class="numero">
+                10
+            </div>
+
+            <strong>
+                Manutenção
+            </strong>
+
             <p>
                 Mantenha os dados e obrigações atualizados.
             </p>
+
         </div>
+
 
     </div>
 
 
-    <!-- DOCUMENTAÇÃO -->
 
-    <h2>📑 Documentação</h2>
+    <!-- ========================================================= -->
+    <!-- DOCUMENTAÇÃO -->
+    <!-- ========================================================= -->
+
+    <h2>
+        📑 Documentação
+    </h2>
 
     <p>
         A documentação necessária varia conforme a atividade e o
@@ -661,62 +815,82 @@
         os documentos específicos aplicáveis ao seu caso.
     </p>
 
+
     <div class="documentos">
 
-        <h3>📋 Documentação que pode ser exigida</h3>
+        <h3>
+            📋 Documentação que pode ser exigida
+        </h3>
+
 
         <div class="documentos-grid">
+
 
             <div class="documento">
                 Documentação cadastral aplicável
             </div>
 
+
             <div class="documento">
                 Planta ou layout do estabelecimento
             </div>
+
 
             <div class="documento">
                 Memorial descritivo
             </div>
 
+
             <div class="documento">
                 Manual de Boas Práticas de Fabricação
             </div>
+
 
             <div class="documento">
                 Responsabilidade técnica, quando aplicável
             </div>
 
+
             <div class="documento">
                 Documentação relativa à água, quando aplicável
             </div>
+
 
             <div class="documento">
                 Documentos relacionados aos produtos
             </div>
 
+
             <div class="documento">
                 Documentos específicos da atividade
             </div>
+
 
             <div class="documento">
                 Comprovantes e declarações exigidos pelo sistema
             </div>
 
+
             <div class="documento">
                 Demais documentos solicitados pelo serviço responsável
             </div>
+
 
         </div>
 
     </div>
 
 
+
+    <!-- ========================================================= -->
     <!-- ATENÇÃO -->
+    <!-- ========================================================= -->
 
     <div class="atencao">
 
-        <strong>⚠️ Atenção</strong>
+        <strong>
+            ⚠️ Atenção
+        </strong>
 
         <p>
             A relação apresentada nesta página possui caráter orientativo.
@@ -733,15 +907,24 @@
     </div>
 
 
-    <!-- REFERÊNCIAS -->
 
-    <h2>📚 Principais referências</h2>
+    <!-- ========================================================= -->
+    <!-- REFERÊNCIAS -->
+    <!-- ========================================================= -->
+
+    <h2>
+        📚 Principais referências
+    </h2>
+
 
     <div class="grid">
 
+
         <div class="card">
 
-            <h3>📘 Legislação e normas aplicáveis</h3>
+            <h3>
+                📘 Legislação e normas aplicáveis
+            </h3>
 
             <p>
                 Consulte a legislação vigente e os requisitos específicos
@@ -757,7 +940,9 @@
 
         <div class="card">
 
-            <h3>🏛️ Orientação oficial do MAPA</h3>
+            <h3>
+                🏛️ Orientação oficial do MAPA
+            </h3>
 
             <p>
                 Consulte as informações e orientações oficiais disponíveis
@@ -770,14 +955,20 @@
 
         </div>
 
+
     </div>
 
 
+
+    <!-- ========================================================= -->
     <!-- AVISO FINAL -->
+    <!-- ========================================================= -->
 
     <div class="rodape-aviso">
 
-        <strong>📌 Importante</strong>
+        <strong>
+            📌 Importante
+        </strong>
 
         <p>
             O SIPOV-SP organiza as informações desta página para facilitar
@@ -793,8 +984,14 @@
 
     </div>
 
+
 </div>
 
+
+
+<!-- ============================================================= -->
+<!-- RODAPÉ -->
+<!-- ============================================================= -->
 
 <footer>
 
@@ -808,5 +1005,7 @@
 
 </footer>
 
+
 </body>
+
 </html>
