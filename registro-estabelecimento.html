@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Estabelecimento | SIPOV-SP</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f5;
+            color: #173b2a;
+            line-height: 1.5;
+        }
+
+        header {
+            background: #08783f;
+            height: 22px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        a {
+            color: #08783f;
+            text-decoration: none;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        h1 {
+            color: #08783f;
+            font-size: 30px;
+            margin: 5px 0 8px;
+        }
+
+        h2 {
+            color: #08783f;
+            font-size: 23px;
+            margin-top: 32px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            color: #08783f;
+            font-size: 17px;
+            margin: 0 0 8px;
+        }
+
+        p {
+            color: #333;
+            font-size: 14px;
+            margin: 6px 0;
+        }
+
+        .intro {
+            background: #eaf5ee;
+            border-left: 4px solid #08783f;
+            padding: 16px 18px;
+            margin-bottom: 25px;
+        }
+
+        .intro strong {
+            display: block;
+            color: #08783f;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d5ddd8;
+            border-radius: 7px;
+            padding: 18px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+
+        .card:hover {
+            border-color: #08783f;
+        }
+
+        .card .icone {
+            font-size: 21px;
+            margin-right: 5px;
+        }
+
+        .card a {
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .card p {
+            margin-top: 8px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 9px;
+            padding: 7px 12px;
+            background: #08783f;
+            color: white;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background: #065f31;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid #d5ddd8;
+            border-radius: 6px;
+            padding: 13px 10px;
+            text-align: center;
+            min-height: 100px;
+        }
+
+        .numero {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #08783f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            font-weight: bold;
+        }
+
+        .step strong {
+            display: block;
+            color: #08783f;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .step p {
+            font-size: 11px;
+        }
+
+        .documentos {
+            background: white;
+            border: 1px solid #d5ddd8;
+            border-radius: 7px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .documentos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 35px;
+        }
+
+        .documento {
+            font-size: 13px;
+            color: #333;
+        }
+
+        .documento::before {
+            content: "☐";
+            color: #08783f;
+            font-weight: bold;
+            margin-right: 7px;
+        }
+
+        .atencao {
+            background: #fff9df;
+            border-left: 4px solid #e2b400;
+            padding: 15px 18px;
+            margin-top: 25px;
+        }
+
+        .atencao strong {
+            color: #594700;
+        }
+
+        .referencias {
+            margin-top: 15px;
+        }
+
+        .rodape-aviso {
+            background: #fff9df;
+            border-left: 4px solid #e2b400;
+            padding: 15px 18px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #08783f;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            font-size: 12px;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .grid,
+            .documentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header></header>
+
+<div class="container">
+
+    <a href="registro.html" class="voltar">← Voltar para Registro</a>
+
+    <h1>🏭 Registro de estabelecimento</h1>
+
+    <div class="intro">
+        <strong>Antes de solicitar o registro</strong>
+
+        <p>
+            Verifique o enquadramento do estabelecimento, a atividade que será
+            exercida, os produtos envolvidos e a documentação necessária para
+            a solicitação.
+        </p>
+
+        <p>
+            A documentação e os requisitos podem variar conforme a atividade
+            desenvolvida e as características do estabelecimento.
+        </p>
+    </div>
+
+
+    <!-- ATIVIDADES -->
+
+    <h2>🔎 Qual é a atividade do estabelecimento?</h2>
+
+    <p>
+        Selecione a atividade correspondente ao estabelecimento para consultar
+        as orientações específicas, os requisitos e a documentação aplicável.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>
+                🏭
+                <a href="produtor.html">Produtor / Fabricante / Elaborador</a>
+            </h3>
+
+            <p>
+                Orientações para estabelecimentos que produzem, fabricam,
+                elaboram ou processam produtos sob competência do SIPOV.
+            </p>
+
+            <a href="produtor.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>
+                ⚙️
+                <a href="padronizador.html">Padronizador</a>
+            </h3>
+
+            <p>
+                Informações e requisitos relacionados aos estabelecimentos
+                que realizam atividades de padronização.
+            </p>
+
+            <a href="padronizador.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>
+                🍾
+                <a href="envelhecedor.html">Envelhecedor / Engarrafador</a>
+            </h3>
+
+            <p>
+                Orientações para estabelecimentos que realizam envelhecimento,
+                engarrafamento ou atividades relacionadas.
+            </p>
+
+            <a href="envelhecedor.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>
+                📦
+                <a href="armazenista.html">Armazenista</a>
+            </h3>
+
+            <p>
+                Consulte os requisitos aplicáveis aos estabelecimentos
+                destinados ao armazenamento de produtos.
+            </p>
+
+            <a href="armazenista.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>
+                🌎
+                <a href="importador.html">Importador</a>
+            </h3>
+
+            <p>
+                Orientações específicas para estabelecimentos que realizam
+                importação de produtos sujeitos à fiscalização.
+            </p>
+
+            <a href="importador.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>
+                🚢
+                <a href="exportador.html">Exportador</a>
+            </h3>
+
+            <p>
+                Informações e requisitos aplicáveis aos estabelecimentos
+                que realizam exportação.
+            </p>
+
+            <a href="exportador.html" class="botao">
+                Ver orientações
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- COMO FUNCIONA -->
+
+    <h2>🔄 Como funciona o registro?</h2>
+
+    <p>
+        De forma geral, o processo envolve as etapas abaixo. A necessidade
+        de vistoria e outras providências pode variar conforme a atividade
+        e as características do estabelecimento.
+    </p>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="numero">1</div>
+            <strong>Identifique</strong>
+            <p>
+                Defina a atividade que será exercida pelo estabelecimento.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">2</div>
+            <strong>Verifique</strong>
+            <p>
+                Confira o enquadramento e os requisitos aplicáveis.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">3</div>
+            <strong>Prepare</strong>
+            <p>
+                Organize a documentação e as informações necessárias.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">4</div>
+            <strong>Solicite</strong>
+            <p>
+                Faça a solicitação pelo sistema correspondente.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">5</div>
+            <strong>Acompanhe</strong>
+            <p>
+                Acompanhe a análise e eventuais solicitações.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="numero">6</div>
+            <strong>Atenda</strong>
+            <p>
+                Responda às exigências e apresente os documentos solicitados.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">7</div>
+            <strong>Vistoria</strong>
+            <p>
+                Quando aplicável, acompanhe a vistoria do estabelecimento.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">8</div>
+            <strong>Determinação</strong>
+            <p>
+                Aguarde a conclusão da análise.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">9</div>
+            <strong>Certificado</strong>
+            <p>
+                Acesse o certificado quando disponibilizado.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="numero">10</div>
+            <strong>Concluído</strong>
+            <p>
+                Mantenha os dados e registros atualizados.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- DOCUMENTAÇÃO -->
+
+    <h2>📋 Documentação para registro de estabelecimento</h2>
+
+    <p>
+        A documentação necessária pode variar conforme a atividade e as
+        características do estabelecimento. Utilize a relação abaixo como
+        orientação inicial e confira os requisitos específicos da atividade.
+    </p>
+
+    <div class="documentos">
+
+        <h3>📑 Documentação cadastral e técnica</h3>
+
+        <div class="documentos-grid">
+
+            <div class="documento">
+                CNPJ ou documento cadastral aplicável
+            </div>
+
+            <div class="documento">
+                Planta ou layout do estabelecimento
+            </div>
+
+            <div class="documento">
+                Documentos societários, quando aplicáveis
+            </div>
+
+            <div class="documento">
+                Manual de Boas Práticas de Fabricação
+            </div>
+
+            <div class="documento">
+                Identificação dos responsáveis
+            </div>
+
+            <div class="documento">
+                Laudo de potabilidade da água, quando aplicável
+            </div>
+
+            <div class="documento">
+                Responsabilidade técnica, quando aplicável
+            </div>
+
+            <div class="documento">
+                Documentos específicos da atividade
+            </div>
+
+            <div class="documento">
+                Memorial descritivo
+            </div>
+
+            <div class="documento">
+                Demais documentos solicitados pelo serviço responsável
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ATENÇÃO -->
+
+    <div class="atencao">
+
+        <strong>⚠️ Atenção</strong>
+
+        <p>
+            A relação de documentos apresentada nesta página é orientativa.
+            Os documentos exigidos podem variar conforme a atividade, os
+            produtos, as instalações e as demais características do
+            estabelecimento.
+        </p>
+
+        <p>
+            Antes de protocolar a solicitação, confira os requisitos
+            específicos aplicáveis ao seu caso.
+        </p>
+
+    </div>
+
+
+    <!-- O QUE SERÁ ANALISADO -->
+
+    <h2>🔍 O que será considerado na análise?</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🏭 Estrutura e instalações</h3>
+
+            <p>
+                Verificação das instalações, setores, equipamentos,
+                fluxo operacional e compatibilidade com a atividade.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Documentação</h3>
+
+            <p>
+                Conferência das informações e documentos apresentados
+                na solicitação de registro.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🧪 Processo produtivo</h3>
+
+            <p>
+                Quando aplicável, avaliação das etapas de produção,
+                elaboração, armazenamento ou demais operações realizadas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📖 Autocontrole</h3>
+
+            <p>
+                Verificação dos procedimentos e controles aplicáveis
+                às atividades desenvolvidas pelo estabelecimento.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- REFERÊNCIAS -->
+
+    <h2>📚 Principais referências</h2>
+
+    <div class="grid referencias">
+
+        <div class="card">
+
+            <h3>📘 Legislação e normas aplicáveis</h3>
+
+            <p>
+                Consulte a legislação vigente e os requisitos específicos
+                relacionados à atividade do estabelecimento.
+            </p>
+
+            <a href="#" class="botao">
+                Consultar legislação
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏛️ Orientação oficial do MAPA</h3>
+
+            <p>
+                Consulte as orientações e informações oficiais disponíveis
+                para registro e fiscalização de estabelecimentos.
+            </p>
+
+            <a href="#" class="botao">
+                Consultar MAPA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- AVISO FINAL -->
+
+    <div class="rodape-aviso">
+
+        <strong>📌 Importante</strong>
+
+        <p>
+            O SIPOV-SP organiza estas informações para facilitar a consulta
+            e orientar os usuários quanto aos procedimentos relacionados ao
+            registro de estabelecimentos.
+        </p>
+
+        <p>
+            As informações possuem caráter orientativo. A versão oficial das
+            normas e os requisitos aplicáveis devem sempre ser consultados
+            nas fontes correspondentes.
+        </p>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal – SIPOV-SP
+    </p>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</footer>
+
+</body>
+</html>
