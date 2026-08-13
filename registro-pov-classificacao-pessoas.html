@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Pessoas Físicas – Classificação Vegetal | SIPOV-SP</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f5;
+            color: #222;
+            line-height: 1.55;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 24px 60px;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #087f45;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .voltar:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: #087f45;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #087f45;
+            font-size: 22px;
+            margin-top: 36px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            color: #087f45;
+            margin-top: 0;
+        }
+
+        p {
+            margin-top: 8px;
+        }
+
+        a {
+            color: #087f45;
+        }
+
+        /* DESTAQUES */
+
+        .destaque {
+            background: #eaf6ef;
+            border-left: 4px solid #087f45;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 22px 0;
+        }
+
+        .alerta {
+            background: #fff8e5;
+            border-left: 4px solid #e2a400;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 22px 0;
+        }
+
+        .alerta strong {
+            color: #8a6500;
+        }
+
+        /* CARDS */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d5dfda;
+            border-radius: 9px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eaf6ef;
+            color: #087f45;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 9px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* INFORMAÇÕES */
+
+        .info {
+            background: white;
+            border: 1px solid #d5dfda;
+            border-radius: 9px;
+            padding: 20px;
+            margin-top: 18px;
+        }
+
+        .info-item {
+            margin-bottom: 13px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-item strong {
+            color: #087f45;
+        }
+
+        /* TABELA */
+
+        .tabela-container {
+            overflow-x: auto;
+            background: white;
+            border: 1px solid #d5dfda;
+            border-radius: 9px;
+            margin-top: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        th {
+            background: #087f45;
+            color: white;
+            padding: 13px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 13px;
+            border-bottom: 1px solid #dfe7e2;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: #f8faf9;
+        }
+
+        /* LISTA */
+
+        .lista {
+            background: white;
+            border: 1px solid #d5dfda;
+            border-radius: 9px;
+            padding: 20px 25px;
+            margin-top: 18px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .lista li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* BOTÕES */
+
+        .botoes {
+            margin-top: 18px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #087f45;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 6px 8px 6px 0;
+        }
+
+        .botao:hover {
+            background: #066a39;
+        }
+
+        /* RODAPÉ */
+
+        .fonte {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #ccd8d1;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 750px) {
+
+            .container {
+                padding: 22px 16px 45px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                min-width: 800px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- ========================================================= -->
+    <!-- VOLTAR -->
+    <!-- ========================================================= -->
+
+    <a class="voltar" href="registro-estabelecimento.html">
+        ← Voltar para Registro de Estabelecimento
+    </a>
+
+
+    <!-- ========================================================= -->
+    <!-- CABEÇALHO -->
+    <!-- ========================================================= -->
+
+    <h1>
+        👤 Registro de Pessoas Físicas – Classificação Vegetal
+    </h1>
+
+    <p>
+        Orientações para profissionais que atuam em atividades relacionadas
+        à classificação e à certificação de produtos de origem vegetal.
+    </p>
+
+
+    <div class="destaque">
+
+        <strong>
+            📌 Importante
+        </strong>
+
+        <p>
+            As atividades relacionadas à classificação vegetal envolvem
+            diferentes profissionais, com atribuições e formas de habilitação
+            específicas.
+        </p>
+
+        <p>
+            Consulte abaixo as diferenças entre <strong>classificador vegetal,
+            inspetor, instrutor e monitor</strong>, bem como as orientações
+            para habilitação e registro.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- PROFISSIONAIS -->
+    <!-- ========================================================= -->
+
+    <h2>
+        👥 Profissionais relacionados à classificação vegetal
+    </h2>
+
+    <div class="grid">
+
+
+        <!-- CLASSIFICADOR -->
+
+        <div class="card">
+
+            <span class="tag">
+                CLASSIFICADOR HABILITADO
+            </span>
+
+            <h3>
+                🌾 Classificador vegetal
+            </h3>
+
+            <p>
+                O classificador habilitado é o profissional que realizou
+                curso específico de classificação, aprovado e homologado
+                pelo MAPA em conformidade com a Portaria nº 521, de
+                1º de dezembro de 2022.
+            </p>
+
+            <p>
+                Está habilitado a classificar os produtos para os quais
+                recebeu formação.
+            </p>
+
+            <p>
+                Cada posto de classificação deve contar com, no mínimo,
+                um classificador habilitado.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-classificadores-de-produtos-vegetais"
+                target="_blank"
+            >
+                Orientações para classificadores
+            </a>
+
+        </div>
+
+
+        <!-- INSPETOR -->
+
+        <div class="card">
+
+            <span class="tag">
+                CERTIFICAÇÃO VOLUNTÁRIA
+            </span>
+
+            <h3>
+                🔎 Inspetor habilitado
+            </h3>
+
+            <p>
+                Na certificação voluntária atua o inspetor, profissional
+                registrado no MAPA e capacitado por meio de cursos e
+                treinamentos específicos, em conformidade com a
+                Portaria nº 521, de 1º de dezembro de 2022.
+            </p>
+
+            <p>
+                Atua no chamado <strong>Serviço de Controle Autorizado</strong>
+                e verifica se o produto de origem vegetal atende aos padrões
+                e requisitos definidos para a certificação voluntária.
+            </p>
+
+        </div>
+
+
+        <!-- INSTRUTOR -->
+
+        <div class="card">
+
+            <span class="tag">
+                FORMAÇÃO
+            </span>
+
+            <h3>
+                🎓 Instrutor
+            </h3>
+
+            <p>
+                Nos cursos de formação de classificadores vegetais
+                disciplinados pela Portaria nº 521, de 1º de dezembro
+                de 2022, existe a figura do instrutor.
+            </p>
+
+            <p>
+                É o profissional habilitado e registrado no CGC/MAPA,
+                responsável pela condução dos cursos homologados pelo MAPA.
+            </p>
+
+            <p>
+                Durante a realização do curso, pode ser auxiliado por
+                outro profissional habilitado, o monitor.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-instrutores-dos-cursos-de-classificacao-de-produtos-vegetais"
+                target="_blank"
+            >
+                Orientações para instrutores
+            </a>
+
+        </div>
+
+
+        <!-- MONITOR -->
+
+        <div class="card">
+
+            <span class="tag">
+                APOIO À FORMAÇÃO
+            </span>
+
+            <h3>
+                👨‍🏫 Monitor
+            </h3>
+
+            <p>
+                O monitor auxilia o instrutor nas atividades práticas
+                dos cursos de formação de classificadores e inspetores.
+            </p>
+
+            <p>
+                Deve ser classificador ou inspetor habilitado no produto
+                ou na área de conhecimento objeto do curso.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- QUADRO COMPARATIVO -->
+    <!-- ========================================================= -->
+
+    <h2>
+        📊 Quadro comparativo – Profissionais de Classificação Vegetal
+    </h2>
+
+    <div class="tabela-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Profissional
+                    </th>
+
+                    <th>
+                        Finalidade da atuação
+                    </th>
+
+                    <th>
+                        Onde atua
+                    </th>
+
+                    <th>
+                        Forma de habilitação
+                    </th>
+
+                    <th>
+                        Validade do registro
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Classificador vegetal</strong>
+                    </td>
+
+                    <td>
+                        Realizar a classificação oficial de produtos
+                        de origem vegetal, conforme padrões de identidade
+                        e qualidade estabelecidos pelo MAPA.
+                    </td>
+
+                    <td>
+                        Postos de serviço de classificação, unidades
+                        operacionais ou fluxos operacionais de
+                        estabelecimentos registrados.
+                    </td>
+
+                    <td>
+                        Aprovação em curso de formação homologado pelo MAPA,
+                        com disciplinas de conhecimentos gerais e específicos
+                        para o produto ou normativo.
+                    </td>
+
+                    <td>
+                        5 anos, com possibilidade de renovação condicionada
+                        a atualização, proficiência ou comprovação de atuação.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Inspetor</strong>
+                    </td>
+
+                    <td>
+                        Realizar a avaliação da conformidade do produto vegetal
+                        no âmbito de serviços de controle autorizados,
+                        especialmente na certificação voluntária.
+                    </td>
+
+                    <td>
+                        Empresas e entidades que executam serviços de controle
+                        e certificação voluntária reconhecidos pelo MAPA.
+                    </td>
+
+                    <td>
+                        Aprovação em curso de formação específico para
+                        inspetores, conforme normas nacionais, internacionais
+                        ou programas de certificação reconhecidos.
+                    </td>
+
+                    <td>
+                        5 anos, podendo exigir atualização periódica.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Instrutor</strong>
+                    </td>
+
+                    <td>
+                        Ministrar cursos de formação de classificadores
+                        e inspetores, conforme projeto homologado pelo MAPA.
+                    </td>
+
+                    <td>
+                        Entidades promotoras de cursos homologados pelo MAPA.
+                    </td>
+
+                    <td>
+                        Registro como classificador ou inspetor, atuação prévia
+                        como monitor e atendimento aos requisitos técnicos
+                        da Portaria nº 521/2022.
+                    </td>
+
+                    <td>
+                        5 anos, com possibilidade de exigência de curso
+                        de atualização na renovação.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Monitor</strong>
+                    </td>
+
+                    <td>
+                        Auxiliar o instrutor nas atividades práticas dos
+                        cursos de formação.
+                    </td>
+
+                    <td>
+                        Cursos de formação de classificadores e inspetores.
+                    </td>
+
+                    <td>
+                        Ser classificador ou inspetor habilitado no produto
+                        ou área de conhecimento objeto do curso.
+                    </td>
+
+                    <td>
+                        Vinculado à validade da habilitação como classificador
+                        ou inspetor.
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- OBSERVAÇÕES -->
+    <!-- ========================================================= -->
+
+    <h2>
+        ⚠️ Observações importantes
+    </h2>
+
+    <div class="lista">
+
+        <ul>
+
+            <li>
+                Independentemente da forma de classificação adotada,
+                é obrigatória a atuação de profissional habilitado pelo MAPA.
+            </li>
+
+            <li>
+                Todos esses profissionais somente podem atuar se estiverem
+                registrados no CGC/MAPA.
+            </li>
+
+            <li>
+                O registro é pessoal, não estando vinculado automaticamente
+                a um estabelecimento.
+            </li>
+
+            <li>
+                A habilitação é específica por produto, atividade ou
+                disciplina, conforme o curso realizado.
+            </li>
+
+            <li>
+                A perda, suspensão ou cancelamento da habilitação impede
+                o exercício regular da atividade.
+            </li>
+
+            <li>
+                A supervisão, suspensão ou cancelamento do registro ocorrem
+                sempre mediante critérios e procedimentos definidos pelo MAPA.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- COMO SOLICITAR -->
+    <!-- ========================================================= -->
+
+    <h2>
+        📝 Como solicitar o registro?
+    </h2>
+
+    <div class="destaque">
+
+        <p>
+            Solicitações relacionadas ao registro de profissionais de
+            classificação vegetal devem ser realizadas por meio da
+            plataforma <strong>GOV.BR</strong>.
+        </p>
+
+        <p>
+            O serviço disponibilizado pelo MAPA contém as orientações
+            específicas para a solicitação de habilitação dos profissionais.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-classificadores-de-produtos-vegetais"
+            target="_blank"
+        >
+            Acessar serviço no GOV.BR
+        </a>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- CAPACITAÇÃO -->
+    <!-- ========================================================= -->
+
+    <h2>
+        🎓 Capacitação e Cursos da Inspeção Vegetal
+    </h2>
+
+    <div class="card">
+
+        <p>
+            Esta área de cursos reúne as capacitações oferecidas pelo
+            MAPA para formação e aperfeiçoamento de classificadores,
+            instrutores e inspetores que atuam na classificação e
+            certificação de produtos vegetais.
+        </p>
+
+        <div class="botoes">
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal"
+                target="_blank"
+            >
+                Acessar capacitações do MAPA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- FORMAÇÃO / HOMOLOGAÇÃO -->
+    <!-- ========================================================= -->
+
+    <h2>
+        📚 Homologação de cursos
+    </h2>
+
+    <div class="info">
+
+        <p>
+            Para acessar o serviço do Portal GOV.BR e realizar a solicitação
+            de homologação de cursos de formação para classificador de
+            produtos vegetais e inspetor do sistema de certificação,
+            consulte o serviço oficial disponibilizado pelo MAPA.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br"
+            target="_blank"
+        >
+            Acessar Portal GOV.BR
+        </a>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- REFERÊNCIA NORMATIVA -->
+    <!-- ========================================================= -->
+
+    <h2>
+        ⚖️ Referência normativa
+    </h2>
+
+    <div class="lista">
+
+        <ul>
+
+            <li>
+                <strong>
+                    Portaria nº 521, de 1º de dezembro de 2022
+                </strong>
+                – referência para as atividades de formação e habilitação
+                relacionadas à classificação vegetal.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- FONTE OFICIAL -->
+    <!-- ========================================================= -->
+
+    <div class="fonte">
+
+        <h2>
+            🌐 Fontes oficiais
+        </h2>
+
+        <p>
+            Para informações atualizadas sobre habilitação, registro,
+            cursos e procedimentos aplicáveis aos profissionais de
+            classificação vegetal, consulte diretamente as páginas
+            oficiais do MAPA.
+        </p>
+
+        <div class="botoes">
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-classificadores-de-produtos-vegetais"
+                target="_blank"
+            >
+                Classificadores
+            </a>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas/habilitacao-de-instrutores-dos-cursos-de-classificacao-de-produtos-vegetais"
+                target="_blank"
+            >
+                Instrutores
+            </a>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/habilitacao-de-pessoas-fisicas"
+                target="_blank"
+            >
+                Habilitação de Pessoas Físicas
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
