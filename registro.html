@@ -1,121 +1,1493 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro | SIPOV-SP</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f7f6;color:#26332d;line-height:1.6}
-header{background:#fff;border-bottom:1px solid #dfe5e1}
-.topo{max-width:1200px;margin:auto;padding:22px 30px;display:flex;justify-content:space-between;align-items:center}
-.marca{display:flex;align-items:center;gap:15px}.simbolo{width:48px;height:48px;background:#176b3a;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-weight:bold}.marca h1{font-size:22px;color:#176b3a}.marca p{font-size:13px;color:#68736d}
-nav{background:#176b3a}.menu{max-width:1200px;margin:auto;display:flex;flex-wrap:wrap}.menu a{color:#fff;text-decoration:none;padding:14px 17px;font-size:14px}.menu a:hover{background:#0f512b}
-.hero{background:#176b3a;color:#fff}.hero-conteudo{max-width:1200px;margin:auto;padding:50px 30px}.hero h2{font-size:38px;margin-bottom:12px}.hero p{font-size:18px;max-width:850px}
-.container{max-width:1200px;margin:auto;padding:45px 30px}.titulo{margin-bottom:25px}.titulo h2{color:#176b3a;font-size:28px;margin-bottom:6px}.titulo p{color:#68736d}
-.voltar{margin-bottom:25px}.voltar a{color:#176b3a;text-decoration:none;font-weight:bold}
-.destaque{background:#eef5f0;border-left:5px solid #176b3a;padding:22px;margin-bottom:30px;border-radius:5px}.destaque strong{color:#176b3a}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:#fff;border:1px solid #dfe5e1;border-radius:10px;padding:25px}.card h3{color:#176b3a;margin-bottom:10px;font-size:20px}.card p{color:#68736d;font-size:15px}.card ul{margin:12px 0 0 20px}.card li{margin-bottom:7px}
-.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.mini{background:#fff;border:1px solid #dfe5e1;border-radius:10px;padding:20px}.mini h3{color:#176b3a;font-size:17px;margin-bottom:7px}.mini p{font-size:14px;color:#68736d}
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.passo{background:#fff;border:1px solid #dfe5e1;border-radius:10px;padding:22px}.numero{width:34px;height:34px;background:#176b3a;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;margin-bottom:12px}.passo h3{color:#176b3a;font-size:17px;margin-bottom:6px}.passo p{font-size:14px;color:#68736d}
-.lista{margin-top:15px;padding-left:20px}.lista li{margin-bottom:8px}
-.botao{display:inline-block;background:#176b3a;color:#fff;text-decoration:none;padding:13px 22px;border-radius:6px;margin-top:15px;font-weight:bold}.botao:hover{background:#0f512b}
-.faq details{background:#fff;border:1px solid #dfe5e1;border-radius:8px;margin-bottom:10px;padding:17px 20px}.faq summary{cursor:pointer;color:#176b3a;font-weight:bold}.faq p{margin-top:12px;color:#68736d}
-.nota{font-size:13px;color:#68736d;margin-top:15px}
-footer{background:#26332d;color:#fff;margin-top:20px}.rodape{max-width:1200px;margin:auto;padding:35px 30px}.rodape p{color:#c8d0cb;font-size:14px}
-@media(max-width:800px){.cards,.cards-3,.passos{grid-template-columns:1fr}.topo{flex-direction:column;align-items:flex-start}.menu{flex-direction:column}.hero h2{font-size:30px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | SIPOV-SP</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f5;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        header {
+            background: #08783f;
+            color: white;
+            padding: 30px 6%;
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav {
+            background: #075f32;
+            padding: 10px 6%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 20px 50px;
+        }
+
+        .voltar {
+            margin-bottom: 24px;
+        }
+
+        .voltar a {
+            color: #08783f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .intro {
+            background: #edf7f1;
+            border-left: 4px solid #08783f;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+        }
+
+        .intro strong {
+            display: block;
+            color: #08783f;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        h2 {
+            color: #08783f;
+            margin-top: 34px;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        h3 {
+            color: #08783f;
+            margin: 0 0 8px 0;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        .section-intro {
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 18px 0 28px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d7ded9;
+            border-radius: 7px;
+            padding: 18px;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .card a {
+            color: #08783f;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .card .icone {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 12px;
+            background: #08783f;
+            color: white !important;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none !important;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .botao:hover {
+            background: #075f32;
+        }
+
+        .processo {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 20px 0 30px;
+        }
+
+        .etapa {
+            background: white;
+            border: 1px solid #d7ded9;
+            border-radius: 7px;
+            padding: 14px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .etapa-numero {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            background: #08783f;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .etapa strong {
+            display: block;
+            color: #08783f;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .etapa p {
+            margin: 0;
+            font-size: 11px;
+        }
+
+        .checklist {
+            background: white;
+            border: 1px solid #d7ded9;
+            border-radius: 7px;
+            padding: 20px;
+            margin: 18px 0 28px;
+        }
+
+        .checklist h3 {
+            margin-bottom: 12px;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            columns: 2;
+        }
+
+        .checklist li {
+            font-size: 12px;
+            padding: 5px 0;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            margin-right: 8px;
+            color: #08783f;
+            font-weight: bold;
+        }
+
+        .atencao {
+            background: #fffbea;
+            border-left: 4px solid #d6a400;
+            padding: 15px 18px;
+            margin: 22px 0 30px;
+        }
+
+        .atencao strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .atencao p {
+            margin: 0;
+        }
+
+        .dica {
+            background: #eef5ff;
+            border-left: 4px solid #4778b8;
+            padding: 15px 18px;
+            margin: 22px 0 30px;
+        }
+
+        .dica strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #315e91;
+        }
+
+        .dica p {
+            margin: 0;
+        }
+
+        .fonte {
+            background: white;
+            border: 1px solid #d7ded9;
+            border-radius: 7px;
+            padding: 18px;
+        }
+
+        .fonte p {
+            margin-top: 0;
+        }
+
+        footer {
+            background: #075f32;
+            color: white;
+            padding: 28px 6%;
+            margin-top: 20px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        footer p {
+            margin: 3px 0;
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .processo {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .processo {
+                grid-template-columns: 1fr;
+            }
+
+            .checklist ul {
+                columns: 1;
+            }
+
+            nav a {
+                display: inline-block;
+                margin-bottom: 6px;
+            }
+        }
+    </style>
+
 </head>
+
+
 <body>
+
+
 <header>
-<div class="topo"><div class="marca"><div class="simbolo">S</div><div><h1>SIPOV-SP</h1><p>Serviço de Inspeção de Produtos de Origem Vegetal</p></div></div><strong>MAPA</strong></div>
-<nav><div class="menu">
-<a href="index.html">Início</a><a href="registro.html">Registro</a><a href="bebidas.html">Bebidas</a><a href="classificacao.html">Classificação</a><a href="importacao.html">Importação</a><a href="fiscalizacao.html">Fiscalização</a><a href="legislacao.html">Legislação</a><a href="documentos.html">Documentos</a><a href="contato.html">Contato</a>
-</div></nav>
+
+    <h1>📋 Registro de Estabelecimentos e Produtos</h1>
+
+    <p>
+        Orientações para registro, alteração, renovação, certificação
+        e consulta de estabelecimentos e produtos sujeitos à fiscalização
+        do Ministério da Agricultura e Pecuária.
+    </p>
+
 </header>
-<section class="hero"><div class="hero-conteudo"><h2>Registro de Estabelecimentos</h2><p>Orientações para registro, manutenção e alteração cadastral de estabelecimentos sujeitos à inspeção de produtos de origem vegetal.</p></div></section>
+
+
+<nav>
+
+    <a href="index.html">Início</a>
+    <a href="registro.html">Registro</a>
+    <a href="bebidas.html">Bebidas</a>
+    <a href="classificacao.html">Classificação</a>
+    <a href="importacao.html">Importação</a>
+    <a href="fiscalizacao.html">Fiscalização</a>
+    <a href="legislacao.html">Legislação</a>
+    <a href="documentos.html">Documentos</a>
+    <a href="contato.html">Contato</a>
+
+</nav>
+
+
 <main>
-<section class="container">
-<div class="voltar"><a href="index.html">← Voltar para a página inicial</a></div>
-<div class="destaque"><strong>Antes de solicitar o registro</strong><p>Verifique se a atividade está sujeita a registro, identifique o enquadramento aplicável e reúna a documentação necessária. A solicitação é realizada pelo SIPEAGRO.</p></div>
-<div class="titulo"><h2>1. Preciso de registro?</h2><p>O registro é um ato administrativo do MAPA e, para as atividades sujeitas ao controle, é necessário para a regularidade do estabelecimento.</p></div>
-<div class="cards">
-<div class="card"><h3>🏭 Atividades sujeitas a registro</h3><ul><li>Produtor, fabricante ou elaborador;</li><li>Padronizador;</li><li>Envasilhador ou engarrafador;</li><li>Atacadista;</li><li>Importador;</li><li>Exportador.</li></ul></div>
-<div class="card"><h3>📌 Importante</h3><p>O registro é único e exclusivo para cada unidade produtiva. Um estabelecimento recebe um único número de registro, ainda que elabore produtos abrangidos por diferentes legislações aplicáveis.</p></div>
-</div>
-<p class="nota">A classificação da atividade e a necessidade de registro devem ser verificadas conforme a legislação e a habilitação correspondente.</p>
-</section>
 
-<section class="container">
-<div class="titulo"><h2>2. Quando o registro não é exigido?</h2><p>Há hipóteses específicas de dispensa previstas na legislação.</p></div>
-<div class="cards-3">
-<div class="mini"><h3>🔬 Pesquisa</h3><p>Produtos destinados à pesquisa, desde que identificados, separados dos destinados à comercialização e acompanhados da documentação pertinente.</p></div>
-<div class="mini"><h3>🏆 Concurso</h3><p>Produtos destinados a concurso de qualidade.</p></div>
-<div class="mini"><h3>🏠 Consumo próprio</h3><p>Produção para consumo próprio, sem finalidade comercial.</p></div>
-<div class="mini"><h3>🍽️ Serviços de alimentação</h3><p>Hipóteses específicas de produção, envase e venda direta ao consumidor final no próprio local.</p></div>
-<div class="mini"><h3>🍾 Envase imediato</h3><p>Estações de envase ou estabelecimentos comerciais que engarrafem no local produtos já registrados, com venda imediata.</p></div>
-<div class="mini"><h3>⚠️ Atenção</h3><p>A dispensa de registro não afasta a fiscalização nem as demais responsabilidades legais aplicáveis.</p></div>
-</div>
-</section>
 
-<section class="container">
-<div class="titulo"><h2>3. Qual é o nível de registro?</h2><p>Para estabelecimentos abrangidos pelo Cadastro Geral de Classificação (CGC/MAPA), o registro pode ser enquadrado nos níveis básico, intermediário ou completo. O nível depende da atividade, produto e habilitação solicitada.</p></div>
-<div class="cards-3">
-<div class="mini"><h3>🟢 Nível Básico</h3><p>Não exige apresentação de documentação complementar nem realização de vistoria. A concessão do registro é realizada automaticamente pelo sistema, com base nas informações e declarações prestadas.</p></div>
-<div class="mini"><h3>🟡 Nível Intermediário</h3><p>Exige documentação complementar. A realização de vistoria pode ser determinada pelo órgão fiscalizador quando necessária.</p></div>
-<div class="mini"><h3>🔵 Nível Completo</h3><p>Exige documentação complementar e vistoria obrigatória. Também requer a documentação de habilitação do responsável técnico e o comprovante de pagamento do emolumento, conforme aplicável.</p></div>
-</div>
-<div class="destaque"><strong>⚠️ Atenção ao enquadramento</strong><p>Quando o estabelecimento exercer atividades enquadráveis em mais de um nível, o SIPEAGRO adota o nível mais elevado. Para importadores, existem regras específicas quanto à vistoria. Verifique sempre a habilitação ativa e a orientação oficial vigente.</p></div>
-<p class="nota">Esta classificação de níveis refere-se ao registro no CGC/MAPA. Estabelecimentos de bebidas possuem orientação específica e devem ser consultados na área de Bebidas deste portal.</p>
-</section>
+    <div class="voltar">
+        <a href="index.html">← Voltar para Início</a>
+    </div>
 
-<section class="container">
-<div class="titulo"><h2>4. Documentação</h2><p>Para estabelecimentos com CNPJ, exceto exclusivamente importadores ou exportadores, a página oficial do MAPA relaciona os principais documentos necessários.</p></div>
-<div class="cards">
-<div class="card"><h3>📄 Documentos cadastrais</h3><ul><li>CPF dos sócios ou representante legal;</li><li>Comprovante de inscrição no CNPJ;</li><li>Contrato Social ou Ato Constitutivo consolidado;</li><li>Alvará de funcionamento, quando aplicável.</li></ul></div>
-<div class="card"><h3>👷 Responsabilidade técnica</h3><ul><li>ART ou documento equivalente, conforme aplicável;</li><li>Dados do responsável técnico no sistema;</li><li>Documentação compatível com a atividade requerida.</li></ul></div>
-<div class="card"><h3>🏭 Instalações e processo</h3><ul><li>Projeto;</li><li>Memorial descritivo das instalações e equipamentos;</li><li>Manual de Boas Práticas;</li><li>Informações sobre processo e fluxo de operações.</li></ul></div>
-<div class="card"><h3>💧 Água</h3><p>Laudo de análise físico-química e microbiológica da água utilizada no estabelecimento, contemplando, no mínimo, os parâmetros indicados pelo MAPA e atestando sua potabilidade. A página oficial informa que este documento poderá ser apresentado por ocasião da vistoria.</p></div>
-</div>
-<p class="nota">A documentação varia conforme o tipo de estabelecimento, atividade e enquadramento. Consulte sempre a orientação oficial vigente.</p>
-</section>
 
-<section class="container">
-<div class="titulo"><h2>5. Como solicitar o registro?</h2><p>O processo ocorre pelo SIPEAGRO e passa por análise documental e, quando aplicável, vistoria.</p></div>
-<div class="passos">
-<div class="passo"><div class="numero">1</div><h3>Verifique o enquadramento</h3><p>Identifique a atividade, os produtos e a habilitação correspondente.</p></div>
-<div class="passo"><div class="numero">2</div><h3>Prepare os documentos</h3><p>Reúna os documentos exigidos e confira se as informações são compatíveis entre si.</p></div>
-<div class="passo"><div class="numero">3</div><h3>Acesse o SIPEAGRO</h3><p>O representante legal realiza o acesso e inicia a solicitação.</p></div>
-<div class="passo"><div class="numero">4</div><h3>Preencha e envie</h3><p>Preencha as abas do sistema e anexe os documentos correspondentes.</p></div>
-<div class="passo"><div class="numero">5</div><h3>Acompanhe a análise</h3><p>Atenda às pendências dentro do prazo e reenvie a solicitação quando necessário.</p></div>
-<div class="passo"><div class="numero">6</div><h3>Vistoria e decisão</h3><p>Após a aprovação documental, ocorre a vistoria quando aplicável. Em conformidade, o registro é deferido.</p></div>
-</div>
-<a class="botao" href="https://sistemasweb.agricultura.gov.br/pages/SIPEAGRO.html" target="_blank" rel="noopener noreferrer">Acessar o SIPEAGRO</a>
-</section>
+    <div class="intro">
 
-<section class="container">
-<div class="titulo"><h2>6. Já tenho registro. Preciso alterar alguma coisa?</h2><p>Alterações devem ser comunicadas previamente ao MAPA pelo SIPEAGRO, acompanhadas da documentação correspondente.</p></div>
-<div class="cards">
-<div class="card"><h3>🔄 Alteração cadastral</h3><p>Utilize a solicitação de alteração de registro para as situações em que o sistema e a legislação permitam a atualização das informações cadastrais.</p></div>
-<div class="card"><h3>📍 Alteração de endereço</h3><p>Em estabelecimentos de bebidas, a mudança física de local pode implicar cancelamento do registro e dos produtos vinculados. Existem exceções específicas, como alteração do nome do logradouro e alteração de acesso.</p></div>
-<div class="card"><h3>🛠️ Reforma ou mudança de fluxo</h3><p>Ampliação, redução ou reforma da área da fábrica, mudança no fluxo de produção ou nos procedimentos de fabricação dependem de autorização prévia do MAPA.</p></div>
-<div class="card"><h3>🏷️ Razão social</h3><p>A alteração da razão social não acarreta, por si só, o cancelamento do registro, observadas as regras aplicáveis e a necessidade de atualização cadastral.</p></div>
-</div>
-</section>
+        <strong>Como podemos ajudar?</strong>
 
-<section class="container faq">
-<div class="titulo"><h2>7. Dúvidas frequentes</h2><p>Algumas situações exigem atenção especial.</p></div>
-<details><summary>O registro é pago?</summary><p>Atualmente, a página oficial do MAPA informa que não há cobrança de taxa para solicitação de registro de estabelecimentos ou produtos de origem vegetal.</p></details>
-<details><summary>O que acontece se houver pendência?</summary><p>O representante legal é comunicado pelo sistema/e-mail cadastrado, deve resolver as pendências e reenviar a solicitação. O não atendimento dentro do prazo pode levar ao arquivamento; a persistência de pendências após nova análise pode resultar em indeferimento.</p></details>
-<details><summary>Todo estabelecimento passa por vistoria?</summary><p>Não. A regra prevê vistoria após a aprovação documental, mas estabelecimentos exclusivamente importadores ou exportadores são dispensados dessa etapa, conforme a legislação aplicável.</p></details>
-<details><summary>Mudar a fábrica de endereço é apenas editar o CEP no SIPEAGRO?</summary><p>Para a maioria dos estabelecimentos de bebidas, a mudança física de endereço não é tratada como simples alteração cadastral: pode implicar cancelamento do registro atual e necessidade de novo registro. Há situações específicas em que a alteração de endereço é admitida sem cancelamento.</p></details>
-<details><summary>O SIPOV-SP pode substituir a legislação oficial?</summary><p>Não. Este portal organiza informações para facilitar o acesso aos serviços e orientações. Para requisitos legais, atos normativos e procedimentos oficiais, consulte sempre a versão vigente disponibilizada pelo MAPA.</p></details>
-</section>
+        <p>
+            Encontre abaixo o caminho correspondente à sua necessidade.
+            Antes de iniciar uma solicitação, confira o enquadramento,
+            os requisitos e a documentação aplicável.
+        </p>
 
-<section class="container">
-<div class="destaque"><strong>📚 Consulte sempre a fonte oficial</strong><p>A legislação e os procedimentos podem ser alterados. Antes de protocolar uma solicitação, confira a orientação vigente no portal do MAPA e os manuais aplicáveis ao SIPEAGRO.</p><a class="botao" href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos" target="_blank" rel="noopener noreferrer">Consultar orientação oficial do MAPA</a></div>
-</section>
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- O QUE VOCÊ PRECISA FAZER? -->
+    <!-- ========================================= -->
+
+    <h2>🔎 O que você precisa fazer?</h2>
+
+    <p class="section-intro">
+        Selecione a opção correspondente à sua situação.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icone">🏭</div>
+
+            <h3>Registrar um estabelecimento</h3>
+
+            <p>
+                Saiba quem precisa se registrar, qual atividade escolher,
+                quais documentos apresentar e como solicitar o registro.
+            </p>
+
+            <a class="botao" href="registro-estabelecimento.html">
+                Registrar estabelecimento
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🥤</div>
+
+            <h3>Registrar um produto</h3>
+
+            <p>
+                Confira se o produto precisa de registro, identifique
+                o enquadramento e verifique os requisitos antes de solicitar.
+            </p>
+
+            <a class="botao" href="registro-produto.html">
+                Registrar produto
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🔄</div>
+
+            <h3>Alterar um registro</h3>
+
+            <p>
+                Orientações para alterações cadastrais, endereço,
+                atividade, instalações e demais informações.
+            </p>
+
+            <a class="botao" href="alteracao-registro.html">
+                Alterar registro
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">♻️</div>
+
+            <h3>Renovar um registro</h3>
+
+            <p>
+                Consulte os procedimentos e documentos necessários
+                para renovação do registro.
+            </p>
+
+            <a class="botao" href="renovacao.html">
+                Renovar registro
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📄</div>
+
+            <h3>Certificado de registro</h3>
+
+            <p>
+                Consulte orientações para emissão, consulta e
+                autenticação do certificado.
+            </p>
+
+            <a class="botao" href="certificado.html">
+                Certificados
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🔎</div>
+
+            <h3>Consultar registros</h3>
+
+            <p>
+                Acesse as consultas e bases oficiais disponibilizadas
+                pelo MAPA.
+            </p>
+
+            <a class="botao" href="consultas.html">
+                Consultar registros
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- COMO FUNCIONA -->
+    <!-- ========================================= -->
+
+    <h2>🧭 Como funciona o processo?</h2>
+
+    <p class="section-intro">
+        De forma geral, o processo de registro envolve as seguintes etapas.
+        As etapas e a necessidade de vistoria podem variar conforme a situação.
+    </p>
+
+
+    <div class="processo">
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">1</div>
+
+            <strong>Identifique</strong>
+
+            <p>
+                Defina o que pretende registrar ou alterar.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">2</div>
+
+            <strong>Verifique</strong>
+
+            <p>
+                Confira a obrigatoriedade e o enquadramento.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">3</div>
+
+            <strong>Prepare</strong>
+
+            <p>
+                Separe documentos e informações necessárias.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">4</div>
+
+            <strong>Solicite</strong>
+
+            <p>
+                Faça a solicitação pelo SIPEAGRO.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">5</div>
+
+            <strong>Acompanhe</strong>
+
+            <p>
+                Acompanhe a análise e eventuais exigências.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">6</div>
+
+            <strong>Atenda</strong>
+
+            <p>
+                Corrija ou complemente a documentação, quando necessário.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">7</div>
+
+            <strong>Vistoria</strong>
+
+            <p>
+                Realize a vistoria quando aplicável.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">8</div>
+
+            <strong>Deferimento</strong>
+
+            <p>
+                Aguarde a conclusão da análise.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">9</div>
+
+            <strong>Certificado</strong>
+
+            <p>
+                Acesse o certificado conforme o procedimento aplicável.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">10</div>
+
+            <strong>Concluído</strong>
+
+            <p>
+                Mantenha os dados e registros atualizados.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- ESTABELECIMENTO -->
+    <!-- ========================================= -->
+
+    <h2>🏭 Registro de estabelecimento</h2>
+
+    <p class="section-intro">
+        Antes de iniciar a solicitação, identifique a atividade que
+        será exercida pelo estabelecimento.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icone">🏭</div>
+
+            <h3>Produtor / Fabricante / Elaborador</h3>
+
+            <p>
+                Orientações para estabelecimentos que realizam produção,
+                fabricação ou elaboração de produtos sujeitos a registro.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">⚙️</div>
+
+            <h3>Padronizador</h3>
+
+            <p>
+                Informações e requisitos relacionados à atividade
+                de padronização.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🍾</div>
+
+            <h3>Envasilhador / Engarrafador</h3>
+
+            <p>
+                Orientações para estabelecimentos que realizam
+                envase ou engarrafamento.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📦</div>
+
+            <h3>Atacadista</h3>
+
+            <p>
+                Consulte os requisitos aplicáveis à atividade
+                de atacado.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🌎</div>
+
+            <h3>Importador</h3>
+
+            <p>
+                Orientações específicas para estabelecimentos
+                que realizam importação.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🚢</div>
+
+            <h3>Exportador</h3>
+
+            <p>
+                Informações relacionadas aos estabelecimentos
+                que realizam exportação.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <a class="botao" href="registro-estabelecimento.html">
+        Ver orientações completas para estabelecimento
+    </a>
+
+
+    <!-- ========================================= -->
+    <!-- DOCUMENTOS -->
+    <!-- ========================================= -->
+
+    <h2>📋 Documentos para registro de estabelecimento</h2>
+
+    <p class="section-intro">
+        A documentação pode variar conforme a atividade e a situação
+        do estabelecimento. Utilize a lista abaixo como conferência inicial.
+    </p>
+
+
+    <div class="checklist">
+
+        <h3>Documentação cadastral e técnica</h3>
+
+        <ul>
+
+            <li>CNPJ e documentação cadastral aplicável</li>
+
+            <li>Documentos societários, quando aplicáveis</li>
+
+            <li>Identificação dos responsáveis</li>
+
+            <li>Responsabilidade técnica / ART, quando aplicável</li>
+
+            <li>Memorial descritivo</li>
+
+            <li>Planta ou layout do estabelecimento</li>
+
+            <li>Manual de Boas Práticas de Fabricação</li>
+
+            <li>Laudo de potabilidade, quando aplicável</li>
+
+            <li>Documentos específicos da atividade</li>
+
+            <li>Demais documentos solicitados pelo serviço responsável</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- EVITE PENDÊNCIAS -->
+    <!-- ========================================= -->
+
+    <div class="atencao">
+
+        <strong>⚠️ Evite pendências na análise</strong>
+
+        <p>
+            Antes de enviar a solicitação, confira se os documentos estão
+            legíveis, se as informações são coerentes entre si, se o layout
+            corresponde ao estabelecimento, se o memorial corresponde ao
+            layout e se a documentação de responsabilidade técnica contempla
+            efetivamente o objeto apresentado.
+        </p>
+
+    </div>
+
+
+    <div class="dica">
+
+        <strong>💡 Dica SIPOV-SP</strong>
+
+        <p>
+            Uma conferência prévia da documentação e da compatibilidade entre
+            os documentos apresentados pode evitar exigências e reduzir
+            retrabalho durante a análise do processo.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- PRODUTO -->
+    <!-- ========================================= -->
+
+    <h2>🥤 Registro de produto</h2>
+
+    <p class="section-intro">
+        Antes de registrar um produto, verifique seu enquadramento,
+        composição, denominação, requisitos específicos e rotulagem.
+    </p>
+
+
+    <div class="processo">
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">1</div>
+
+            <strong>Precisa registrar?</strong>
+
+            <p>
+                Verifique a obrigatoriedade ou eventual dispensa.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">2</div>
+
+            <strong>Enquadramento</strong>
+
+            <p>
+                Identifique corretamente a categoria do produto.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">3</div>
+
+            <strong>Composição</strong>
+
+            <p>
+                Confira matérias-primas e ingredientes.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">4</div>
+
+            <strong>Denominação</strong>
+
+            <p>
+                Verifique a denominação de venda.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">5</div>
+
+            <strong>Requisitos</strong>
+
+            <p>
+                Confira PIQ e parâmetros aplicáveis.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">6</div>
+
+            <strong>Rotulagem</strong>
+
+            <p>
+                Confira as informações obrigatórias.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <div class="etapa-numero">7</div>
+
+            <strong>SIPEAGRO</strong>
+
+            <p>
+                Realize a solicitação correspondente.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <a class="botao" href="registro-produto.html">
+        Ver orientações completas para produtos
+    </a>
+
+
+    <!-- ========================================= -->
+    <!-- ENCONTRE SEU PRODUTO -->
+    <!-- ========================================= -->
+
+    <h2>🔎 Encontre seu produto</h2>
+
+    <p class="section-intro">
+        Consulte as páginas específicas para verificar o enquadramento
+        e os requisitos relacionados a cada categoria.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+            <div class="icone">🍊</div>
+            <h3><a href="sucos.html">Sucos, néctares e polpas</a></h3>
+            <p>
+                Enquadramento, composição, requisitos e orientações
+                para produtos à base de frutas.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🥤</div>
+            <h3><a href="refrigerantes.html">Refrigerantes e preparados</a></h3>
+            <p>
+                Orientações para refrigerantes, preparados e categorias
+                relacionadas.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍵</div>
+            <h3><a href="cha.html">Chás e bebidas à base de vegetais</a></h3>
+            <p>
+                Consulte informações sobre enquadramento e composição.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍹</div>
+            <h3><a href="kombucha.html">Kombucha</a></h3>
+            <p>
+                Orientações específicas para produtos enquadrados
+                como kombucha.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍺</div>
+            <h3><a href="cerveja.html">Cervejas</a></h3>
+            <p>
+                Informações sobre enquadramento e requisitos aplicáveis.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍏</div>
+            <h3><a href="sidra.html">Sidras</a></h3>
+            <p>
+                Orientações para produtos enquadrados como sidra.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍯</div>
+            <h3><a href="hidromel.html">Hidromel</a></h3>
+            <p>
+                Consulte os requisitos específicos aplicáveis ao hidromel.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍎</div>
+            <h3><a href="fermentados.html">Fermentados de frutas</a></h3>
+            <p>
+                Orientações para produtos fermentados de frutas.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍷</div>
+            <h3><a href="vinhos.html">Vinhos e derivados da uva e do vinho</a></h3>
+            <p>
+                Consulte orientações específicas para vinhos e derivados.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🥃</div>
+            <h3><a href="destilados.html">Destilados</a></h3>
+            <p>
+                Aguardente, cachaça, rum, uísque, vodca, gim e outras
+                categorias de bebidas destiladas.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🍸</div>
+            <h3><a href="compostas.html">Bebidas alcoólicas compostas</a></h3>
+            <p>
+                Consulte categorias e requisitos aplicáveis às bebidas
+                alcoólicas compostas.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icone">🧴</div>
+            <h3><a href="vinagres.html">Vinagres e fermentados acéticos</a></h3>
+            <p>
+                Orientações sobre enquadramento e requisitos aplicáveis.
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- NOVO REGISTRO -->
+    <!-- ========================================= -->
+
+    <h2>❓ O produto precisa de um novo registro?</h2>
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>🧪 Alteração de composição</h3>
+
+            <p>
+                Verifique os efeitos da alteração da formulação sobre
+                o registro existente.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏷️ Alteração de denominação</h3>
+
+            <p>
+                Confira se a nova denominação permanece compatível
+                com o enquadramento do produto.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏭 Alteração do estabelecimento elaborador</h3>
+
+            <p>
+                Verifique as regras aplicáveis quando houver alteração
+                do local ou estabelecimento responsável pela elaboração.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- ALTERAÇÃO / RENOVAÇÃO / CERTIFICADO -->
+    <!-- ========================================= -->
+
+    <h2>🔄 Outros procedimentos</h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icone">🔄</div>
+
+            <h3>Alteração de registro</h3>
+
+            <p>
+                Alteração de dados cadastrais, endereço, atividade,
+                instalações, responsáveis ou outras informações.
+            </p>
+
+            <a class="botao" href="alteracao-registro.html">
+                Ver procedimentos
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">♻️</div>
+
+            <h3>Renovação</h3>
+
+            <p>
+                Confira validade, documentação e procedimentos
+                relacionados à renovação.
+            </p>
+
+            <a class="botao" href="renovacao.html">
+                Ver orientações
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📄</div>
+
+            <h3>Certificado</h3>
+
+            <p>
+                Consulte orientações para emitir, consultar
+                e autenticar certificados.
+            </p>
+
+            <a class="botao" href="certificado.html">
+                Ver certificados
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- SIPEAGRO -->
+    <!-- ========================================= -->
+
+    <h2>🟢 SIPEAGRO</h2>
+
+    <p class="section-intro">
+        Sistema utilizado pelo MAPA para os procedimentos relacionados
+        ao registro e cadastro de estabelecimentos e produtos.
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icone">🖥️</div>
+
+            <h3>Acessar SIPEAGRO</h3>
+
+            <p>
+                Acesse o sistema para realizar solicitações e acompanhar
+                os procedimentos disponíveis.
+            </p>
+
+            <a
+                class="botao"
+                href="https://sistemasweb.agricultura.gov.br/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Acessar sistema
+
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📘</div>
+
+            <h3>Manuais do SIPEAGRO</h3>
+
+            <p>
+                Consulte os manuais e orientações oficiais disponibilizados
+                pelo MAPA.
+            </p>
+
+            <a class="botao" href="documentos.html">
+                Ver documentos
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🔎</div>
+
+            <h3>Consultas oficiais</h3>
+
+            <p>
+                Acesse as consultas e informações disponibilizadas
+                oficialmente pelo MAPA.
+            </p>
+
+            <a class="botao" href="consultas.html">
+                Consultar
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- AJUDA -->
+    <!-- ========================================= -->
+
+    <h2>🚨 Precisa de ajuda?</h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>❓ Tenho uma dúvida sobre registro</h3>
+
+            <p>
+                Consulte as perguntas frequentes e orientações
+                gerais sobre registro.
+            </p>
+
+            <a class="botao" href="faq.html">
+                Perguntas frequentes
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📋 Não sei quais documentos preciso</h3>
+
+            <p>
+                Consulte os checklists e documentos relacionados
+                à sua situação.
+            </p>
+
+            <a class="botao" href="documentos.html">
+                Ver documentos
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>⚠️ Recebi uma exigência</h3>
+
+            <p>
+                Consulte orientações gerais para compreender e
+                atender pendências do processo.
+            </p>
+
+            <a class="botao" href="exigencias.html">
+                Orientações
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏭 Vou passar por vistoria</h3>
+
+            <p>
+                Consulte orientações para preparação e realização
+                da vistoria técnica.
+            </p>
+
+            <a class="botao" href="vistoria.html">
+                Ver orientações
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- FONTES OFICIAIS -->
+    <!-- ========================================= -->
+
+    <h2>📚 Legislação e referências</h2>
+
+
+    <div class="fonte">
+
+        <h3>📗 Cartilhão de Bebidas</h3>
+
+        <p>
+            Material de orientação que reúne informações sobre
+            registro de estabelecimentos e produtos, enquadramento,
+            procedimentos e requisitos aplicáveis às bebidas.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-programas-nacionais-e-seguranca-dos-alimentos-1/legislacao/compendios"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Consultar no MAPA
+
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div class="fonte">
+
+        <h3>🏛️ Registro de estabelecimentos — MAPA</h3>
+
+        <p>
+            Consulte as orientações oficiais do Ministério da Agricultura
+            e Pecuária para registro de estabelecimentos.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-estabelecimentos"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Acessar orientação oficial
+
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div class="fonte">
+
+        <h3>🥤 Registro de produtos — MAPA</h3>
+
+        <p>
+            Consulte as orientações oficiais para registro de produtos
+            de bebidas e derivados da uva e do vinho.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-produtos/registro-de-produtos-vinhos-e-bebidas"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Acessar orientação oficial
+
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div class="fonte">
+
+        <h3>🖥️ SIPEAGRO</h3>
+
+        <p>
+            Sistema utilizado para os procedimentos relacionados
+            ao registro e cadastro de produtos e estabelecimentos.
+        </p>
+
+        <a
+            class="botao"
+            href="https://www.gov.br/agricultura/pt-br/acesso-a-informacao/tecnologia-da-informacao/sistemas/orgaos/mapa/animal/sipeagro-sistema-integrado-de-produtos-e-estabelecimentos-agropecuarios"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Informações sobre o SIPEAGRO
+
+        </a>
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- AVISO -->
+    <!-- ========================================= -->
+
+    <div class="atencao">
+
+        <strong>📌 Importante</strong>
+
+        <p>
+            As informações disponibilizadas neste portal possuem caráter
+            orientativo e destinam-se a facilitar a compreensão dos
+            procedimentos de registro. Em caso de divergência, devem ser
+            observadas a legislação vigente e as orientações oficiais
+            do Ministério da Agricultura e Pecuária – MAPA.
+        </p>
+
+    </div>
+
+
 </main>
-<footer><div class="rodape"><h3>SIPOV-SP</h3><p>Serviço de Inspeção de Produtos de Origem Vegetal</p><p>Superintendência Federal de Agricultura no Estado de São Paulo</p><br><p>Ministério da Agricultura e Pecuária – MAPA</p></div></footer>
+
+
+<footer>
+
+    <h3>SIPOV-SP</h3>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</footer>
+
+
 </body>
+
 </html>
