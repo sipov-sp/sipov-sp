@@ -1,44 +1,487 @@
-<h2>📚 Principais referências</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="cards">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="fonte">
-        <h3>📘 Cartilhão de Bebidas</h3>
-        <p>
-            Consulte o Cartilhão de Bebidas como material de apoio para
-            consulta das normas e referências relacionadas às bebidas.
-        </p>
+    <title>Bebidas Fermentadas | SIPOV-SP</title>
 
-        <a
-            class="botao"
-            href="https://www.gov.br/agricultura/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Consultar referências oficiais
-        </a>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #176b3a;
+            color: white;
+            padding: 28px 7%;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 35px 20px 50px;
+        }
+
+        .voltar {
+            margin-bottom: 25px;
+        }
+
+        .voltar a {
+            color: #08783e;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .destaque {
+            background: #edf5f0;
+            border-left: 4px solid #08783e;
+            padding: 18px;
+            margin-bottom: 30px;
+        }
+
+        .destaque strong {
+            display: block;
+            color: #176b3a;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #176b3a;
+            margin-bottom: 6px;
+            font-size: 22px;
+        }
+
+        .intro {
+            margin-bottom: 20px;
+            color: #4d5b54;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #d9e0dc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #08783e;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .card p,
+        .card li {
+            font-size: 14px;
+            color: #46534d;
+        }
+
+        .etapas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .etapa {
+            background: white;
+            border: 1px solid #d9e0dc;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .numero {
+            display: inline-flex;
+            width: 28px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            background: #08783e;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .etapa h3 {
+            font-size: 16px;
+            color: #176b3a;
+            margin-bottom: 5px;
+        }
+
+        .etapa p {
+            font-size: 13px;
+            color: #4d5b54;
+        }
+
+        .atencao {
+            background: #fff8e8;
+            border-left: 4px solid #d79b00;
+            padding: 18px;
+            margin-bottom: 30px;
+        }
+
+        .atencao strong {
+            color: #8a6200;
+        }
+
+        .fontes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .fonte {
+            background: white;
+            border: 1px solid #d9e0dc;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .fonte h3 {
+            color: #08783e;
+            margin-bottom: 8px;
+        }
+
+        .fonte p {
+            font-size: 14px;
+            color: #46534d;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #08783e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #176b3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+
+            .cards,
+            .etapas,
+            .fontes {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍎 Bebidas fermentadas</h1>
+
+    <p>
+        Orientações sobre enquadramento, composição, denominação,
+        padrões de identidade e qualidade, rotulagem e registro.
+    </p>
+</header>
+
+<main>
+
+    <div class="voltar">
+        <a href="bebidas.html">← Voltar para Bebidas</a>
     </div>
 
-    <div class="fonte">
-        <h3>🏛️ Orientação oficial do MAPA</h3>
-        <p>
-            As informações desta página têm caráter orientativo.
-            Consulte sempre a legislação e as orientações oficiais vigentes.
-        </p>
 
-        <a
-            class="botao"
-            href="https://www.gov.br/agricultura/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Consultar MAPA
-        </a>
+    <div class="destaque">
+
+        <strong>Antes de registrar seu produto</strong>
+
+        Verifique o enquadramento do produto, sua composição,
+        matérias-primas, denominação e os requisitos específicos
+        aplicáveis às bebidas fermentadas.
+
     </div>
 
-</div>
 
-<div class="destaque">
-    <strong>📌 Importante</strong>
-    A versão oficial das normas deve ser sempre consultada na fonte
-    correspondente. Esta página possui finalidade orientativa e não
-    substitui a legislação vigente.
-</div>
+    <h2>🍎 O que você procura?</h2>
+
+    <p class="intro">
+        Selecione o assunto relacionado à bebida fermentada que deseja consultar.
+    </p>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🍎 Bebidas fermentadas</h3>
+
+            <p>
+                Consulte as características e os requisitos aplicáveis
+                às bebidas obtidas por processo de fermentação.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🧪 Composição</h3>
+
+            <p>
+                Verifique matérias-primas, ingredientes, aditivos e demais
+                características previstas para a categoria do produto.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🏷️ Denominação</h3>
+
+            <p>
+                A denominação pretendida deve ser compatível com o
+                enquadramento e as características do produto.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📋 Rotulagem</h3>
+
+            <p>
+                Confira as informações obrigatórias e os requisitos
+                específicos aplicáveis à rotulagem.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <h2>🔎 Como analisar seu produto?</h2>
+
+    <p class="intro">
+        A análise deve começar pelo correto enquadramento da bebida
+        e seguir para a verificação dos requisitos específicos.
+    </p>
+
+
+    <div class="etapas">
+
+        <div class="etapa">
+
+            <span class="numero">1</span>
+
+            <h3>Identifique o produto</h3>
+
+            <p>
+                Defina a bebida que pretende fabricar, importar
+                ou comercializar.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <span class="numero">2</span>
+
+            <h3>Verifique o enquadramento</h3>
+
+            <p>
+                Confira a categoria correspondente às características
+                e à composição do produto.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <span class="numero">3</span>
+
+            <h3>Confira a composição</h3>
+
+            <p>
+                Verifique matérias-primas, ingredientes, aditivos
+                e demais requisitos aplicáveis.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <span class="numero">4</span>
+
+            <h3>Confira a denominação</h3>
+
+            <p>
+                A denominação deve ser compatível com o enquadramento
+                e os requisitos aplicáveis ao produto.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <span class="numero">5</span>
+
+            <h3>Verifique a rotulagem</h3>
+
+            <p>
+                Confira as informações obrigatórias e os requisitos
+                específicos aplicáveis ao produto.
+            </p>
+
+        </div>
+
+
+        <div class="etapa">
+
+            <span class="numero">6</span>
+
+            <h3>Registre no SIPEAGRO</h3>
+
+            <p>
+                Após verificar os requisitos aplicáveis, realize
+                o procedimento correspondente no sistema.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="atencao">
+
+        <strong>⚠️ Atenção</strong>
+
+        <p>
+            O enquadramento de uma bebida depende de suas características,
+            composição e requisitos específicos. A denominação pretendida
+            deve ser compatível com o enquadramento e com a legislação vigente.
+        </p>
+
+    </div>
+
+
+    <h2>📚 Principais referências</h2>
+
+
+    <div class="fontes">
+
+        <div class="fonte">
+
+            <h3>📘 Cartilhão de Bebidas</h3>
+
+            <p>
+                Consulte o Cartilhão de Bebidas como material de apoio
+                para consulta das normas e referências relacionadas às bebidas.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Consultar referências oficiais
+            </a>
+
+        </div>
+
+
+        <div class="fonte">
+
+            <h3>🏛️ Orientação oficial do MAPA</h3>
+
+            <p>
+                As informações desta página têm caráter orientativo.
+                Consulte sempre a legislação e as orientações oficiais vigentes.
+            </p>
+
+            <a
+                class="botao"
+                href="https://www.gov.br/agricultura/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Consultar MAPA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="destaque">
+
+        <strong>📌 Importante</strong>
+
+        A versão oficial das normas deve ser sempre consultada na fonte
+        correspondente. Esta página possui finalidade orientativa e não
+        substitui a legislação vigente.
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <strong>SIPOV-SP</strong>
+
+    <p>
+        Serviço de Inspeção de Produtos de Origem Vegetal
+    </p>
+
+    <p>
+        Ministério da Agricultura e Pecuária – MAPA
+    </p>
+
+</footer>
+
+</body>
+
+</html>
